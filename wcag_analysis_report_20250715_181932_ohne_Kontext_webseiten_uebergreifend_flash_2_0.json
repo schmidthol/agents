@@ -1,0 +1,113 @@
+[
+    {
+        "step": 1,
+        "description": "Suchergebnisseite",
+        "url": "https://www.otto.de/suche/t-shirt/",
+        "violations": [
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Fehlender oder unzureichender Alt-Text für ein Bild.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_logo\" role=\"img\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                "Änderungsvorschlag": "<svg class=\"pl_logo\" role=\"img\" aria-label=\"Otto Logo\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                "Änderungen einzeln": "aria-label=\"Otto Logo\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Otto Logo im Header-Bereich der Webseite, das zur Startseite verlinkt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Fehlende Beschriftung für ein Formularfeld.",
+                "Html Ausschnitt auf der Webseite": "<input class=\"squirrel_searchfield js_squirrel_searchbar__input oc-copy-125\" autocomplete=\"off\" type=\"text\" role=\"searchbox\" tabindex=\"0\" aria-describedby=\"squirrel_searchfieldDescription\" maxlength=\"150\" data-qa=\"ftfind-search-field\" data-qa-id=\"search-field\" data-testid=\"squirrel-searchfield\" data-target=\"https://www.otto.de/suche/t-shirt/#t=%7B%22wk.san_ActiveSearch%22%3A%22true%22%2C%22san_InitialSearch%22%3A%22true%22%2C%22san_Interaction%22%3A%22initial_search%22%2C%22wk.san_SearchType%22%3A%22search%22%7D\" placeholder=\"Wonach suchst du?\">",
+                "Änderungsvorschlag": "<label for=\"search-field\">Suchbegriff</label><input id=\"search-field\" class=\"squirrel_searchfield js_squirrel_searchbar__input oc-copy-125\" autocomplete=\"off\" type=\"text\" role=\"searchbox\" tabindex=\"0\" aria-describedby=\"squirrel_searchfieldDescription\" maxlength=\"150\" data-qa=\"ftfind-search-field\" data-qa-id=\"search-field\" data-testid=\"squirrel-searchfield\" data-target=\"https://www.otto.de/suche/t-shirt/#t=%7B%22wk.san_ActiveSearch%22%3A%22true%22%2C%22san_InitialSearch%22%3A%22true%22%2C%22san_Interaction%22%3A%22initial_search%22%2C%22wk.san_SearchType%22%3A%22search%22%7D\" placeholder=\"Wonach suchst du?\">",
+                "Änderungen einzeln": "<label for=\"search-field\">Suchbegriff</label>\n id=\"search-field\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Eingabefeld für Suchbegriffe in der Suchleiste im Header-Bereich der Webseite."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das Suchfeld hat keinen programmatisch bestimmbaren Namen.",
+                "Html Ausschnitt auf der Webseite": "<input class=\"squirrel_searchfield js_squirrel_searchbar__input oc-copy-125\" autocomplete=\"off\" type=\"text\" role=\"searchbox\" tabindex=\"0\" aria-describedby=\"squirrel_searchfieldDescription\" maxlength=\"150\" data-qa=\"ftfind-search-field\" data-qa-id=\"search-field\" data-testid=\"squirrel-searchfield\" data-target=\"https://www.otto.de/suche/t-shirt/#t=%7B%22wk.san_ActiveSearch%22%3A%22true%22%2C%22san_InitialSearch%22%3A%22true%22%2C%22san_Interaction%22%3A%22initial_search%22%2C%22wk.san_SearchType%22%3A%22search%22%7D\" placeholder=\"Wonach suchst du?\">",
+                "Änderungsvorschlag": "<input class=\"squirrel_searchfield js_squirrel_searchbar__input oc-copy-125\" autocomplete=\"off\" type=\"text\" role=\"searchbox\" tabindex=\"0\" aria-label=\"Suchbegriff\" aria-describedby=\"squirrel_searchfieldDescription\" maxlength=\"150\" data-qa=\"ftfind-search-field\" data-qa-id=\"search-field\" data-testid=\"squirrel-searchfield\" data-target=\"https://www.otto.de/suche/t-shirt/#t=%7B%22wk.san_ActiveSearch%22%3A%22true%22%2C%22san_InitialSearch%22%3A%22true%22%2C%22san_Interaction%22%3A%22initial_search%22%2C%22wk.san_SearchType%22%3A%22search%22%7D\" placeholder=\"Wonach suchst du?\">",
+                "Änderungen einzeln": "aria-label=\"Suchbegriff\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Eingabefeld für Suchbegriffe in der Suchleiste im Header-Bereich der Webseite."
+            }
+        ]
+    },
+    {
+        "step": 2,
+        "description": "Produktdetailseite",
+        "url": "https://www.otto.de/p/jack-jones-t-shirt-basic-o-neck-3-tlg-3er-pack-etwas-laenger-geschnitten-nicht-zu-kurz-S0O1G0UW/#variationId=S0O1G0UW141E",
+        "violations": [
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Die Webseite verwendet keine semantischen HTML-Elemente, um die Struktur und Beziehungen zwischen den Inhalten zu definieren. Dies erschwert es Benutzern von Screenreadern, die Seite zu verstehen und zu navigieren.",
+                "Html Ausschnitt auf der Webseite": "<div class=\"find_headerContent\"> ... </div>",
+                "Änderungsvorschlag": "Verwende semantische HTML5-Elemente wie <header>, <nav>, <main>, <article>, <aside> und <footer>, um die Inhaltsstruktur klarer zu definieren.",
+                "Änderungen einzeln": "Ersetze generische <div>-Elemente durch semantische HTML5-Elemente.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Der `<header>`-Bereich enthält die Hauptnavigation und das Logo der Webseite. Die Verwendung eines `<nav>`-Elements innerhalb des Headers würde die Navigation hervorheben."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.1 Blöcke umgehen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Die Webseite bietet keine Möglichkeit, Inhaltsblöcke zu überspringen, was die Navigation für Benutzer von Screenreadern erschwert.",
+                "Html Ausschnitt auf der Webseite": "<header class=\"withSubMenu\"> ... </header>",
+                "Änderungsvorschlag": "Füge einen 'Skip to Content'-Link am Anfang des Dokuments hinzu, der es Benutzern ermöglicht, direkt zum Hauptinhalt zu springen.",
+                "Änderungen einzeln": "<a href=\"#main-content\" class=\"skip-link\">Zum Hauptinhalt springen</a>",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Der 'Skip to Content'-Link ermöglicht es Benutzern, den Header- und Navigationsbereich zu überspringen und direkt zum Hauptinhalt der Seite zu gelangen. Dies ist besonders nützlich für Benutzer von Screenreadern."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Es gibt keine eindeutige Überschriftenstruktur, um den Inhalt zu organisieren und zu strukturieren. Dies erschwert es Benutzern, den Inhalt zu überfliegen und die wichtigsten Informationen zu finden.",
+                "Html Ausschnitt auf der Webseite": "<h1 class=\"pdp_short-info pl_headline100 pl_headline200--lg\" data-qa=\"variationName\"> ... </h1>",
+                "Änderungsvorschlag": "Stelle sicher, dass die Überschriftenstruktur logisch ist (h1, h2, h3, etc.) und dass jede Überschrift den Inhalt des nachfolgenden Abschnitts genau beschreibt.",
+                "Änderungen einzeln": "Überprüfe und korrigiere die Überschriftenstruktur, um eine klare und hierarchische Organisation des Inhalts zu gewährleisten.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Die Überschriftenstruktur hilft Benutzern, die Seite zu überfliegen und die wichtigsten Informationen schnell zu finden. Eine klare Struktur verbessert die Benutzerfreundlichkeit und Zugänglichkeit."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Einige interaktive Elemente haben möglicherweise keine zugänglichen Namen, Rollen oder Werte, was es für Benutzer von assistierenden Technologien schwierig macht, mit ihnen zu interagieren.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow\" type=\"button\"> ... </button>",
+                "Änderungsvorschlag": "Füge ARIA-Attribute hinzu, um den zugänglichen Namen, die Rolle und den Wert interaktiver Elemente explizit zu definieren. Zum Beispiel: <button aria-label=\"Nächstes Bild\" ... >",
+                "Änderungen einzeln": "aria-label=\"Nächstes Bild\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "ARIA-Attribute verbessern die Zugänglichkeit interaktiver Elemente, indem sie assistierenden Technologien zusätzliche Informationen liefern, die für die Interaktion erforderlich sind."
+            }
+        ]
+    },
+    {
+        "step": 3,
+        "description": "Warenkorbseite",
+        "url": "https://www.otto.de/order/basket",
+        "violations": [
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Fehlender oder unzureichender Alt-Text für ein Bild im Warenkorb.",
+                "Html Ausschnitt auf der Webseite": "<img src=\"https://i.otto.de/i/otto/892a731b-917d-5264-95e5-fdbf1f748cc5?$responsive_order$\" alt=\"T-Shirt Basic O-Neck\" onerror=\"this.src='https://i.otto.de/i/otto/lh_platzhalter_ohne_abbildung?$responsive_order$'; this.removeAttribute('onerror');\" data-qa=\"image\">",
+                "Änderungsvorschlag": "<img src=\"https://i.otto.de/i/otto/892a731b-917d-5264-95e5-fdbf1f748cc5?$responsive_order$\" alt=\"T-Shirt Basic O-Neck der Marke Jack & Jones, 3er Pack, Farbe grau, Größe XXL\" onerror=\"this.src='https://i.otto.de/i/otto/lh_platzhalter_ohne_abbildung?$responsive_order$'; this.removeAttribute('onerror');\" data-qa=\"image\">",
+                "Änderungen einzeln": "alt=\"T-Shirt Basic O-Neck der Marke Jack & Jones, 3er Pack, Farbe grau, Größe XXL\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Produktbild des Artikels im Warenkorb. Es dient der visuellen Darstellung des Artikels."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Fehlendes Label für das Select-Element zur Auswahl der Artikelanzahl im Warenkorb.",
+                "Html Ausschnitt auf der Webseite": "<select class=\"js-pl_dropdown__element pl_dropdown__element or_basketItem__quantitySelection order_js_quantitySelection\" id=\"quantitySelection_ab97195a-2ca2-45ea-8a41-2a2548abe92a\" data-qa=\"changeQuantity\" data-value=\"1\" data-old-quantity=\"1\">",
+                "Änderungsvorschlag": "<label for=\"quantitySelection_ab97195a-2ca2-45ea-8a41-2a2548abe92a\" class=\"pl_label or_basketItem__quantityDropdown__label\">Anzahl</label>\n<select class=\"js-pl_dropdown__element pl_dropdown__element or_basketItem__quantitySelection order_js_quantitySelection\" id=\"quantitySelection_ab97195a-2ca2-45ea-8a41-2a2548abe92a\" data-qa=\"changeQuantity\" data-value=\"1\" data-old-quantity=\"1\">",
+                "Änderungen einzeln": "<label for=\"quantitySelection_ab97195a-2ca2-45ea-8a41-2a2548abe92a\" class=\"pl_label or_basketItem__quantityDropdown__label\">Anzahl</label>",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Select-Element zur Auswahl der Artikelanzahl im Warenkorb."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Fehlende oder unzureichende ARIA-Attribute für dynamische Bereiche oder interaktive Elemente.",
+                "Html Ausschnitt auf der Webseite": "<div class=\"or_js_add2Wishlist or_add2Wishlist or_add2Wishlist--lite or_add2Wishlist--suppress-msgs or_add2Wishlist--visible\" data-track-from=\"Basket\" data-qa=\"add2Wishlist\" data-variation-id=\"S0O1G0UW9SJG\" data-basket-item-id=\"ab97195a-2ca2-45ea-8a41-2a2548abe92a\" data-tracking-basket-id=\"68767fd0fa1ef30d0f9c1b80\" data-initialized=\"true\">",
+                "Änderungsvorschlag": "<div class=\"or_js_add2Wishlist or_add2Wishlist or_add2Wishlist--lite or_add2Wishlist--suppress-msgs or_add2Wishlist--visible\" data-track-from=\"Basket\" data-qa=\"add2Wishlist\" data-variation-id=\"S0O1G0UW9SJG\" data-basket-item-id=\"ab97195a-2ca2-45ea-8a41-2a2548abe92a\" data-tracking-basket-id=\"68767fd0fa1ef30d0f9c1b80\" data-initialized=\"true\" aria-live=\"polite\" aria-atomic=\"true\">",
+                "Änderungen einzeln": "aria-live=\"polite\" aria-atomic=\"true\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Dynamischer Bereich, der Informationen zum Hinzufügen zur Merkliste enthält. Durch aria-live wird der Nutzer über Änderungen informiert."
+            }
+        ]
+    }
+]

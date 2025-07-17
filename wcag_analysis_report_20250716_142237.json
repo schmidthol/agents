@@ -1,0 +1,99 @@
+[
+    {
+        "step": 1,
+        "description": "Suchergebnisseite",
+        "url": "https://www.otto.de/suche/t-shirt/",
+        "violations": [
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "4",
+                "Beschreibung der Verletzung": "Interaktive SVG-Icons, die als Buttons fungieren, haben keinen zugänglichen Namen (z.B. via aria-label oder umgebendem Text). Dies betrifft die Carousel-Pfeile und die Filter-Buttons.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow\" type=\"button\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "CSS-Selektor": ".nav_slider__button-left > button, .nav_slider__button-right > button, #find_filterSheetButton, #find_quickFilterButton",
+                "Änderungsvorschlag": "Für die Carousel-Pfeile: <button type=\"button\" aria-label=\"Vorherige Vorschläge\"><svg aria-hidden=\"true\" ...></svg></button> und <button type=\"button\" aria-label=\"Nächste Vorschläge\"><svg aria-hidden=\"true\" ...></svg></button>. Für den Filter-Button: <button id=\"find_filterSheetButton\" aria-label=\"Filter öffnen\" ...><svg aria-hidden=\"true\" ...></svg></button> und <button id=\"find_quickFilterButton\" aria-label=\"Filtern und Sortieren\" ...><svg aria-hidden=\"true\" ...></svg><span class=\"pl_headline50\">Filtern &amp; Sortieren</span></button> (hier SVG mit aria-hidden).",
+                "Änderungen einzeln": "aria-label=\"Vorherige Vorschläge\" oder aria-label=\"Nächste Vorschläge\" für Carousel-Pfeile; aria-label=\"Filter öffnen\" für #find_filterSheetButton; aria-label=\"Filtern und Sortieren\" und aria-hidden=\"true\" für SVG in #find_quickFilterButton.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Die Elemente sind Buttons, die visuell durch Icons dargestellt werden. Sie dienen der Navigation innerhalb eines Karussells oder zum Öffnen/Schließen von Filteroptionen. Ohne zugänglichen Namen ist ihre Funktion für Screenreader-Nutzer unklar."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Die Suchergebnisseite verwendet zwei <h1>-Elemente, was die semantische Struktur der Seite beeinträchtigt und für Screenreader-Nutzer verwirrend sein kann. Der zweite <h1>-Tag innerhalb des Breadcrumbs sollte eine niedrigere oder keine Überschriftenebene haben.",
+                "Html Ausschnitt auf der Webseite": "<h1 class=\"nav_grimm-breadcrumb-headline__title nav_grimm-breadcrumb-headline__title--nomargin nav_grimm-breadcrumb-headline__title--clickable\" data-nav-testing=\"breadcrumb-headline\" data-nav-track=\"true\" data-nav-tracking-click-breadcrumb-headline=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;san_SearchBoxAction&quot;:&quot;clickTitle&quot;}}]\"> „t-shirt</h1>",
+                "CSS-Selektor": ".nav_grimm-breadcrumb-headline__title",
+                "Änderungsvorschlag": "Ändere den <h1>-Tag im Breadcrumb zu einem <span>-Tag und füge dem übergeordneten Link oder dem <span>-Tag selbst aria-current=\"page\" hinzu, um den aktuellen Seitenkontext zu kennzeichnen. Beispiel: <span class=\"nav_grimm-breadcrumb-headline__title\">„t-shirt</span>.",
+                "Änderungen einzeln": "Ändere <h1> zu <span>; füge aria-current=\"page\" zum relevanten Elternelement hinzu.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Element zeigt den aktuellen Suchbegriff im Breadcrumb an. Es ist eine sekundäre Information auf der Seite und sollte nicht als primäre Überschrift (H1) behandelt werden, da die Seite bereits einen H1-Titel hat."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.5 Bestimmung des Eingabezwecks (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das E-Mail-Eingabefeld für den Newsletter-Anmeldebereich verwendet kein 'autocomplete'-Attribut, was die automatische Vervollständigung für Benutzer erschwert und die Barrierefreiheit beeinträchtigt.",
+                "Html Ausschnitt auf der Webseite": "<oc-text-field-v1 id=\"newsletter-subscribe-footer-email-input\" class=\"newsletter-subscribe-footer-input oc-mt-50 oc-mb-100\" hide-counter=\"\" placeholder=\"E-Mail-Adresse\" type=\"email\" value=\"\" maxlength=\"80\">E-Mail-Adresse\n            </oc-text-field-v1>",
+                "CSS-Selektor": "#newsletter-subscribe-footer-email-input",
+                "Änderungsvorschlag": "Füge dem <input>-Element innerhalb von <oc-text-field-v1> das Attribut autocomplete=\"email\" hinzu. Beispiel: <input id=\"newsletter-subscribe-footer-email-input\" type=\"email\" autocomplete=\"email\" ...>",
+                "Änderungen einzeln": "autocomplete=\"email\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Dies ist ein Eingabefeld im Footer-Bereich, in dem Benutzer ihre E-Mail-Adresse für den Newsletter eingeben können."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.1 Blöcke umgehen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Es fehlt ein 'Skip-Link' oder eine ähnliche Funktion, die es Benutzern ermöglicht, wiederholte Inhaltsblöcke (z.B. Header-Navigation) zu überspringen und direkt zum Hauptinhalt der Seite zu gelangen.",
+                "Html Ausschnitt auf der Webseite": "<body>...<div class=\"gridAndInfoContainer\">...<main id=\"reptile-content\">...</main></div></body>",
+                "CSS-Selektor": "body",
+                "Änderungsvorschlag": "Füge am Anfang des <body>-Tags einen visuell versteckten Link hinzu, der bei Fokus sichtbar wird und zum Hauptinhalt springt. Beispiel: <a href=\"#main-content\" class=\"skip-link\">Zum Hauptinhalt springen</a> und füge id=\"main-content\" zum <main>-Element hinzu.",
+                "Änderungen einzeln": "<a href=\"#main-content\" class=\"skip-link\">Zum Hauptinhalt springen</a> (CSS für visuelle Ausblendung und Fokus-Sichtbarkeit erforderlich); id=\"main-content\" zum <main>-Tag.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Der Skip-Link würde es Benutzern, insbesondere solchen, die auf Tastaturnavigation oder Screenreader angewiesen sind, ermöglichen, den umfangreichen Header-Bereich schnell zu überspringen und direkt zu den Suchergebnissen zu gelangen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.4 Linkzweck (Im Kontext) (A)",
+                "Anzahl der Verletzungen": "17",
+                "Beschreibung der Verletzung": "Mehrere Buttons und Links haben einen generischen oder keinen zugänglichen Namen, wodurch ihr Zweck im Kontext unklar ist. Dies betrifft die Carousel-Pfeile, die Filter-Buttons und die 'Mehr anzeigen'-Buttons in den Filtern.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow\" type=\"button\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "CSS-Selektor": ".nav_slider__button-left > button, .nav_slider__button-right > button, #find_filterSheetButton, #find_quickFilterButton, .heureka_filterTitle__more > button",
+                "Änderungsvorschlag": "Für Carousel-Pfeile und Filter-Buttons siehe 1.1.1. Für 'Mehr anzeigen'-Buttons: <button class=\"pl_link100--primary\" aria-label=\"Mehr [Filtername] anzeigen\">Mehr anzeigen</button>. Beispiel für 'Marke': <button class=\"pl_link100--primary\" aria-label=\"Mehr Marken anzeigen\">Mehr anzeigen</button>.",
+                "Änderungen einzeln": "aria-label=\"Vorherige Vorschläge\" / aria-label=\"Nächste Vorschläge\" für Carousel-Pfeile; aria-label=\"Filter öffnen\" / aria-label=\"Filtern und Sortieren\" für Filter-Buttons; aria-label=\"Mehr [Filtername] anzeigen\" für 'Mehr anzeigen'-Buttons.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Diese Elemente sind interaktive Steuerelemente (Buttons), deren Funktion ohne einen expliziten, beschreibenden Text oder eine aria-Label für assistive Technologien nicht eindeutig ist. Sie dienen der Navigation oder dem Aufruf weiterer Filteroptionen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "17",
+                "Beschreibung der Verletzung": "Einige interaktive Elemente, insbesondere Buttons mit Icons, haben keine oder unzureichende Beschriftungen (Labels), die ihren Zweck klar beschreiben. Dies ist eine Wiederholung der Probleme aus 1.1.1 und 2.4.4, da fehlende Namen auch fehlende Labels bedeuten.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow\" type=\"button\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "CSS-Selektor": ".nav_slider__button-left > button, .nav_slider__button-right > button, #find_filterSheetButton, #find_quickFilterButton, .heureka_filterTitle__more > button",
+                "Änderungsvorschlag": "Siehe 1.1.1 und 2.4.4 für spezifische Korrekturen. Die Hinzufügung von 'aria-label' oder die Bereitstellung von sichtbarem, beschreibendem Text ist entscheidend.",
+                "Änderungen einzeln": "Siehe 1.1.1 und 2.4.4.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Diese Buttons sind Teil der Benutzeroberfläche für Navigation und Filterung. Klare Labels sind notwendig, damit alle Benutzer ihren Zweck verstehen können."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.5.3 Beschriftung (Label) im Namen (A)",
+                "Anzahl der Verletzungen": "4",
+                "Beschreibung der Verletzung": "Interaktive Elemente, die visuell Text oder Bilder von Text als Beschriftung verwenden, müssen sicherstellen, dass dieser Text im programmatischen Namen des Elements enthalten ist. Dies ist bei den Carousel-Pfeilen und den Filter-Buttons nicht der Fall, da sie keine sichtbare Textbeschriftung haben und der Name fehlt.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow\" type=\"button\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "CSS-Selektor": ".nav_slider__button-left > button, .nav_slider__button-right > button, #find_filterSheetButton, #find_quickFilterButton",
+                "Änderungsvorschlag": "Siehe 1.1.1 für die Korrekturvorschläge, die das Hinzufügen von 'aria-label' beinhalten, um den programmatischen Namen zu definieren.",
+                "Änderungen einzeln": "Siehe 1.1.1.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Diese Buttons sind interaktive Steuerelemente, die visuell durch Icons dargestellt werden. Ohne einen programmatischen Namen, der den visuellen Zweck widerspiegelt, können assistive Technologien ihre Funktion nicht korrekt vermitteln."
+            },
+            {
+                "Verletztes WCAG_kriterium": "3.3.3 Fehlerempfehlung (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Bei ungültiger Eingabe im Preisbereich (z.B. 'Von' ist größer als 'Bis') wird der 'Auswahl ansehen'-Button zwar deaktiviert, es wird jedoch keine explizite Textfehlermeldung oder Empfehlung zur Korrektur angezeigt.",
+                "Html Ausschnitt auf der Webseite": "<input id=\"hc_minMax__min0\" maxlength=\"5\" class=\"pl_input__field  svelte-dhe4pz\" type=\"number\" inputmode=\"numeric\" placeholder=\"2\" max=\"850\" data-ts-feature-filter-method=\"interval\" data-ts-feature-ref=\"facetValue_retailprice_value\" data-ts-feature-labels=\"{}\">",
+                "CSS-Selektor": "#hc_minMax__min0, #hc_minMax__max0",
+                "Änderungsvorschlag": "Füge 'aria-invalid=\"true\"' zum Eingabefeld hinzu, wenn der Wert ungültig ist, und verknüpfe es mit einer sichtbaren Fehlermeldung über 'aria-describedby'. Beispiel: <input id=\"hc_minMax__min0\" aria-invalid=\"true\" aria-describedby=\"price-error\" ...><span id=\"price-error\" style=\"display:none;\">Der 'Von'-Preis muss kleiner sein als der 'Bis'-Preis.</span> (Die Fehlermeldung sollte bei Bedarf sichtbar gemacht werden).",
+                "Änderungen einzeln": "aria-invalid=\"true\" und aria-describedby=\"[ID der Fehlermeldung]\" zu den Inputs; eine sichtbare Fehlermeldung mit entsprechender ID.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Dies sind Eingabefelder für die Definition eines Preisbereichs in den Filtern. Sie ermöglichen es Benutzern, den angezeigten Produktpreisbereich anzupassen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "17",
+                "Beschreibung der Verletzung": "Mehrere interaktive Elemente, insbesondere Buttons mit Icons oder generischem Text, haben keinen programmatisch bestimmbaren Namen oder eine unklare Rolle, was die Interaktion für assistive Technologien erschwert. Dies ist eine Wiederholung der Probleme aus 1.1.1, 2.4.4 und 2.5.3.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow\" type=\"button\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "CSS-Selektor": ".nav_slider__button-left > button, .nav_slider__button-right > button, #find_filterSheetButton, #find_quickFilterButton, .heureka_filterTitle__more > button",
+                "Änderungsvorschlag": "Siehe 1.1.1 und 2.4.4 für spezifische Korrekturen. Die Hinzufügung von 'aria-label' oder die Bereitstellung von sichtbarem, beschreibendem Text ist entscheidend, um den Namen und die Rolle programmatisch zu bestimmen.",
+                "Änderungen einzeln": "Siehe 1.1.1 und 2.4.4.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Diese Elemente sind interaktive Steuerelemente (Buttons), die für die Navigation und Filterung verwendet werden. Ihr Name, ihre Rolle und ihr Wert müssen für assistive Technologien zugänglich sein, um eine korrekte Interaktion zu ermöglichen."
+            }
+        ]
+    }
+]

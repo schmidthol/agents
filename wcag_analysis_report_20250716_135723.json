@@ -1,0 +1,319 @@
+[
+    {
+        "step": 1,
+        "description": "Suchergebnisseite",
+        "url": "https://www.otto.de/suche/t-shirt/",
+        "violations": [
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "SVG-Logo fehlt ein explizites aria-label, obwohl der umgebende Link einen Titel hat. Für robuste Barrierefreiheit sollte das SVG selbst ein aria-label haben.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_logo\" role=\"img\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                "CSS-Selektor": "div.find_ottoLogo > a > svg.pl_logo",
+                "Änderungsvorschlag": "<svg class=\"pl_logo\" role=\"img\" aria-label=\"OTTO Logo\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                "Änderungen einzeln": "aria-label=\"OTTO Logo\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das OTTO-Logo im Header-Bereich der Webseite, das zur Startseite verlinkt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das Icon-Element ist rein visuell und sollte für Screenreader ausgeblendet werden, da der übergeordnete Button bereits einen zugänglichen Namen haben sollte.",
+                "Html Ausschnitt auf der Webseite": "<p class=\"nav_menu-toggle-button__icon\"></p>",
+                "CSS-Selektor": "nav-mobile-menu-button > p.nav_menu-toggle-button__icon",
+                "Änderungsvorschlag": "<p class=\"nav_menu-toggle-button__icon\" aria-hidden=\"true\"></p>",
+                "Änderungen einzeln": "aria-hidden=\"true\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Visuelle Darstellung des Icons für den mobilen Menü-Umschalt-Button."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das Icon-Element ist rein visuell und sollte für Screenreader ausgeblendet werden, da der übergeordnete Button bereits einen zugänglichen Namen haben sollte.",
+                "Html Ausschnitt auf der Webseite": "<span class=\"p_icons squirrel_searchIcon__icon svelte-1ml7eaa\">»</span>",
+                "CSS-Selektor": "div.squirrel_searchIcon > span.squirrel_searchIcon__icon",
+                "Änderungsvorschlag": "<span class=\"p_icons squirrel_searchIcon__icon svelte-1ml7eaa\" aria-hidden=\"true\">»</span>",
+                "Änderungen einzeln": "aria-hidden=\"true\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Visuelles Icon für den Such-Button im Header."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das Icon-Element ist rein visuell und sollte für Screenreader ausgeblendet werden, da der übergeordnete Link bereits einen Titel hat.",
+                "Html Ausschnitt auf der Webseite": "<span class=\"p_icons find_headerIcon__icon\">s</span>",
+                "CSS-Selektor": "div.find_headerIcon.find_serviceIcon > a > span.p_icons",
+                "Änderungsvorschlag": "<span class=\"p_icons find_headerIcon__icon\" aria-hidden=\"true\">s</span>",
+                "Änderungen einzeln": "aria-hidden=\"true\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Visuelles Icon für den Service-Link im Header."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das Icon-Element ist rein visuell und sollte für Screenreader ausgeblendet werden, da der übergeordnete Bereich bereits einen zugänglichen Namen haben sollte.",
+                "Html Ausschnitt auf der Webseite": "<span class=\"us_loginAreaIcon p_icons\" data-qa=\"user_login_area_icon\">Θ</span>",
+                "CSS-Selektor": "div.us_loginAreaContainerWithName > div.us_loginArea > span.us_loginAreaIcon",
+                "Änderungsvorschlag": "<span class=\"us_loginAreaIcon p_icons\" data-qa=\"user_login_area_icon\" aria-hidden=\"true\">Θ</span>",
+                "Änderungen einzeln": "aria-hidden=\"true\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Visuelles Icon für den 'Mein Konto'-Bereich im Header."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das Icon-Element ist rein visuell und sollte für Screenreader ausgeblendet werden, da der übergeordnete Bereich bereits einen Titel hat.",
+                "Html Ausschnitt auf der Webseite": "<span class=\"p_icons wl_mini__icon\">♥</span>",
+                "CSS-Selektor": "div.find_headerIcon.find_wishlistIcon > a > div.wl_mini > span.p_icons",
+                "Änderungsvorschlag": "<span class=\"p_icons wl_mini__icon\" aria-hidden=\"true\">♥</span>",
+                "Änderungen einzeln": "aria-hidden=\"true\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Visuelles Icon für den Merkzettel-Link im Header."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das SVG-Icon für den Warenkorb hat kein aria-label, um seine Rolle für Screenreader zu beschreiben.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_icon100 or_minis__icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_basket.svg#pl_icon_basket\"></use></svg>",
+                "CSS-Selektor": "div.find_headerIcon.find_basketIcon > div.or_minis > svg.pl_icon100",
+                "Änderungsvorschlag": "<svg class=\"pl_icon100 or_minis__icon\" role=\"img\" aria-label=\"Warenkorb Icon\"><use xlink:href=\"/assets-static/icons/pl_icon_basket.svg#pl_icon_basket\"></use></svg>",
+                "Änderungen einzeln": "aria-label=\"Warenkorb Icon\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Visuelles Icon für den Warenkorb-Link im Header."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Der Button mit einem rein visuellen SVG-Icon hat kein aria-label, um seine Funktion für Screenreader zu beschreiben.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"pl_rounded50 pl_carousel__arrow\" type=\"button\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "CSS-Selektor": "div.nav_slider__button-left > button",
+                "Änderungsvorschlag": "<button class=\"pl_rounded50 pl_carousel__arrow\" type=\"button\" aria-label=\"Vorheriger Vorschlag\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "Änderungen einzeln": "aria-label=\"Vorheriger Vorschlag\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Button zur Navigation zum vorherigen Element in einem Karussell/Slider."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Der Button mit einem rein visuellen SVG-Icon hat kein aria-label, um seine Funktion für Screenreader zu beschreiben.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"pl_rounded50 pl_carousel__arrow pl_carousel__arrow--next\" type=\"button\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-right.svg#pl_icon_arrow-right\"></use></svg></button>",
+                "CSS-Selektor": "div.nav_slider__button-right > button",
+                "Änderungsvorschlag": "<button class=\"pl_rounded50 pl_carousel__arrow pl_carousel__arrow--next\" type=\"button\" aria-label=\"Nächster Vorschlag\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-right.svg#pl_icon_arrow-right\"></use></svg></button>",
+                "Änderungen einzeln": "aria-label=\"Nächster Vorschlag\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Button zur Navigation zum nächsten Element in einem Karussell/Slider."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "9",
+                "Beschreibung der Verletzung": "Dekorative Bilder in Menü-Kacheln sollten ein leeres alt-Attribut oder aria-hidden=\"true\" haben, um Screenreader nicht mit irrelevanten Informationen zu überladen.",
+                "Html Ausschnitt auf der Webseite": "<img class=\"nav_mobile-list-tile__image\" onerror=\"this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII='\" src=\"https://i.otto.de/i/otto/cd05c6c6-8692-5b95-95c3-c221f3e2a99c/?h=200&amp;upscale=true&amp;w=200\">",
+                "CSS-Selektor": "div.nav_mobile-cluster__item > div.nav_mobile-list-tile > img.nav_mobile-list-tile__image",
+                "Änderungsvorschlag": "<img class=\"nav_mobile-list-tile__image\" onerror=\"this.onerror=null;this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII='\" src=\"https://i.otto.de/i/otto/cd05c6c6-8692-5b95-95c3-c221f3e2a99c/?h=200&amp;upscale=true&amp;w=200\" alt=\"\" aria-hidden=\"true\">",
+                "Änderungen einzeln": "alt=\"\" aria-hidden=\"true\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Dekoratives Bild für eine Kategorie-Kachel im mobilen Menü."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Der Button mit einem rein visuellen SVG-Icon hat kein aria-label, um seine Funktion für Screenreader zu beschreiben.",
+                "Html Ausschnitt auf der Webseite": "<button id=\"find_filterSheetButton\" class=\"pl_button50--primary js_openFilterSheet find_filterSheetButton--mini\" data-ts-labels=\"{&quot;san_Foldout&quot;:&quot;filter_top_all&quot;,&quot;san_FilterWhatIf&quot;:&quot;e3387_true&quot;,&quot;san_PopularFacetValues&quot;:&quot;kategorien|marke|preis-in-eur|us-groessen|verkaeufer&quot;}\">\n<svg class=\"pl_icon100 find_filterSheetButton__icon--centered\" role=\"img\">\n<use xlink:href=\"/assets-static/icons/pl_icon_filter.svg#pl_icon_filter\"></use>\n</svg> </button>",
+                "CSS-Selektor": "button#find_filterSheetButton",
+                "Änderungsvorschlag": "<button id=\"find_filterSheetButton\" class=\"pl_button50--primary js_openFilterSheet find_filterSheetButton--mini\" data-ts-labels=\"{&quot;san_Foldout&quot;:&quot;filter_top_all&quot;,&quot;san_FilterWhatIf&quot;:&quot;e3387_true&quot;,&quot;san_PopularFacetValues&quot;:&quot;kategorien|marke|preis-in-eur|us-groessen|verkaeufer&quot;}\" aria-label=\"Filter öffnen\">\n<svg class=\"pl_icon100 find_filterSheetButton__icon--centered\" role=\"img\" aria-hidden=\"true\">\n<use xlink:href=\"/assets-static/icons/pl_icon_filter.svg#pl_icon_filter\"></use>\n</svg> </button>",
+                "Änderungen einzeln": "aria-label=\"Filter öffnen\" und aria-hidden=\"true\" zum SVG",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Button zum Öffnen des Filter-Overlays."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Der Button mit einem rein visuellen SVG-Icon hat kein aria-label, um seine Funktion für Screenreader zu beschreiben.",
+                "Html Ausschnitt auf der Webseite": "<button id=\"find_quickFilterButton\" class=\"pl_button50--primary js_openFilterSheet js_san_quickFilter_button heureka_quickFilterButton\" data-ts-labels=\"{&quot;san_Foldout&quot;:&quot;filter_bottom_all&quot;,&quot;san_FilterWhatIf&quot;:&quot;e3387_true&quot;,&quot;san_PopularFacetValues&quot;:&quot;kategorien|marke|preis-in-eur|us-groessen|verkaeufer&quot;}\" hidden=\"\"> <svg class=\"pl_icon100\" role=\"img\">\n<use xlink:href=\"/assets-static/icons/pl_icon_filter.svg#pl_icon_filter\"></use>\n</svg><span class=\"pl_headline50\">Filtern &amp; Sortieren</span></button>",
+                "CSS-Selektor": "button#find_quickFilterButton",
+                "Änderungsvorschlag": "<button id=\"find_quickFilterButton\" class=\"pl_button50--primary js_openFilterSheet js_san_quickFilter_button heureka_quickFilterButton\" data-ts-labels=\"{&quot;san_Foldout&quot;:&quot;filter_bottom_all&quot;,&quot;san_FilterWhatIf&quot;:&quot;e3387_true&quot;,&quot;san_PopularFacetValues&quot;:&quot;kategorien|marke|preis-in-eur|us-groessen|verkaeufer&quot;}\" hidden=\"\" aria-label=\"Filtern und Sortieren\"> <svg class=\"pl_icon100\" role=\"img\" aria-hidden=\"true\">\n<use xlink:href=\"/assets-static/icons/pl_icon_filter.svg#pl_icon_filter\"></use>\n</svg><span class=\"pl_headline50\">Filtern &amp; Sortieren</span></button>",
+                "Änderungen einzeln": "aria-label=\"Filtern und Sortieren\" und aria-hidden=\"true\" zum SVG",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Button zum schnellen Filtern und Sortieren, sichtbar auf mobilen Geräten."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "19",
+                "Beschreibung der Verletzung": "Das SVG-Icon für den Schließen-Button in Bannern hat zwar ein title-Element, aber ein explizites aria-label auf dem SVG ist robuster für Screenreader.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_icon js_pl_banner__close\" role=\"img\"><title>Hinweis schließen</title>\n<use xlink:href=\"/assets-static/icons/pl_icon_close.svg#pl_icon_close\"></use>\n</svg>",
+                "CSS-Selektor": "div.pl_banner > svg.pl_icon.js_pl_banner__close",
+                "Änderungsvorschlag": "<svg class=\"pl_icon js_pl_banner__close\" role=\"img\" aria-label=\"Hinweis schließen\"><title>Hinweis schließen</title>\n<use xlink:href=\"/assets-static/icons/pl_icon_close.svg#pl_icon_close\"></use>\n</svg>",
+                "Änderungen einzeln": "aria-label=\"Hinweis schließen\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Schließen-Icon für verschiedene Informations- oder Fehlermeldungsbanner."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "14",
+                "Beschreibung der Verletzung": "Das SVG-Icon in Akkordeon-Headern ist rein dekorativ und sollte für Screenreader ausgeblendet werden, da der Text des Headers die Funktion bereits beschreibt.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_icon\" role=\"img\">\n<use xlink:href=\"/assets-static/icons/pl_icon_arrow-down.svg#pl_icon_arrow-down\"></use>\n</svg>",
+                "CSS-Selektor": "dt.pl_accordion__header > svg.pl_icon",
+                "Änderungsvorschlag": "<svg class=\"pl_icon\" role=\"img\" aria-hidden=\"true\">\n<use xlink:href=\"/assets-static/icons/pl_icon_arrow-down.svg#pl_icon_arrow-down\"></use>\n</svg>",
+                "Änderungen einzeln": "aria-hidden=\"true\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Dekoratives Icon, das den Auf-/Zuklapp-Zustand eines Akkordeon-Headers anzeigt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "14",
+                "Beschreibung der Verletzung": "Der Button mit einem rein visuellen SVG-Icon zum Löschen von Filtern hat kein aria-label, um seine Funktion für Screenreader zu beschreiben.",
+                "Html Ausschnitt auf der Webseite": "<button data-ts-feature-labels=\"{&quot;san_FilterMethod&quot;:[&quot;x_single_local&quot;]}\" class=\"pl_link75--secondary heureka_removeAllTrashCan ts_heureka_selectAll\" data-select-mode=\"deselect\" form=\"find_filter_marke\" type=\"button\" hidden=\"\"> <svg class=\"pl_icon100\" role=\"img\"> <use xlink:href=\"/assets-static/icons/pl_icon_delete.svg#pl_icon_delete\"></use> </svg> </button>",
+                "CSS-Selektor": "div.heureka_filterHeaderButtons > button.heureka_removeAllTrashCan",
+                "Änderungsvorschlag": "<button data-ts-feature-labels=\"{&quot;san_FilterMethod&quot;:[&quot;x_single_local&quot;]}\" class=\"pl_link75--secondary heureka_removeAllTrashCan ts_heureka_selectAll\" data-select-mode=\"deselect\" form=\"find_filter_marke\" type=\"button\" hidden=\"\" aria-label=\"Auswahl löschen\"> <svg class=\"pl_icon100\" role=\"img\" aria-hidden=\"true\"> <use xlink:href=\"/assets-static/icons/pl_icon_delete.svg#pl_icon_delete\"></use> </svg> </button>",
+                "Änderungen einzeln": "aria-label=\"Auswahl löschen\" und aria-hidden=\"true\" zum SVG",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Button zum Löschen der ausgewählten Filterwerte in einem Filterbereich."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "50+",
+                "Beschreibung der Verletzung": "Das Checkmark-Icon in benutzerdefinierten Checkboxen ist rein dekorativ und sollte für Screenreader ausgeblendet werden, da die Checkbox selbst bereits einen zugänglichen Namen hat.",
+                "Html Ausschnitt auf der Webseite": "<oc-icon-v1 class=\"hc_checkbox__checkmark svelte-3xf3eo\" size=\"50\"></oc-icon-v1>",
+                "CSS-Selektor": "label.hc_checkbox > span.hc_checkbox__handle > oc-icon-v1",
+                "Änderungsvorschlag": "<oc-icon-v1 class=\"hc_checkbox__checkmark svelte-3xf3eo\" size=\"50\" aria-hidden=\"true\"></oc-icon-v1>",
+                "Änderungen einzeln": "aria-hidden=\"true\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Dekoratives Häkchen-Icon, das den ausgewählten Zustand einer Checkbox anzeigt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "2",
+                "Beschreibung der Verletzung": "Das SVG-Icon für den 'gesponsert'-Hinweis hat kein aria-label, um seine Funktion für Screenreader zu beschreiben.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_icon50 sponsoredHint--icon\" role=\"img\">\n<use href=\"/assets-static/icons/pl_icon_info-hint50.svg#pl_icon_info-hint50\" xlink:href=\"/assets-static/icons/pl_icon_info-hint50.svg#pl_icon_info-hint50\"></use>\n</svg>",
+                "CSS-Selektor": "span.js_reptile_sponsored > svg.pl_icon50",
+                "Änderungsvorschlag": "<svg class=\"pl_icon50 sponsoredHint--icon\" role=\"img\" aria-label=\"Informationen zu gesponserten Produkten\">\n<use href=\"/assets-static/icons/pl_icon_info-hint50.svg#pl_icon_info-hint50\" xlink:href=\"/assets-static/icons/pl_icon_info-hint50.svg#pl_icon_info-hint50\"></use>\n</svg>",
+                "Änderungen einzeln": "aria-label=\"Informationen zu gesponserten Produkten\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Informations-Icon, das Details zu gesponserten Produkten anzeigt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das SVG-Icon für den Transparenz-Hinweis hat kein aria-label, um seine Funktion für Screenreader zu beschreiben.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_icon\" role=\"img\">\n<use xlink:href=\"/assets-static/icons/pl_icon_info-hint.svg#pl_icon_info-hint\"></use>\n</svg>",
+                "CSS-Selektor": "span.reptile_tilelist__transparencyIcon > svg.pl_icon",
+                "Änderungsvorschlag": "<svg class=\"pl_icon\" role=\"img\" aria-label=\"Warum zeigen wir dir diese Produkte?\">\n<use xlink:href=\"/assets-static/icons/pl_icon_info-hint.svg#pl_icon_info-hint\"></use>\n</svg>",
+                "Änderungen einzeln": "aria-label=\"Warum zeigen wir dir diese Produkte?\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Informations-Icon, das die Sortierung und Transparenz der Suchergebnisse erklärt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das SVG-Icon für das Nachhaltigkeits-Badge hat kein aria-label, um seine Funktion für Screenreader zu beschreiben.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_icon\" role=\"img\">\n<use href=\"/assets-static/icons/pl_icon_sustainable-social-initiatives.svg#pl_icon_sustainable-social-initiatives\" xlink:href=\"/assets-static/icons/pl_icon_sustainable-social-initiatives.svg#pl_icon_sustainable-social-initiatives\"></use>\n</svg>",
+                "CSS-Selektor": "div.reptile_sustainabilityBadge > svg.pl_icon",
+                "Änderungsvorschlag": "<svg class=\"pl_icon\" role=\"img\" aria-label=\"Förderung sozialer Initiativen\">\n<use href=\"/assets-static/icons/pl_icon_sustainable-social-initiatives.svg#pl_icon_sustainable-social-initiatives\" xlink:href=\"/assets-static/icons/pl_icon_sustainable-social-initiatives.svg#pl_icon_sustainable-social-initiatives\"></use>\n</svg>",
+                "Änderungen einzeln": "aria-label=\"Förderung sozialer Initiativen\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Icon, das anzeigt, dass ein Produkt den Standard 'Förderung sozialer Initiativen' erfüllt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "3",
+                "Beschreibung der Verletzung": "Das SVG-Logo für OTTO UP hat kein aria-label, um seine Funktion für Screenreader zu beschreiben.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"reptile_tile__ottoUp pl_logo--red\" role=\"img\">\n<use href=\"/assets-static/icons/pl_logo_otto-up.svg#pl_logo_otto-up\" xlink:href=\"/assets-static/icons/pl_logo_otto-up.svg#pl_logo_otto-up\"></use>\n</svg>",
+                "CSS-Selektor": "div.reptile_tile__deliveryInfo > svg.reptile_tile__ottoUp",
+                "Änderungsvorschlag": "<svg class=\"reptile_tile__ottoUp pl_logo--red\" role=\"img\" aria-label=\"OTTO UP Logo\">\n<use href=\"/assets-static/icons/pl_logo_otto-up.svg#pl_logo_otto-up\" xlink:href=\"/assets-static/icons/pl_logo_otto-up.svg#pl_logo_otto-up\"></use>\n</svg>",
+                "Änderungen einzeln": "aria-label=\"OTTO UP Logo\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Logo, das anzeigt, dass OTTO UP Vorteile für das Produkt gelten."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "5",
+                "Beschreibung der Verletzung": "Die SVG-Icons für die Feedback-Smileys haben keine aria-labels, um ihre Bedeutung für Screenreader zu vermitteln.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_icon_angry js_reptile_feedback\" role=\"img\" data-feedback-score=\"1\">\n<use xlink:href=\"/assets-static/icons/pl_icon_smiley-angry.svg#pl_icon_smiley-angry\"></use>\n</svg>",
+                "CSS-Selektor": "div.reptile_feedback__smileys > svg.pl_icon_angry",
+                "Änderungsvorschlag": "<svg class=\"pl_icon_angry js_reptile_feedback\" role=\"img\" data-feedback-score=\"1\" aria-label=\"Sehr unzufrieden\">\n<use xlink:href=\"/assets-static/icons/pl_icon_smiley-angry.svg#pl_icon_smiley-angry\"></use>\n</svg>",
+                "Änderungen einzeln": "aria-label=\"Sehr unzufrieden\" (und entsprechend für andere Smileys)",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Interaktives Icon zur Abgabe von Feedback zur Zufriedenheit mit den Suchergebnissen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Ein div-Element wird mit role=\"button\" verwendet, anstatt ein natives button-Element zu nutzen. Dies kann zu Problemen bei der Tastaturbedienung führen, wenn nicht alle nativen Button-Eigenschaften emuliert werden.",
+                "Html Ausschnitt auf der Webseite": "<div class=\"squirrel_searchIcon js_squirrel_searchIcon svelte-1ml7eaa\" data-testid=\"squirrel-search-icon\" role=\"button\"><span class=\"p_icons squirrel_searchIcon__icon svelte-1ml7eaa\">»</span> <span class=\"squirrel_searchIcon__label svelte-1ml7eaa\">Suche</span></div>",
+                "CSS-Selektor": "div.squirrel_searchIcon",
+                "Änderungsvorschlag": "<button type=\"button\" class=\"squirrel_searchIcon js_squirrel_searchIcon svelte-1ml7eaa\" data-testid=\"squirrel-search-icon\" aria-label=\"Suche\"><span class=\"p_icons squirrel_searchIcon__icon svelte-1ml7eaa\" aria-hidden=\"true\">»</span> <span class=\"squirrel_searchIcon__label svelte-1ml7eaa\">Suche</span></button>",
+                "Änderungen einzeln": "div durch button ersetzen, type=\"button\" hinzufügen, aria-label zum button und aria-hidden=\"true\" zum icon hinzufügen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Button, der die Suchfunktion auslöst."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Ein div-Element wird als klickbarer Bereich für das Benutzerkonto verwendet, anstatt ein natives button- oder a-Element zu nutzen. Dies kann zu Problemen bei der Tastaturbedienung und der semantischen Interpretation führen.",
+                "Html Ausschnitt auf der Webseite": "<div class=\"us_loginArea us_js_loginAreaMenuHandle ub64e\" id=\"us_id_loginArea\" data-qa=\"user_login_area_header\" data-ub64e=\"amF2YXNjcmlwdDp2b2lkKDApOw==\">\n<span class=\"us_loginAreaIcon p_icons\" data-qa=\"user_login_area_icon\">\nΘ\n</span>\n                        <span class=\"us_iconSubtitle us_js_loginAreaIconSubtitle\" data-qa=\"user_login_area_icon_subtitle\" data-loggedin=\"false\" data-login-state=\"UNKNOWN_VISITOR\">\n                                        <span class=\"us_js_loginAreaIconSubtitleMyAccount\" data-qa=\"user_loginAreaIconSubtitleMyAccount\">Mein Konto</span>\n                                    </span>\n                    </div>",
+                "CSS-Selektor": "div.us_loginArea",
+                "Änderungsvorschlag": "<button type=\"button\" class=\"us_loginArea us_js_loginAreaMenuHandle ub64e\" id=\"us_id_loginArea\" data-qa=\"user_login_area_header\" aria-label=\"Mein Konto\">\n<span class=\"us_loginAreaIcon p_icons\" data-qa=\"user_login_area_icon\" aria-hidden=\"true\">\nΘ\n</span>\n                        <span class=\"us_iconSubtitle us_js_loginAreaIconSubtitle\" data-qa=\"user_login_area_icon_subtitle\" data-loggedin=\"false\" data-login-state=\"UNKNOWN_VISITOR\">\n                                        <span class=\"us_js_loginAreaIconSubtitleMyAccount\" data-qa=\"user_loginAreaIconSubtitleMyAccount\">Mein Konto</span>\n                                    </span>\n                    </button>",
+                "Änderungen einzeln": "div durch button ersetzen, type=\"button\" hinzufügen, aria-label zum button und aria-hidden=\"true\" zum icon hinzufügen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein klickbarer Bereich, der das Benutzerkonto-Menü öffnet."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Ein div-Element wird als Link zum Warenkorb verwendet, anstatt ein natives a-Element zu nutzen. Dies kann zu Problemen bei der Tastaturbedienung und der semantischen Interpretation führen.",
+                "Html Ausschnitt auf der Webseite": "<div class=\"or_minis or_minibasket order_js_minibasket_link ub64e ts-link\" data-ub64e=\"L29yZGVyL2Jhc2tldA==\" data-ts-link=\"{&quot;san_Header&quot;:&quot;basket&quot;,&quot;order_MiniBasket&quot;:0}\" title=\"Zum Warenkorb\">\n    <svg class=\"pl_icon100 or_minis__icon\" role=\"img\">\n        <use xlink:href=\"/assets-static/icons/pl_icon_basket.svg#pl_icon_basket\"></use>\n    </svg>\n    <span class=\"or_minis__badge or_minis__badge--empty pl_badge--red order_js_minibasket_amount\" data-loadurl=\"/order/basket/amount.json\" data-qa=\"miniBasketAmount\">0</span>\n    <span class=\"or_minis__text--large pl_copy75\">Warenkorb</span>\n    <span class=\"or_minis__text pl_copy50\">Warenkorb</span>\n</div>",
+                "CSS-Selektor": "div.or_minis",
+                "Änderungsvorschlag": "<a href=\"/order/basket\" class=\"or_minis or_minibasket order_js_minibasket_link\" data-ts-link=\"{&quot;san_Header&quot;:&quot;basket&quot;,&quot;order_MiniBasket&quot;:0}\" title=\"Zum Warenkorb\">\n    <svg class=\"pl_icon100 or_minis__icon\" role=\"img\" aria-label=\"Warenkorb Icon\">\n        <use xlink:href=\"/assets-static/icons/pl_icon_basket.svg#pl_icon_basket\"></use>\n    </svg>\n    <span class=\"or_minis__badge or_minis__badge--empty pl_badge--red order_js_minibasket_amount\" data-loadurl=\"/order/basket/amount.json\" data-qa=\"miniBasketAmount\">0</span>\n    <span class=\"or_minis__text--large pl_copy75\">Warenkorb</span>\n    <span class=\"or_minis__text pl_copy50\">Warenkorb</span>\n</a>",
+                "Änderungen einzeln": "div durch a ersetzen, href-Attribut hinzufügen, aria-label zum SVG hinzufügen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Link, der zum Warenkorb führt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "2",
+                "Beschreibung der Verletzung": "Die h4-Elemente 'BELIEBT' und 'WEITERE' innerhalb des Filterbereichs dienen als Überschriften für Gruppen von Filteroptionen, sind aber nicht semantisch korrekt mit den zugehörigen Listen verknüpft. Dies kann die Struktur für Screenreader unklar machen.",
+                "Html Ausschnitt auf der Webseite": "<h4 class=\"heureka_popularFacetValues--headline\"><span class=\"pl_copy75 pl_copy75--grey\">BELIEBT</span></h4>\n<ul class=\"find_facet__content find_facet__content--popularValues\">\n    ...\n</ul>\n<h4 class=\"heureka_popularFacetValues--headline heureka_popularFacetValues--second-headline\"><span class=\"pl_copy75 pl_copy75--grey\">WEITERE</span></h4>\n<ul class=\"find_facet__content\">\n    ...\n</ul>",
+                "CSS-Selektor": "div[data-parent-id=\"facet_categorypath\"] > h4",
+                "Änderungsvorschlag": "<h4 id=\"popular-heading\" class=\"heureka_popularFacetValues--headline\"><span class=\"pl_copy75 pl_copy75--grey\">BELIEBT</span></h4>\n<div role=\"group\" aria-labelledby=\"popular-heading\">\n    <ul class=\"find_facet__content find_facet__content--popularValues\">\n        ...\n    </ul>\n</div>\n<h4 id=\"other-heading\" class=\"heureka_popularFacetValues--headline heureka_popularFacetValues--second-headline\"><span class=\"pl_copy75 pl_copy75--grey\">WEITERE</span></h4>\n<div role=\"group\" aria-labelledby=\"other-heading\">\n    <ul class=\"find_facet__content\">\n        ...\n    </ul>\n</div>",
+                "Änderungen einzeln": "h4-Elementen IDs zuweisen und die nachfolgenden ul-Elemente in div-Elemente mit role=\"group\" und aria-labelledby verpacken.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Überschriften für Untergruppen von Filteroptionen (z.B. 'Beliebte Marken', 'Weitere Marken')."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "6",
+                "Beschreibung der Verletzung": "Das legend-Element innerhalb eines fieldset ist mit 'hidden' versehen, wodurch es für Screenreader unsichtbar wird. Ein fieldset benötigt ein zugängliches legend, um seine Gruppe von Formularfeldern zu beschreiben.",
+                "Html Ausschnitt auf der Webseite": "<fieldset id=\"facet_fashionsizeeuchildrenv2\" data-ts-feature-name=\"Facet\" data-ts-feature-parent-id=\"find_filter_groesse\" data-ts-feature-labels=\"{&quot;san_FacetName&quot;:[&quot;kindernormalgroessen&quot;],&quot;san_FacetCoverage&quot;:[&quot;0.10339709176236357&quot;],&quot;san_PopularFacetValueCount&quot;:[&quot;0&quot;],&quot;san_FacetValueCount&quot;:[&quot;26&quot;]}\" class=\"find_facet find_facet--chip\" data-facet-visibility=\"hidden\" data-facet-name=\"kindernormalgroessen\" hidden=\"\">\n<legend hidden=\"\"><span class=\"pl_headline50\">Kindernormalgrößen</span></legend>\n<ul class=\"find_facet__content\">\n    ...\n</ul>\n</fieldset>",
+                "CSS-Selektor": "fieldset[id^=\"facet_fashionsize\"] > legend[hidden]",
+                "Änderungsvorschlag": "<legend><span class=\"pl_headline50\">Kindernormalgrößen</span></legend>",
+                "Änderungen einzeln": "hidden-Attribut vom legend-Element entfernen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Beschriftung für eine Gruppe von Größenfiltern (z.B. 'Kindernormalgrößen')."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.5 Bestimmung des Eingabezwecks (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das E-Mail-Eingabefeld für den Newsletter hat kein autocomplete-Attribut, was die automatische Vervollständigung für Benutzer erschwert.",
+                "Html Ausschnitt auf der Webseite": "<oc-text-field-v1 id=\"newsletter-subscribe-footer-email-input\" class=\"newsletter-subscribe-footer-input oc-mt-50 oc-mb-100\" hide-counter=\"\" placeholder=\"E-Mail-Adresse\" type=\"email\" value=\"\" maxlength=\"80\">E-Mail-Adresse\n            </oc-text-field-v1>",
+                "CSS-Selektor": "input#newsletter-subscribe-footer-email-input",
+                "Änderungsvorschlag": "<oc-text-field-v1 id=\"newsletter-subscribe-footer-email-input\" class=\"newsletter-subscribe-footer-input oc-mt-50 oc-mb-100\" hide-counter=\"\" placeholder=\"E-Mail-Adresse\" type=\"email\" value=\"\" maxlength=\"80\" autocomplete=\"email\">E-Mail-Adresse\n            </oc-text-field-v1>",
+                "Änderungen einzeln": "autocomplete=\"email\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Eingabefeld für die E-Mail-Adresse zur Newsletter-Anmeldung."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.1 Blöcke umgehen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Es fehlt ein 'Zum Hauptinhalt springen'-Link, der es Benutzern von assistiven Technologien ermöglicht, wiederholende Header- und Navigationsinhalte zu überspringen.",
+                "Html Ausschnitt auf der Webseite": "<body class=\"san-system\">",
+                "CSS-Selektor": "body",
+                "Änderungsvorschlag": "<body class=\"san-system\">\n<a href=\"#reptile-content\" class=\"skip-link\">Zum Hauptinhalt springen</a>\n...",
+                "Änderungen einzeln": "Einfügen eines Skip-Links am Anfang des body-Elements, der auf die main-Content-ID verweist.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ermöglicht das Überspringen von wiederholenden Inhalten wie Navigation und Header."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.4 Linkzweck (Im Kontext) (A)",
+                "Anzahl der Verletzungen": "3",
+                "Beschreibung der Verletzung": "Der Linktext '+6' ist generisch und beschreibt nicht den Zweck des Links im Kontext der Farbvarianten eines Produkts. Screenreader-Benutzer erhalten keine ausreichenden Informationen über die Aktion des Links.",
+                "Html Ausschnitt auf der Webseite": "<li class=\"reptile_colorThumbLink js_reptile_colorThumbLink\">\n<oc-link-v2 base64-href=\"L3Avb25seS10LXNoaXJ0LW9ubGxpdmUtbG92ZS1uZXctMy10bGctM2VyLXBhY2stZmlndXItYmV0b250LWVsYXN0aXNjaGUtYmF1bXdvbGxxdWFsaXRhZXQtUzBPMUcwVVYvI3ZhcmlhdGlvbklkPVMwTzFHMFVWMExSUQ==\" size=\"100\"> <a class=\"\" href=\"/p/only-t-shirt-onllive-love-new-3-tlg-3er-pack-figur-betont-elastische-baumwollqualitaet-S0O1G0UV/\" data-link-type=\"text\" title=\"ONLY T-Shirt ONLLIVE LOVE NEW (3-tlg., 3er Pack) Figur betont, elastische Baumwollqualität\" tabindex=\"0\">+6</a> </oc-link-v2>\n</li>",
+                "CSS-Selektor": "li.reptile_colorThumbLink > oc-link-v2 > a",
+                "Änderungsvorschlag": "<a class=\"\" href=\"/p/only-t-shirt-onllive-love-new-3-tlg-3er-pack-figur-betont-elastische-baumwollqualitaet-S0O1G0UV/\" data-link-type=\"text\" title=\"Weitere Farben anzeigen\" aria-label=\"Weitere 6 Farben anzeigen\" tabindex=\"0\">+6</a>",
+                "Änderungen einzeln": "aria-label=\"Weitere 6 Farben anzeigen\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Link, der weitere Farbvarianten eines Produkts anzeigt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das Such-Eingabefeld hat kein explizites Label-Element oder aria-label. Es verlässt sich auf den Platzhaltertext, der für Screenreader nicht immer ausreichend ist, und auf aria-describedby, das eine Beschreibung, aber kein Label liefert.",
+                "Html Ausschnitt auf der Webseite": "<input class=\"squirrel_searchfield js_squirrel_searchbar__input oc-copy-125\" autocomplete=\"off\" type=\"text\" role=\"searchbox\" tabindex=\"0\" aria-describedby=\"squirrel_searchfieldDescription\" maxlength=\"150\" data-qa=\"ftfind-search-field\" data-qa-id=\"search-field\" data-testid=\"squirrel-searchfield\" data-target=\"https://www.otto.de/suche/t-shirt/#t=%7B%22wk.san_ActiveSearch%22%3A%22true%22%2C%22san_InitialSearch%22%3A%22true%22%2C%22san_Interaction%22%3A%22initial_search%22%2C%22wk.san_SearchType%22%3A%22search%22%7D\" placeholder=\"Wonach suchst du?\">",
+                "CSS-Selektor": "input.squirrel_searchfield",
+                "Änderungsvorschlag": "<label for=\"search-input-field\" class=\"sr-only\">Wonach suchst du?</label><input id=\"search-input-field\" class=\"squirrel_searchfield js_squirrel_searchbar__input oc-copy-125\" autocomplete=\"off\" type=\"text\" role=\"searchbox\" tabindex=\"0\" aria-describedby=\"squirrel_searchfieldDescription\" maxlength=\"150\" data-qa=\"ftfind-search-field\" data-qa-id=\"search-field\" data-testid=\"squirrel-searchfield\" data-target=\"https://www.otto.de/suche/t-shirt/#t=%7B%22wk.san_ActiveSearch%22%3A%22true%22%2C%22san_InitialSearch%22%3A%22true%22%2C%22san_Interaction%22%3A%22initial_search%22%2C%22wk.san_SearchType%22%3A%22search%22%7D\" placeholder=\"Wonach suchst du?\">",
+                "Änderungen einzeln": "Hinzufügen eines visuell versteckten label-Elements, das mit dem input-Feld verknüpft ist.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Haupt-Suchfeld im Header der Webseite."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "2",
+                "Beschreibung der Verletzung": "Das oc-tag-v1-Komponente mit dem 'Info'-Icon hat kein explizites aria-label für das Icon selbst, um seine Funktion für Screenreader zu beschreiben. Obwohl der Text '-XX% Extra' sichtbar ist, ist die Bedeutung des Info-Icons unklar.",
+                "Html Ausschnitt auf der Webseite": "<div class=\"reptile_tile__discountBenefitTag js_reptile_discountBenefit\" data-benefit-id=\"e4045459-58e4-4792-b731-83b7fe6bd419\">\n<oc-tag-v1 variant=\"sale\" size=\"50\" show-info-icon=\"\">-20% Extra</oc-tag-v1>\n</div>",
+                "CSS-Selektor": "div.reptile_tile__discountBenefitTag > oc-tag-v1",
+                "Änderungsvorschlag": "<div class=\"reptile_tile__discountBenefitTag js_reptile_discountBenefit\" data-benefit-id=\"e4045459-58e4-4792-b731-83b7fe6bd419\">\n<oc-tag-v1 variant=\"sale\" size=\"50\" show-info-icon=\"\" aria-label=\"Weitere Informationen zum Rabatt\">-20% Extra</oc-tag-v1>\n</div>",
+                "Änderungen einzeln": "aria-label=\"Weitere Informationen zum Rabatt\" zum oc-tag-v1 hinzufügen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Tag, der einen zusätzlichen Rabatt anzeigt und ein Info-Icon für weitere Details enthält."
+            }
+        ]
+    }
+]

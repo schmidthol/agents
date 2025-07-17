@@ -1,0 +1,212 @@
+[
+    {
+        "step": 1,
+        "description": "Suchergebnisseite",
+        "url": "https://www.otto.de/suche/t-shirt/",
+        "violations": [
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "4",
+                "Beschreibung der Verletzung": "SVG-Bilder, die informative Inhalte darstellen, fehlen ein zugänglicher Name (z.B. aria-label oder <title>).",
+                "Html Ausschnitt auf der Webseite": [
+                    "<svg class=\"pl_logo\" role=\"img\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                    "<svg class=\"pl_icon100 or_minis__icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_basket.svg#pl_icon_basket\"></use></svg>",
+                    "<svg class=\"pl_icon50 sponsoredHint--icon\" role=\"img\"><use href=\"/assets-static/icons/pl_icon_info-hint50.svg#pl_icon_info-hint50\" xlink:href=\"/assets-static/icons/pl_icon_info-hint50.svg#pl_icon_info-hint50\"></use></svg>",
+                    "<svg class=\"pl_icon_angry js_reptile_feedback\" role=\"img\" data-feedback-score=\"1\"><use xlink:href=\"/assets-static/icons/pl_icon_smiley-angry.svg#pl_icon_smiley-angry\"></use></svg>"
+                ],
+                "Änderungsvorschlag": [
+                    "<svg class=\"pl_logo\" role=\"img\" aria-label=\"OTTO Logo\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                    "<svg class=\"pl_icon100 or_minis__icon\" role=\"img\" aria-label=\"Warenkorb Icon\"><use xlink:href=\"/assets-static/icons/pl_icon_basket.svg#pl_icon_basket\"></use></svg>",
+                    "<svg class=\"pl_icon50 sponsoredHint--icon\" role=\"img\" aria-label=\"Information zu gesponserten Produkten\"><use href=\"/assets-static/icons/pl_icon_info-hint50.svg#pl_icon_info-hint50\" xlink:href=\"/assets-static/icons/pl_icon_info-hint50.svg#pl_icon_info-hint50\"></use></svg>",
+                    "<svg class=\"pl_icon_angry js_reptile_feedback\" role=\"img\" aria-label=\"Bewertung: 1 von 5 Sternen (sehr unzufrieden)\" data-feedback-score=\"1\"><use xlink:href=\"/assets-static/icons/pl_icon_smiley-angry.svg#pl_icon_smiley-angry\"></use></svg>"
+                ],
+                "Änderungen einzeln": "aria-label=\"OTTO Logo\", aria-label=\"Warenkorb Icon\", aria-label=\"Information zu gesponserten Produkten\", aria-label=\"Bewertung: [Wert] von 5 Sternen ([Beschreibung])\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Logos, Icons und interaktive Bewertungssymbole, die visuelle Informationen vermitteln."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "3",
+                "Beschreibung der Verletzung": "Schaltflächen, die nur ein Symbol oder einen nicht-semantischen Text als Beschriftung haben, fehlen ein zugänglicher Name.",
+                "Html Ausschnitt auf der Webseite": [
+                    "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow\" type=\"button\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                    "<button id=\"us_id_closeLoginMenuButton\" class=\"us_closeLoginMenuButton p_symbolBtn100--4th\" type=\"button\" data-qa=\"user_login_area_menu_close\"><i>x</i></button>",
+                    "<button id=\"find_filterSheetButton\" class=\"pl_button50--primary js_openFilterSheet find_filterSheetButton--mini\" data-ts-labels=\"{&quot;san_Foldout&quot;:&quot;filter_top_all&quot;,&quot;san_FilterWhatIf&quot;:&quot;e3387_true&quot;,&quot;san_PopularFacetValues&quot;:&quot;kategorien|marke|preis-in-eur|us-groessen|verkaeufer&quot;}\"><svg class=\"pl_icon100 find_filterSheetButton__icon--centered\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_filter.svg#pl_icon_filter\"></use></svg></button>"
+                ],
+                "Änderungsvorschlag": [
+                    "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow\" type=\"button\" aria-label=\"Vorheriger Artikel\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                    "<button id=\"us_id_closeLoginMenuButton\" class=\"us_closeLoginMenuButton p_symbolBtn100--4th\" type=\"button\" data-qa=\"user_login_area_menu_close\" aria-label=\"Menü schließen\"> <span aria-hidden=\"true\">x</span> </button>",
+                    "<button id=\"find_filterSheetButton\" class=\"pl_button50--primary js_openFilterSheet find_filterSheetButton--mini\" aria-label=\"Filter öffnen\"> <svg class=\"pl_icon100 find_filterSheetButton__icon--centered\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_filter.svg#pl_icon_filter\"></use></svg> </button>"
+                ],
+                "Änderungen einzeln": "aria-label=\"Vorheriger Artikel\", aria-label=\"Menü schließen\", aria-label=\"Filter öffnen\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Navigationspfeile in Karussells, Schließen-Buttons für Overlays und Buttons zum Öffnen von Filteroptionen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "8",
+                "Beschreibung der Verletzung": "Semantische Struktur und Beziehungen sind unzureichend oder fehlen.",
+                "Html Ausschnitt auf der Webseite": [
+                    "<input class=\"squirrel_searchfield js_squirrel_searchbar__input oc-copy-125\" autocomplete=\"off\" type=\"text\" role=\"searchbox\" tabindex=\"0\" aria-describedby=\"squirrel_searchfieldDescription\" maxlength=\"150\" data-qa=\"ftfind-search-field\" data-qa-id=\"search-field\" data-testid=\"squirrel-searchfield\" data-target=\"https://www.otto.de/suche/t-shirt/#t=%7B%22wk.san_ActiveSearch%22%3A%22true%22%2C%22san_InitialSearch%22%3A%22true%22%2C%22san_Interaction%22%3A%22initial_search%22%2C%22wk.san_SearchType%22%3A%22search%22%7D\" placeholder=\"Wonach suchst du?\">",
+                    "<h1 class=\"nav_grimm-breadcrumb-headline__title nav_grimm-breadcrumb-headline__title--nomargin nav_grimm-breadcrumb-headline__title--clickable\" data-nav-testing=\"breadcrumb-headline\" data-nav-track=\"true\" data-nav-tracking-click-breadcrumb-headline=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;san_SearchBoxAction&quot;:&quot;clickTitle&quot;}}]\"> „t-shirt</h1><div class=\"nav_grimm-breadcrumb-headline__quote\">“</div>",
+                    "<fieldset class=\"heureka_sorting__relevantValues\"><input data-ts-feature-ref=\"facetValue_categorypath_shirts>t-shirts\" data-ts-feature-labels=\"{&quot;san_FacetValue&quot;:[&quot;T-Shirts&quot;],&quot;san_TopFacetValue&quot;:[&quot;popular&quot;]}\" class=\"js_tValue\" type=\"hidden\" name=\"kategorien\" value=\"shirts>t-shirts\">",
+                    "<dt class=\"pl_accordion__header\">Marke<div class=\"heureka_filterHeaderButtons\" hidden=\"\"><button data-ts-feature-labels=\"{&quot;san_FilterMethod&quot;:[&quot;x_single_local&quot;]}\" class=\"pl_link75--secondary heureka_removeAllTrashCan ts_heureka_selectAll\" data-select-mode=\"deselect\" form=\"find_filter_marke\" type=\"button\" hidden=\"\"> <svg class=\"pl_icon100\" role=\"img\"> <use xlink:href=\"/assets-static/icons/pl_icon_delete.svg#pl_icon_delete\"></use> </svg> </button></div><svg class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-down.svg#pl_icon_arrow-down\"></use></svg> </dt>",
+                    "<div class=\"reptile_tile__discountBenefitTag js_reptile_discountBenefit\" data-benefit-id=\"e4045459-58e4-4792-b731-83b7fe6bd419\"><oc-tag-v1 variant=\"sale\" size=\"50\" show-info-icon=\"\">-20% Extra</oc-tag-v1></div>",
+                    "<span class=\"find_tile__previousPrice pl_copy75\">UVP <span class=\"find_tile__priceValue find_tile__priceValue--strikethrough\">39,95 €</span></span>",
+                    "<li class=\"reptile_colorThumb reptile_colorThumb--selected\" data-color-name=\"Mix 6 (Bu/Ka/Go)\" data-variation-id=\"S0O1G0UV0LRQ\"><div class=\"reptile_colorThumb__dot \" style=\"background:#683228\"></div></li>",
+                    "<span class=\"pl_headline50\">Auswahl enthält</span>"
+                ],
+                "Änderungsvorschlag": [
+                    "<label for=\"squirrel_searchfield\">Wonach suchst du?</label><input id=\"squirrel_searchfield\" class=\"squirrel_searchfield js_squirrel_searchbar__input oc-copy-125\" autocomplete=\"off\" type=\"text\" role=\"searchbox\" tabindex=\"0\" aria-describedby=\"squirrel_searchfieldDescription\" maxlength=\"150\" data-qa=\"ftfind-search-field\" data-qa-id=\"search-field\" data-testid=\"squirrel-searchfield\" data-target=\"https://www.otto.de/suche/t-shirt/#t=%7B%22wk.san_ActiveSearch%22%3A%22true%22%2C%22san_InitialSearch%22%3A%22true%22%2C%22san_Interaction%22%3A%22initial_search%22%2C%22wk.san_SearchType%22%3A%22search%22%7D\" placeholder=\"Wonach suchst du?\">",
+                    "<h1 class=\"nav_grimm-breadcrumb-headline__title nav_grimm-breadcrumb-headline__title--nomargin nav_grimm-breadcrumb-headline__title--clickable\" data-nav-testing=\"breadcrumb-headline\" data-nav-track=\"true\" data-nav-tracking-click-breadcrumb-headline=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;san_SearchBoxAction&quot;:&quot;clickTitle&quot;}}]\" aria-label=\"Suchergebnis für t-shirt\">„t-shirt“</h1>",
+                    "<fieldset class=\"heureka_sorting__relevantValues\"><legend class=\"visually-hidden\">Sortieren nach</legend><input data-ts-feature-ref=\"facetValue_categorypath_shirts>t-shirts\" data-ts-feature-labels=\"{&quot;san_FacetValue&quot;:[&quot;T-Shirts&quot;],&quot;san_TopFacetValue&quot;:[&quot;popular&quot;]}\" class=\"js_tValue\" type=\"hidden\" name=\"kategorien\" value=\"shirts>t-shirts\">",
+                    "<dt class=\"pl_accordion__header\"><button type=\"button\" aria-expanded=\"false\" aria-controls=\"find_filter_marke_content\">Marke<div class=\"heureka_filterHeaderButtons\" hidden=\"\"><button data-ts-feature-labels=\"{&quot;san_FilterMethod&quot;:[&quot;x_single_local&quot;]}\" class=\"pl_link75--secondary heureka_removeAllTrashCan ts_heureka_selectAll\" data-select-mode=\"deselect\" form=\"find_filter_marke\" type=\"button\" hidden=\"\"> <svg class=\"pl_icon100\" role=\"img\"> <use xlink:href=\"/assets-static/icons/pl_icon_delete.svg#pl_icon_delete\"></use> </svg> </button></div><svg class=\"pl_icon\" role=\"img\" aria-label=\"Filterbereich Marke ein-/ausklappen\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-down.svg#pl_icon_arrow-down\"></use></svg></button></dt>",
+                    "<button type=\"button\" class=\"reptile_tile__discountBenefitTag js_reptile_discountBenefit\" aria-label=\"Informationen zum 20% Extra Rabatt\" data-benefit-id=\"e4045459-58e4-4792-b731-83b7fe6bd419\"><oc-tag-v1 variant=\"sale\" size=\"50\" show-info-icon=\"\">-20% Extra</oc-tag-v1></button>",
+                    "<span class=\"find_tile__previousPrice pl_copy75\">UVP <del>39,95 €</del></span>",
+                    "<li class=\"reptile_colorThumb reptile_colorThumb--selected\" data-color-name=\"Mix 6 (Bu/Ka/Go)\" data-variation-id=\"S0O1G0UV0LRQ\"><button type=\"button\" aria-label=\"Farbe: Mix 6 (Bu/Ka/Go)\"><div class=\"reptile_colorThumb__dot \" style=\"background:#683228\" aria-hidden=\"true\"></div></button></li>",
+                    "<h2 class=\"pl_headline50\">Auswahl enthält</h2>"
+                ],
+                "Änderungen einzeln": "Hinzufügen von <label> für Input, Zusammenführen von Überschriftstext, Hinzufügen von <legend> zu <fieldset>, Umwandlung von <dt> in <button> mit ARIA-Attributen, Umwandlung von <div> in <button> mit ARIA-Label, Ersetzen von <span> durch <del>, Umwandlung von <li> in <button> mit ARIA-Label, Umwandlung von <span> in <h2>.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Formularfelder, Überschriften, Filteroptionen, Preisangaben und Farbauswahlen, die eine klare semantische Struktur benötigen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.3 Sensorische Eigenschaften (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Icon-Schriftzeichen werden ohne aria-hidden=\"true\" verwendet, obwohl ein sichtbarer Text vorhanden ist, was zu redundanten oder verwirrenden Ausgaben für Screenreader führen kann.",
+                "Html Ausschnitt auf der Webseite": [
+                    "<span class=\"p_icons squirrel_searchIcon__icon svelte-1ml7eaa\">»</span>",
+                    "<span class=\"p_icons find_headerIcon__icon\">s</span>",
+                    "<span class=\"us_loginAreaIcon p_icons\" data-qa=\"user_login_area_icon\">Θ</span>",
+                    "<span class=\"p_icons wl_mini__icon\">♥</span>"
+                ],
+                "Änderungsvorschlag": [
+                    "<span class=\"p_icons squirrel_searchIcon__icon svelte-1ml7eaa\" aria-hidden=\"true\">»</span>",
+                    "<span class=\"p_icons find_headerIcon__icon\" aria-hidden=\"true\">s</span>",
+                    "<span class=\"us_loginAreaIcon p_icons\" data-qa=\"user_login_area_icon\" aria-hidden=\"true\">Θ</span>",
+                    "<span class=\"p_icons wl_mini__icon\" aria-hidden=\"true\">♥</span>"
+                ],
+                "Änderungen einzeln": "aria-hidden=\"true\" zu den jeweiligen <span> Elementen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Visuelle Icons, die neben Textbeschriftungen stehen und daher für Screenreader ausgeblendet werden sollten."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.1 Blöcke umgehen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Es fehlt ein \"Springe zu Hauptinhalt\"-Link, der es Benutzern von assistiven Technologien ermöglicht, wiederholende Navigationsblöcke zu überspringen.",
+                "Html Ausschnitt auf der Webseite": "(Fehlen des Elements)",
+                "Änderungsvorschlag": "<a href=\"#main-content\" class=\"skip-link\">Zum Hauptinhalt springen</a>",
+                "Änderungen einzeln": "<a href=\"#main-content\" class=\"skip-link\">Zum Hauptinhalt springen</a>",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein unsichtbarer Link, der beim Fokussieren sichtbar wird und es ermöglicht, direkt zum Hauptinhalt der Seite zu springen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.4 Linkzweck (Im Kontext) (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Der Linktext \"+6\" ist außerhalb des Kontextes nicht vollständig aussagekräftig und sollte den Zweck klarer beschreiben.",
+                "Html Ausschnitt auf der Webseite": "<oc-link-v2 base64-href=\"L3Avb25seS10LXNoaXJ0LW9ubGxpdmUtbG92ZS1uZXctMy10bGctM2VyLXBhY2stZmlndXItYmV0b250LWVsYXN0aXNjaGUtYmF1bXdvbGxxdWFsaXRhZXQtUzBPMUcwVVYvI3ZhcmlhdGlvbklkPVMwTzFHMFVWMExSUQ==\" size=\"100\"> <a class=\"\" href=\"/p/only-t-shirt-onllive-love-new-3-tlg-3er-pack-figur-betont-elastische-baumwollqualitaet-S0O1G0UV/\" data-link-type=\"text\" title=\"ONLY T-Shirt ONLLIVE LOVE NEW (3-tlg., 3er Pack) Figur betont, elastische Baumwollqualität\" tabindex=\"0\">+6</a> </oc-link-v2>",
+                "Änderungsvorschlag": "<oc-link-v2 base64-href=\"L3Avb25seS10LXNoaXJ0LW9ubGxpdmUtbG92ZS1uZXctMy10bGctM2VyLXBhY2stZmlndXItYmV0b250LWVsYXN0aXNjaGUtYmF1bXdvbGxxdWFsaXRhZXQtUzBPMUcwVVYvI3ZhcmlhdGlvbklkPVMwTzFHMFVWMExSUQ==\" size=\"100\"> <a class=\"\" href=\"/p/only-t-shirt-onllive-love-new-3-tlg-3er-pack-figur-betont-elastische-baumwollqualitaet-S0O1G0UV/\" data-link-type=\"text\" title=\"Weitere 6 Farben anzeigen\" tabindex=\"0\">Weitere +6 Farben</a> </oc-link-v2>",
+                "Änderungen einzeln": "Linktext ändern zu \"Weitere +6 Farben\" oder aria-label=\"Weitere 6 Farben anzeigen\" hinzufügen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Link, der weitere Farbvarianten eines Produkts anzeigt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) AA",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Die Überschriftenhierarchie ist im Footer nicht korrekt, da ein <h1>-Element für einen untergeordneten Abschnitt verwendet wird.",
+                "Html Ausschnitt auf der Webseite": "<h1 class=\"oc-headline-100 oc-mb-75\" id=\"newsletter-footer-headline\">Newsletter anmelden &amp; Vorteile sichern</h1>",
+                "Änderungsvorschlag": "<h2 class=\"oc-headline-100 oc-mb-75\" id=\"newsletter-footer-headline\">Newsletter anmelden &amp; Vorteile sichern</h2>",
+                "Änderungen einzeln": "<h1> zu <h2> ändern.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Eine Überschrift für den Newsletter-Anmeldebereich im Footer."
+            },
+            {
+                "Verletztes WCAG_kriterium": "3.3.3 Fehlerempfehlung (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Ein wichtiger Zustimmungstext für den Newsletter ist standardmäßig ausgeblendet (display: none), was die Zugänglichkeit der Informationen beeinträchtigt.",
+                "Html Ausschnitt auf der Webseite": "<span class=\"oc-copy-75 newsletter-subscribe-footer-text\" id=\"newsletter-subscribe-footer-text\" style=\"display: none\">Ich möchte den Newsletter der Plattform otto.de, betrieben von der Otto GmbH &amp; Co. KGaA, erhalten und über Angebote, Trends und Aktionen des  Verkäufers OTTO und/oder anderer Verkäufer auf otto.de, per E-Mail informiert werden. Diese Einwilligung kann jederzeit mit Wirkung für die Zukunft unter www.otto.de/abmelden oder am Ende jedes E-Mail-Newsletters widerrufen werden.</span>",
+                "Änderungsvorschlag": "Das style=\"display: none\" Attribut entfernen und den Text mit einem entsprechenden Formularfeld (z.B. Checkbox) verknüpfen.",
+                "Änderungen einzeln": "style=\"display: none\" entfernen und ggf. Checkbox mit Label hinzufügen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Rechtlicher Zustimmungstext für die Newsletter-Anmeldung."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Nicht-semantische <span>-Elemente werden als interaktive Links oder Buttons verwendet, ohne dass ihre Rolle und ihr Zustand programmatisch korrekt an assistive Technologien übermittelt werden.",
+                "Html Ausschnitt auf der Webseite": [
+                    "<span class=\"ub64e p_link100--2nd us_js_loginAreaLink\" data-ub64e=\"L215YWNjb3VudC9kYXNoYm9hcmQ/ZW50cnlQb2ludD1sb2dpbkFyZWE=\" data-qa=\"user_login_area_menu_myaccount\" data-us-navi-destination=\"MyAccountOverview\"><span style=\"all: unset;\">\nMein Konto                </span></span>",
+                    "<span class=\"ub64e p_btn100--1st us_js_loginAreaLink\" data-ub64e=\"L2N1c3RvbWVyLWlkZW50aXR5L2xvZ2luP2VudHJ5UG9pbnQ9bG9naW5BcmVh\" data-qa=\"user_login_area_login\" data-us-navi-destination=\"Login\"><span style=\"all: unset;\">\nAnmelden            </span></span>"
+                ],
+                "Änderungsvorschlag": [
+                    "<a href=\"/myaccount/dashboard?entryPoint=loginArea\" class=\"p_link100--2nd us_js_loginAreaLink\" data-qa=\"user_login_area_menu_myaccount\" data-us-navi-destination=\"MyAccountOverview\">Mein Konto</a>",
+                    "<button type=\"button\" class=\"p_btn100--1st us_js_loginAreaLink\" data-qa=\"user_login_area_login\" data-us-navi-destination=\"Login\">Anmelden</button>"
+                ],
+                "Änderungen einzeln": "<span> zu <a> oder <button type=\"button\"> ändern und den Text direkt in das neue Element verschieben.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Navigationslinks und Aktionsbuttons im Header und Footer, die für eine korrekte Interaktion native HTML-Elemente verwenden sollten."
+            }
+        ]
+    },
+    {
+        "step": 2,
+        "description": "Produktdetailseite",
+        "url": "https://www.otto.de/p/jack-jones-t-shirt-basic-o-neck-3-tlg-3er-pack-etwas-laenger-geschnitten-nicht-zu-kurz-S0O1G0UW/#variationId=S0O1G0UW141E",
+        "violations": [
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "2",
+                "Beschreibung der Verletzung": "Informatives Logo (Slogan) hat kein zugängliches Attribut für Screenreader. Informative Produktbilder in den Empfehlungsbereichen haben leere Alt-Attribute.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_logo--grey\" role=\"img\" aria-hidden=\"true\" style=\"height: 40px;\"><use xlink:href=\"/assets-static/icons/pl_logo_slogan.svg#pl_logo_slogan\"></use></svg>\n<img alt=\"\" src=\"https://i.otto.de/i/otto/f48e181e-4d46-5f78-9831-78a5f6e6efcb?$tile_portrait$\" class=\"portrait\">",
+                "Änderungsvorschlag": "<svg class=\"pl_logo--grey\" role=\"img\" aria-label=\"OTTO Slogan: Macht glücklich.\" style=\"height: 40px;\"><use xlink:href=\"/assets-static/icons/pl_logo_slogan.svg#pl_logo_slogan\"></use></svg>\n<img alt=\"T-Shirt Basic V-Neck (3-tlg., 3er Pack) etwas länger geschnitten, nicht zu kurz\" src=\"https://i.otto.de/i/otto/f48e181e-4d46-5f78-9831-78a5f6e6efcb?$tile_portrait$\" class=\"portrait\">",
+                "Änderungen einzeln": "aria-label=\"OTTO Slogan: Macht glücklich.\"\nalt=\"T-Shirt Basic V-Neck (3-tlg., 3er Pack) etwas länger geschnitten, nicht zu kurz\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Slogan-Logo im Footer repräsentiert den Markenslogan. Die Produktbilder in den Empfehlungsbereichen zeigen visuell die empfohlenen Artikel."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Nicht-native Listenstruktur im Footer, die die semantische Beziehung zwischen Liste und Listenelementen für assistierende Technologien beeinträchtigt.",
+                "Html Ausschnitt auf der Webseite": "<div role=\"list\">\n    <div class=\"pl_mb50 pl_mt100\" role=\"listitem\">...</div>\n</div>",
+                "Änderungsvorschlag": "<ul>\n    <li class=\"pl_mb50 pl_mt100\">...</li>\n</ul>",
+                "Änderungen einzeln": "Ersetze <div role=\"list\"> durch <ul> und <div role=\"listitem\"> durch <li>.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Diese Elemente strukturieren die Links zu Zahlungsarten, Unternehmensinformationen und Partnern im Footer."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.5 Bestimmung des Eingabezwecks (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "E-Mail-Eingabefeld fehlt das 'autocomplete'-Attribut, um den Eingabezweck programmatisch zu identifizieren.",
+                "Html Ausschnitt auf der Webseite": "<oc-text-field-v1 id=\"newsletter-subscribe-footer-email-input\" class=\"newsletter-subscribe-footer-input oc-mt-50 oc-mb-100\" hide-counter=\"\" placeholder=\"E-Mail-Adresse\" type=\"email\" value=\"\" maxlength=\"80\">E-Mail-Adresse</oc-text-field-v1>",
+                "Änderungsvorschlag": "<oc-text-field-v1 id=\"newsletter-subscribe-footer-email-input\" autocomplete=\"email\" class=\"newsletter-subscribe-footer-input oc-mt-50 oc-mb-100\" hide-counter=\"\" placeholder=\"E-Mail-Adresse\" type=\"email\" value=\"\" maxlength=\"80\">E-Mail-Adresse</oc-text-field-v1>",
+                "Änderungen einzeln": "autocomplete=\"email\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Dies ist das Eingabefeld für die E-Mail-Adresse im Newsletter-Anmeldeformular im Footer."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.1 Blöcke umgehen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Es fehlt ein 'Skip-Link' am Anfang des Dokuments, um Hauptinhalte schnell zu erreichen.",
+                "Html Ausschnitt auf der Webseite": "Kein 'Skip-Link' am Anfang des <body>-Elements gefunden.",
+                "Änderungsvorschlag": "<a href=\"#main-content\" class=\"skip-link\">Zum Hauptinhalt springen</a>\n<div id=\"main-content\">...</div>",
+                "Änderungen einzeln": "Füge einen versteckten Link am Anfang des <body> hinzu, der auf den Hauptinhaltsbereich verweist.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein 'Skip-Link' ermöglicht es Nutzern von assistierenden Technologien, wiederkehrende Navigationsblöcke zu überspringen und direkt zum Hauptinhalt der Seite zu gelangen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.4 Linkzweck (Im Kontext) (A)",
+                "Anzahl der Verletzungen": "3",
+                "Beschreibung der Verletzung": "Leere Link-Elemente (<a>) für Produktbilder in Karussells und Thumbnails, die den Linkzweck nicht klar vermitteln. Histogramm-Links zeigen nur die Anzahl, nicht den Filterkontext.",
+                "Html Ausschnitt auf der Webseite": "<a href=\"...\" onclick=\"return false;\" title=\"Jack &amp; Jones T-Shirt Basic O-Neck (3-tlg., 3er Pack) etwas länger geschnitten, nicht zu kurz\"></a><div class=\"pdp_main-image__slide-content-wrapper\"><div class=\"pdp_main-image__slide-content js_pdp_main-image__slide-content\"><img alt=\"Jack &amp; Jones T-Shirt Basic O-Neck (3-tlg., 3er Pack) etwas länger geschnitten, nicht zu kurz\" class=\"pdp_main-image__image\" src=\"...\"></div></div>\n<oc-link-v2 class=\"pdp_cr_histogram__amount\" data-num-of-stars=\"5\" base64-href=\"L2t1bmRlbmJld2VydHVuZ2VuL1MwTzFHMFVXLz9maWx0ZXI9Zml2ZVN0YXIjdmFyaWF0aW9uSWQ9UzBPMUcwVVcxNDFF\" size=\"100\">(112)</oc-link-v2>",
+                "Änderungsvorschlag": "<a href=\"...\" title=\"Jack &amp; Jones T-Shirt Basic O-Neck (3-tlg., 3er Pack) etwas länger geschnitten, nicht zu kurz\"><img alt=\"Jack &amp; Jones T-Shirt Basic O-Neck (3-tlg., 3er Pack) etwas länger geschnitten, nicht zu kurz\" class=\"pdp_main-image__image\" src=\"...\"></a>\n<oc-link-v2 class=\"pdp_cr_histogram__amount\" data-num-of-stars=\"5\" base64-href=\"...\" size=\"100\" aria-label=\"112 Bewertungen mit 5 Sternen anzeigen\">(112)</oc-link-v2>",
+                "Änderungen einzeln": "Umschließe das <img> mit dem <a>-Tag.\nFüge aria-label=\"[Anzahl] Bewertungen mit [Anzahl] Sternen anzeigen\" hinzu.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Die leeren Links in den Bildkarussells sollen die Haupt- und alternativen Produktbilder anklickbar machen. Die Histogramm-Links sollen es ermöglichen, Kundenbewertungen nach Sternen zu filtern."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) AA",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Inkorrekte Überschriftenhierarchie: Ein H5-Element wird für einen Text verwendet, der keine Unterüberschrift ist, was die semantische Struktur stört.",
+                "Html Ausschnitt auf der Webseite": "<h5 class=\"pl_headline50 spa_dsa-ad--list-header\">Name des Werbetreibenden:</h5>",
+                "Änderungsvorschlag": "<span class=\"pl_headline50 spa_dsa-ad--list-header\">Name des Werbetreibenden:</span>",
+                "Änderungen einzeln": "Ersetze <h5> durch <span>.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Dieses Element kennzeichnet den Namen des Werbetreibenden in den gesponserten Produktempfehlungen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "3",
+                "Beschreibung der Verletzung": "Benutzerdefinierte Elemente (Custom Elements) wie 'nav-mobile-menu-button', 'oc-icon-button-v2', 'oc-button-v1', 'oc-link-v2' und 'oc-text-field-v1' müssen ihre Rolle und ihren Namen programmatisch korrekt offenlegen. Interaktive Elemente wie 'div' und 'span' werden als Links/Buttons verwendet, ohne die erforderlichen ARIA-Attribute und Tastaturinteraktionen.",
+                "Html Ausschnitt auf der Webseite": "<nav-mobile-menu-button class=\"nav_menu-toggle-button\" ... id=\"nav_menu-toggle-button\" style=\"display: none;\"><p class=\"nav_menu-toggle-button__icon\"></p><p class=\"nav_menu-toggle-button__title-closed\">Sortiment</p><p class=\"nav_menu-toggle-button__title-open\">Schließen</p></nav-mobile-menu-button>\n<div class=\"us_loginArea us_js_loginAreaMenuHandle ub64e\" id=\"us_id_loginArea\" data-qa=\"user_login_area_header\" data-ub64e=\"amF2YXNjcmlwdDp2b2lkKDApOw==\">\n<span class=\"ub64e p_link100--2nd us_js_loginAreaLink\" data-ub64e=\"L215YWNjb3VudC9kYXNoYm9hcmQ/ZW50cnlQb2ludD1sb2dpbkFyZWE=\" data-qa=\"user_login_area_menu_myaccount\" data-us-navi-destination=\"MyAccountOverview\"><span style=\"all: unset;\">Mein Konto</span></span>",
+                "Änderungsvorschlag": "<nav-mobile-menu-button role=\"button\" aria-label=\"Sortiment öffnen\" class=\"nav_menu-toggle-button\" ... id=\"nav_menu-toggle-button\" style=\"display: none;\"><p class=\"nav_menu-toggle-button__icon\"></p><p class=\"nav_menu-toggle-button__title-closed\">Sortiment</p><p class=\"nav_menu-toggle-button__title-open\">Schließen</p></nav-mobile-menu-button>\n<button type=\"button\" class=\"us_loginArea us_js_loginAreaMenuHandle\" id=\"us_id_loginArea\" data-qa=\"user_login_area_header\">...</button>\n<a href=\"/myaccount/dashboard?entryPoint=loginArea\" class=\"p_link100--2nd us_js_loginAreaLink\" data-qa=\"user_login_area_menu_myaccount\" data-us-navi-destination=\"MyAccountOverview\">Mein Konto</a>",
+                "Änderungen einzeln": "Füge role=\"button\" und aria-label=\"Sortiment öffnen\" zu nav-mobile-menu-button hinzu.\nErsetze <div role=\"link\"> durch <button type=\"button\"> oder <a>.\nErsetze <span role=\"link\"> durch <a> mit korrektem href.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Der mobile Menü-Button öffnet/schließt das Hauptnavigationsmenü. Der Login-Bereich im Header ermöglicht den Zugriff auf das Benutzerkonto. Die Links im Login-Menü und Footer navigieren zu verschiedenen Bereichen des Benutzerkontos oder zu Service-Seiten."
+            }
+        ]
+    }
+]

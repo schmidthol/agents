@@ -1,0 +1,223 @@
+[
+    {
+        "step": 1,
+        "description": "Suchergebnisseite",
+        "url": "https://www.otto.de/suche/t-shirt/",
+        "violations": [
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "19",
+                "Beschreibung der Verletzung": "Informative Bilder in Navigationselementen fehlen einen Alt-Text. Der Alt-Text sollte entweder leer sein, wenn die Information redundant ist, oder eine kurze Beschreibung des Bildes enthalten.",
+                "Html Ausschnitt auf der Webseite": "<img src=\"https://i.otto.de/i/otto/001_2021_42_sale_deal_des_tages_kleine_shoppromotion_design_189585?w=200&amp;h=200&amp;upscale=true\">",
+                "Änderungsvorschlag": "<img src=\"...\" alt=\"\">",
+                "Änderungen einzeln": "alt=\"\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Visuelle Darstellung von Kategorien oder Angeboten (z.B. 'Deal des Tages', 'Damen-Mode') in Navigationschips und mobilen Menü-Kacheln. Die Textbeschreibung ist bereits vorhanden."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "29",
+                "Beschreibung der Verletzung": "Das 'legend'-Element innerhalb von 'fieldset'-Elementen ist mit 'hidden=\"\"' versteckt, wodurch die Gruppierung von Formularfeldern für Screenreader nicht zugänglich ist.",
+                "Html Ausschnitt auf der Webseite": "<legend hidden=\"\"><span class=\"pl_headline50\">Marke</span></legend>",
+                "Änderungsvorschlag": "Entfernen Sie das 'hidden'-Attribut vom 'legend'-Element. Wenn eine visuelle Ausblendung erforderlich ist, verwenden Sie CSS-Techniken, die die Zugänglichkeit nicht beeinträchtigen (z.B. .sr-only Klasse).",
+                "Änderungen einzeln": "Entfernen von hidden=\"\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Beschreibt die Kategorie oder den Zweck einer Gruppe von Filteroptionen (z.B. 'Marke', 'Größe', 'Farbe') in der Filterleiste."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A) & 4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "8",
+                "Beschreibung der Verletzung": "Nicht-semantische HTML-Elemente (div, span) werden für interaktive Steuerelemente verwendet, ohne dass die korrekte Rolle und der Zustand für assistierende Technologien vollständig über ARIA-Attribute offengelegt werden. Dies erschwert die Bedienung und das Verständnis für Nutzer von Screenreadern und Tastaturnavigation.",
+                "Html Ausschnitt auf der Webseite": "<div class=\"squirrel_searchIcon js_squirrel_searchIcon svelte-1ml7eaa\" data-testid=\"squirrel-search-icon\" role=\"button\"><span class=\"p_icons squirrel_searchIcon__icon svelte-1ml7eaa\">»</span> <span class=\"squirrel_searchIcon__label svelte-1ml7eaa\">Suche</span></div>",
+                "Änderungsvorschlag": "Ersetzen Sie 'div' und 'span' Elemente mit entsprechenden nativen HTML-Elementen (<button> oder <a>). Falls dies nicht möglich ist, stellen Sie sicher, dass alle notwendigen ARIA-Attribute (role, aria-label, aria-expanded, etc.) korrekt gesetzt sind.",
+                "Änderungen einzeln": "Für Such-Icon: Ändern Sie <div ... role=\"button\"> zu <button type=\"button\">. Für Navigations-Chips: Ändern Sie <span ... role=\"button\"> zu <button type=\"button\">. Für Login-Bereich: Fügen Sie role=\"button\" aria-haspopup=\"menu\" aria-expanded=\"false\" zum <div> hinzu. Für Warenkorb-Link: Ändern Sie <div ... title=\"Zum Warenkorb\"> zu <a href=\"...\" title=\"Zum Warenkorb\">.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Diese Elemente dienen als Schaltflächen (z.B. Such-Icon, Navigations-Chips, Login-Bereich) oder Links (Warenkorb) und ermöglichen Interaktionen auf der Webseite."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A) & 4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "55",
+                "Beschreibung der Verletzung": "SVG-Icons, die entweder interaktiv sind oder Informationen vermitteln, fehlen einen zugänglichen Namen (z.B. aria-label oder <title>). Dekorative Icons, die redundant zu umgebendem Text sind, sollten mit aria-hidden=\"true\" versehen werden.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow\" type=\"button\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "Änderungsvorschlag": "Fügen Sie für interaktive Icons ohne Text eine 'aria-label' zum übergeordneten Button hinzu. Für dekorative Icons, die von umgebendem Text beschrieben werden, fügen Sie 'aria-hidden=\"true\"' zum SVG-Element hinzu. Für informative Icons, die keine Interaktion auslösen, fügen Sie ein <title> Element innerhalb des SVG hinzu.",
+                "Änderungen einzeln": "Für Carousel-Pfeile: Fügen Sie aria-label=\"Vorherige Ergebnisse\" oder aria-label=\"Nächste Ergebnisse\" zum <button> hinzu. Für Filter-Button: Fügen Sie aria-label=\"Filter öffnen\" zum <button> hinzu. Für Löschen-Button: Fügen Sie aria-label=\"Filter entfernen\" zum <button> hinzu. Für Akkordeon-Pfeile, Sponsored-Hinweis-Icons, Social-Proof-Tags, Stern-Icons, Checkmark-Icons, Megaphon-Icon: Fügen Sie aria-hidden=\"true\" zum <svg> hinzu. Für Nachhaltigkeits-Badge und OTTO UP Logo: Fügen Sie aria-label=\"Nachhaltigkeitsstandard: Förderung sozialer Initiativen\" bzw. aria-label=\"OTTO UP Logo\" zum <svg> hinzu. Für Smiley-Icons: Fügen Sie aria-label=\"Sehr unzufrieden\" bis aria-label=\"Sehr zufrieden\" zum <svg> hinzu.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Visuelle Elemente wie Pfeile in Karussells, Filter-Icons, Akkordeon-Pfeile, Löschen-Icons, Informations-Icons, Sterne für Bewertungen, Checkmarks und Logos. Sie dienen der Navigation, Information oder visuellen Unterstützung."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.1 Blöcke umgehen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Es fehlt ein 'Zum Hauptinhalt springen'-Link, der es Tastatur- und Screenreader-Nutzern ermöglicht, wiederkehrende Navigationsblöcke zu überspringen.",
+                "Html Ausschnitt auf der Webseite": "(Fehlendes Element am Anfang des Body-Tags)",
+                "Änderungsvorschlag": "Fügen Sie einen 'Skip-Link' als erstes fokussierbares Element im Body-Tag hinzu, der auf den Hauptinhaltsbereich der Seite verweist.",
+                "Änderungen einzeln": "<a href=\"#reptile-content\" class=\"skip-link\">Zum Hauptinhalt springen</a> (mit CSS für visuelle Ausblendung bis zum Fokus)",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ermöglicht das Überspringen von Header- und Navigationsbereichen, um direkt zum Suchergebnisbereich zu gelangen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.5 Bestimmung des Eingabezwecks (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das E-Mail-Eingabefeld im Newsletter-Anmeldeformular verwendet kein 'autocomplete'-Attribut, was die automatische Vervollständigung durch den Browser verhindert und die Zugänglichkeit beeinträchtigt.",
+                "Html Ausschnitt auf der Webseite": "<oc-text-field-v1 id=\"newsletter-subscribe-footer-email-input\" class=\"newsletter-subscribe-footer-input oc-mt-50 oc-mb-100\" hide-counter=\"\" placeholder=\"E-Mail-Adresse\" type=\"email\" value=\"\" maxlength=\"80\">E-Mail-Adresse</oc-text-field-v1>",
+                "Änderungsvorschlag": "Fügen Sie dem zugrunde liegenden <input>-Element (das von oc-text-field-v1 gerendert wird) das Attribut 'autocomplete=\"email\"' hinzu.",
+                "Änderungen einzeln": "autocomplete=\"email\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Input field for users to enter their email address to subscribe to the newsletter."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) AA",
+                "Anzahl der Verletzungen": "7",
+                "Beschreibung der Verletzung": "Visuelle Überschriften im Footer-Bereich sind als 'span'-Elemente mit Styling-Klassen implementiert, anstatt semantisch korrekte Überschriften-Tags (z.B. <h2>) zu verwenden. Dies beeinträchtigt die semantische Struktur der Seite und die Navigation für Screenreader-Nutzer.",
+                "Html Ausschnitt auf der Webseite": "<span class=\"pl_headline100 reptile_color_black100\">Wir sind gerne für dich da.</span>",
+                "Änderungsvorschlag": "Ersetzen Sie die 'span'-Elemente durch semantisch korrekte Überschriften-Tags (z.B. <h2>), um die Struktur und Hierarchie der Inhalte korrekt darzustellen.",
+                "Änderungen einzeln": "Ändern Sie <span> zu <h2>",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Überschriften, die verschiedene Informationsbereiche im Footer der Webseite strukturieren (z.B. 'Zahlungsarten', 'Über uns', 'Blogs')."
+            }
+        ]
+    },
+    {
+        "step": 2,
+        "description": "Produktdetailseite",
+        "url": "https://www.otto.de/p/jack-jones-t-shirt-basic-o-neck-3-tlg-3er-pack-etwas-laenger-geschnitten-nicht-zu-kurz-S0O1G0UW/#variationId=S0O1G0UW141E",
+        "violations": [
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "SVG-Logo im Header fehlt ein zugänglicher Name, der seinen Zweck beschreibt.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_logo\" role=\"img\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                "Änderungsvorschlag": "<svg class=\"pl_logo\" role=\"img\" aria-label=\"OTTO Logo\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                "Änderungen einzeln": "aria-label=\"OTTO Logo\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Logo repräsentiert die Marke OTTO und dient als Link zur Startseite."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "SVG-Icon für den Warenkorb im Header fehlt ein zugänglicher Name.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_icon100 or_minis__icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_basket.svg#pl_icon_basket\"></use></svg>",
+                "Änderungsvorschlag": "<svg class=\"pl_icon100 or_minis__icon\" role=\"img\" aria-label=\"Warenkorb Icon\"><use xlink:href=\"/assets-static/icons/pl_icon_basket.svg#pl_icon_basket\"></use></svg>",
+                "Änderungen einzeln": "aria-label=\"Warenkorb Icon\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Icon visualisiert den Warenkorb und ist Teil des Links zum Warenkorb."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Dekorative Stern-Icons in der Kundenbewertung sind nicht für Screenreader ausgeblendet.",
+                "Html Ausschnitt auf der Webseite": "<oc-icon-v1 size=\"100\" type=\"rating-filled\"></oc-icon-v1>",
+                "Änderungsvorschlag": "<oc-icon-v1 size=\"100\" type=\"rating-filled\" aria-hidden=\"true\"></oc-icon-v1>",
+                "Änderungen einzeln": "aria-hidden=\"true\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Diese Icons stellen visuell die Sterne der Kundenbewertung dar. Da der numerische Wert (z.B. '4.4 von 5') bereits im Text vorhanden ist, sind die einzelnen Sterne für Screenreader redundant und sollten ausgeblendet werden."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Generischer Alt-Text für Produktbild-Thumbnails in der Bildergalerie.",
+                "Html Ausschnitt auf der Webseite": "<img src=\"https://i.otto.de/i/otto/09ef2e35-8834-5a65-bb25-4a7f2ec563bc?$001PICT36$&amp;fmt=auto\" alt=\"Detailansicht des Produkts 0\">",
+                "Änderungsvorschlag": "<img src=\"...\" alt=\"Jack & Jones T-Shirt Basic O-Neck, Ansicht vorne\">",
+                "Änderungen einzeln": "alt=\"Jack & Jones T-Shirt Basic O-Neck, Ansicht vorne\" (Beispiel für eine spezifischere Beschreibung)",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Die Thumbnails zeigen verschiedene Ansichten des Produkts und ermöglichen die Auswahl des Hauptbildes."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Repetitiver und unzureichend spezifischer Alt-Text für Produktbilder in der Galerie.",
+                "Html Ausschnitt auf der Webseite": "<img class=\"pdp_zoom-image__content js_pdp_zoom-image__content pdp_image-gallery__image pdp_image-gallery__image-limit-height\" src=\"https://i.otto.de/i/otto/c88dcac7-13cb-5015-8fdf-a28ccf9a0e3e?h=380&amp;w=739&amp;sm=clamp&amp;upscale=true&amp;fmt=auto\" srcset=\"...\" alt=\"Jack &amp; Jones T-Shirt Basic O-Neck (3-tlg., 3er Pack) etwas länger geschnitten, nicht zu kurz\">",
+                "Änderungsvorschlag": "<img src=\"...\" alt=\"Jack & Jones T-Shirt Basic O-Neck, Modellansicht von der Seite\">",
+                "Änderungen einzeln": "alt=\"Jack & Jones T-Shirt Basic O-Neck, Modellansicht von der Seite\" (Beispiel für eine spezifischere Beschreibung)",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Die Bilder zeigen das Produkt in verschiedenen Ansichten und Kontexten, um dem Nutzer einen umfassenden visuellen Eindruck zu vermitteln."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Produktbilder in gesponserten Empfehlungen fehlen aussagekräftige Alt-Texte.",
+                "Html Ausschnitt auf der Webseite": "<img alt=\"\" src=\"https://i.otto.de/i/otto/f48e181e-4d46-5f78-9831-78a5f6e6efcb?$tile_portrait$\" class=\"portrait\">",
+                "Änderungsvorschlag": "<img alt=\"T-Shirt Basic V-Neck (3-tlg., 3er Pack) etwas länger geschnitten, nicht zu kurz\" src=\"...\">",
+                "Änderungen einzeln": "alt=\"T-Shirt Basic V-Neck (3-tlg., 3er Pack) etwas länger geschnitten, nicht zu kurz\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Bild zeigt ein empfohlenes Produkt in einem gesponserten Karussell, um die Aufmerksamkeit des Nutzers zu gewinnen und zum Klick anzuregen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "OTTO UP Logo in gesponserten Empfehlungen fehlt ein zugänglicher Name.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_logo--red\" id=\"pl_logo_otto-up\" role=\"img\"><use href=\"/assets-static/icons/pl_logo_otto-up.svg#pl_logo_otto-up\" xlink:href=\"/assets-static/icons/pl_logo_otto-up.svg#pl_logo_otto-up\"></use></svg>",
+                "Änderungsvorschlag": "<svg class=\"pl_logo--red\" id=\"pl_logo_otto-up\" role=\"img\" aria-label=\"OTTO UP Logo\"><use href=\"/assets-static/icons/pl_logo_otto-up.svg#pl_logo_otto-up\" xlink:href=\"/assets-static/icons/pl_logo_otto-up.svg#pl_logo_otto-up\"></use></svg>",
+                "Änderungen einzeln": "aria-label=\"OTTO UP Logo\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Logo zeigt an, dass der Artikel für OTTO UP Punkte berechtigt ist oder mit OTTO UP in Verbindung steht."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Nachhaltigkeits-Icon in gesponserten Empfehlungen fehlt ein zugänglicher Name.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_icon\" role=\"img\"><use href=\"/assets-static/icons/pl_icon_sustainable-organic-materials.svg#pl_icon_sustainable-organic-materials\" xlink:href=\"/assets-static/icons/pl_icon_sustainable-organic-materials.svg#pl_icon_sustainable-organic-materials\"></use></svg>",
+                "Änderungsvorschlag": "<svg class=\"pl_icon\" role=\"img\" aria-label=\"Nachhaltiges Material: Bio-Baumwolle\"><use href=\"/assets-static/icons/pl_icon_sustainable-organic-materials.svg#pl_icon_sustainable-organic-materials\" xlink:href=\"/assets-static/icons/pl_icon_sustainable-organic-materials.svg#pl_icon_sustainable-organic-materials\"></use></svg>",
+                "Änderungen einzeln": "aria-label=\"Nachhaltiges Material: Bio-Baumwolle\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Icon weist auf nachhaltige Eigenschaften des Produkts hin, wie z.B. die Verwendung von Bio-Materialien."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "OTTO UP Logo in 'Ähnliche Artikel' fehlt ein zugänglicher Name.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_logo--red svelte-1ey7asn\" id=\"pl_logo_otto-up\" role=\"img\"><use href=\"/assets-static/icons/pl_logo_otto-up.svg#pl_logo_otto-up\" xlink:href=\"/assets-static/icons/pl_logo_otto-up.svg#pl_logo_otto-up\"></use></svg>",
+                "Änderungsvorschlag": "<svg class=\"pl_logo--red svelte-1ey7asn\" id=\"pl_logo_otto-up\" role=\"img\" aria-label=\"OTTO UP Logo\"><use href=\"/assets-static/icons/pl_logo_otto-up.svg#pl_logo_otto-up\" xlink:href=\"/assets-static/icons/pl_logo_otto-up.svg#pl_logo_otto-up\"></use></svg>",
+                "Änderungen einzeln": "aria-label=\"OTTO UP Logo\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Logo zeigt an, dass der Artikel für OTTO UP Punkte berechtigt ist oder mit OTTO UP in Verbindung steht."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Nachhaltigkeits-Icon in 'Ähnliche Artikel' fehlt ein zugänglicher Name.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_icon svelte-7uyaq3\" role=\"img\"><use href=\"/assets-static/icons/pl_icon_sustainable-social-initiatives.svg#pl_icon_sustainable-social-initiatives\"></use></svg>",
+                "Änderungsvorschlag": "<svg class=\"pl_icon svelte-7uyaq3\" role=\"img\" aria-label=\"Nachhaltigkeit: Förderung sozialer Initiativen\"><use href=\"/assets-static/icons/pl_icon_sustainable-social-initiatives.svg#pl_icon_sustainable-social-initiatives\"></use></svg>",
+                "Änderungen einzeln": "aria-label=\"Nachhaltigkeit: Förderung sozialer Initiativen\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Icon weist auf nachhaltige Eigenschaften des Produkts hin, wie z.B. die Förderung sozialer Initiativen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Checkmark-Icon für 'Verifizierter Kauf' ist nicht für Screenreader ausgeblendet.",
+                "Html Ausschnitt auf der Webseite": "<oc-icon-v1 size=\"50\" type=\"check\"></oc-icon-v1>",
+                "Änderungsvorschlag": "<oc-icon-v1 size=\"50\" type=\"check\" aria-hidden=\"true\"></oc-icon-v1>",
+                "Änderungen einzeln": "aria-hidden=\"true\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Icon visualisiert die Verifizierung eines Kaufs. Da der Text 'Verifizierter Kauf' daneben steht, ist das Icon rein dekorativ und sollte ausgeblendet werden."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Produktdetails-Tabelle ist nicht semantisch korrekt ausgezeichnet (fehlen `<th>` und `scope`).",
+                "Html Ausschnitt auf der Webseite": "<table class=\"dv_characteristicsTable\"><tbody><tr><td class=\"left\"><span>Materialzusammensetzung</span></td><td>92% Baumwolle, 8% Elasthan</td></tr><tr><td class=\"left\"><span>Materialart</span></td><td>Jersey</td></tr></tbody></table>",
+                "Änderungsvorschlag": "<table class=\"dv_characteristicsTable\"><thead><tr><th scope=\"col\">Eigenschaft</th><th scope=\"col\">Wert</th></tr></thead><tbody><tr><th scope=\"row\">Materialzusammensetzung</th><td>92% Baumwolle, 8% Elasthan</td></tr><tr><th scope=\"row\">Materialart</th><td>Jersey</td></tr></tbody></table>",
+                "Änderungen einzeln": "Verwendung von `<thead>`, `<th>` mit `scope=\"col\"` für Spaltenüberschriften und `<th>` mit `scope=\"row\"` für Zeilenüberschriften.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Die Tabelle listet detaillierte Eigenschaften des Produkts auf, wie Material, Pflegehinweise und Passform."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.4 Linkzweck (Im Kontext) (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Der Link mit dem Ellipsen-Zeichen in der Breadcrumb-Navigation hat einen unklaren Zweck.",
+                "Html Ausschnitt auf der Webseite": "<a class=\"nav_grimm-breadcrumb__link ts-link\" data-nav-testing=\"breadcrumb-path-element-link\" data-ts-link=\"{&quot;san_Interaction&quot;:&quot;breadcrumb&quot;, &quot;san_Navigation&quot;:&quot;Breadcrumb&quot;, &quot;wk.nav_BreadcrumbType&quot;: &quot;breadcrumb&quot;}\" href=\"/herren/mode/\">…</a>",
+                "Änderungsvorschlag": "<a class=\"nav_grimm-breadcrumb__link ts-link\" aria-label=\"Vorherige Kategorien anzeigen\" href=\"/herren/mode/\">…</a>",
+                "Änderungen einzeln": "aria-label=\"Vorherige Kategorien anzeigen\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Dieser Link in der Breadcrumb-Navigation soll auf eine verkürzte oder übergeordnete Kategorieebene hinweisen, um die Navigation zu vereinfachen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.4 Linkzweck (Im Kontext) (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Der '... mehr' Button in der Kurzbeschreibung hat einen unklaren Zweck.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"pdp_short-info__expand-button js_pdp_short-info__expand-button pl_link--secondary pl_copy100\">... mehr</button>",
+                "Änderungsvorschlag": "<button class=\"pdp_short-info__expand-button js_pdp_short-info__expand-button pl_link--secondary pl_copy100\" aria-label=\"Mehr Produktinformationen anzeigen\">... mehr</button>",
+                "Änderungen einzeln": "aria-label=\"Mehr Produktinformationen anzeigen\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Dieser Button dient dazu, weitere Details oder eine längere Version der Produktinformationen anzuzeigen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.4 Linkzweck (Im Kontext) (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Die Links zur Filterung von Kundenbewertungen (z.B. '(112)') haben einen unklaren Zweck, da sie nur die Anzahl anzeigen.",
+                "Html Ausschnitt auf der Webseite": "<oc-link-v2 class=\"pdp_cr_histogram__amount\" data-num-of-stars=\"5\" base64-href=\"L2t1bmRlbmJld2VydHVuZ2VuL1MwTzFHMFVXLz9maWx0ZXI9Zml2ZVN0YXIjdmFyaWF0aW9uSWQ9UzBPMUcwVVcxNDFF\" size=\"100\">(112)</oc-link-v2>",
+                "Änderungsvorschlag": "<oc-link-v2 class=\"pdp_cr_histogram__amount\" data-num-of-stars=\"5\" base64-href=\"...\" size=\"100\" aria-label=\"Zeige 112 Bewertungen mit 5 Sternen\">(112)</oc-link-v2>",
+                "Änderungen einzeln": "aria-label=\"Zeige 112 Bewertungen mit 5 Sternen\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Diese Links ermöglichen es Nutzern, Kundenbewertungen nach der Anzahl der Sterne zu filtern und die entsprechenden Bewertungen anzuzeigen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das 'Mein Konto' Element, das als Button fungiert, hat keine explizite Rolle und keinen Zustand für Screenreader.",
+                "Html Ausschnitt auf der Webseite": "<div class=\"us_loginArea us_js_loginAreaMenuHandle ub64e\" id=\"us_id_loginArea\" data-qa=\"user_login_area_header\" data-ub64e=\"amF2YXNjcmlwdDp2b2lkKDApOw==\">",
+                "Änderungsvorschlag": "<div class=\"us_loginArea us_js_loginAreaMenuHandle ub64e\" id=\"us_id_loginArea\" data-qa=\"user_login_area_header\" data-ub64e=\"amF2YXNjcmlwdDp2b2lkKDApOw==\" role=\"button\" aria-expanded=\"false\" aria-controls=\"us_id_loginAreaMenu\">",
+                "Änderungen einzeln": "role=\"button\" aria-expanded=\"false\" aria-controls=\"us_id_loginAreaMenu\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Dieses Element dient als interaktiver Bereich, der beim Klicken ein Menü für den Benutzerbereich ('Mein Konto') öffnet oder schließt."
+            }
+        ]
+    }
+]

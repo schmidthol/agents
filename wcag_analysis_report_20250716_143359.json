@@ -1,0 +1,149 @@
+[
+    {
+        "step": 1,
+        "description": "Suchergebnisseite",
+        "url": "https://www.otto.de/suche/t-shirt/",
+        "violations": [
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "Mehrere",
+                "Beschreibung der Verletzung": "Informative SVG-Grafiken oder Font-Icons, die als nicht-textueller Inhalt dienen, haben keinen zugänglichen Namen (z.B. durch <title> im SVG oder aria-label). Obwohl teilweise sichtbarer Text vorhanden ist, fehlt die explizite Benennung für Screenreader, oder die Icons sind nicht als dekorativ markiert.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_logo\" role=\"img\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                "CSS-Selektor": "header.reptile_header div.find_ottoLogo > a > svg.pl_logo",
+                "Änderungsvorschlag": "<svg class=\"pl_logo\" role=\"img\" aria-label=\"OTTO Logo\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                "Änderungen einzeln": "aria-label=\"OTTO Logo\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Firmenlogo im Header-Bereich, das zur Startseite verlinkt. Es ist ein wichtiges Orientierungselement."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "Mehrere",
+                "Beschreibung der Verletzung": "Interaktive Icons (Pfeile in Slidern, Filter-Button) haben keinen zugänglichen Namen, obwohl sie eine Funktion auslösen. Screenreader-Nutzer können die Funktion der Schaltfläche nicht verstehen.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow\" type=\"button\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "CSS-Selektor": "div.nav_slider__button-left > button.pl_carousel__arrow",
+                "Änderungsvorschlag": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow\" type=\"button\" aria-label=\"Vorheriger Suchvorschlag\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "Änderungen einzeln": "aria-label=\"Vorheriger Suchvorschlag\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Schaltfläche zum Navigieren in einem horizontalen Slider mit Suchvorschlägen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "Mehrere",
+                "Beschreibung der Verletzung": "Header-Icons (Service, Mein Konto, Merkzettel, Warenkorb) sind als Font-Icons oder SVGs ohne expliziten zugänglichen Namen implementiert. Obwohl sichtbarer Text vorhanden ist, sollten die Icons selbst als dekorativ markiert oder mit einem aria-label versehen werden, um Redundanz oder fehlende Semantik zu vermeiden.",
+                "Html Ausschnitt auf der Webseite": "<span class=\"p_icons find_headerIcon__icon\">s</span>\n                    <span class=\"find_headerIcon__label\">Service</span>",
+                "CSS-Selektor": "div.find_headerIcon.find_serviceIcon > a > span.p_icons",
+                "Änderungsvorschlag": "<span class=\"p_icons find_headerIcon__icon\" aria-hidden=\"true\">s</span>\n                    <span class=\"find_headerIcon__label\">Service</span>",
+                "Änderungen einzeln": "aria-hidden=\"true\" zum Icon-Span hinzufügen",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Visuelles Icon für den Service-Link im Header."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "Mehrere",
+                "Beschreibung der Verletzung": "Farbauswahl-Elemente sind rein visuell durch ihre Hintergrundfarbe dargestellt und haben keinen zugänglichen Namen, der die Farbe beschreibt. Dies ist für farbblinde oder sehbehinderte Nutzer nicht verständlich.",
+                "Html Ausschnitt auf der Webseite": "<li class=\"reptile_colorThumb reptile_colorThumb--selected\" data-color-name=\"Mix 6 (Bu/Ka/Go)\" data-variation-id=\"S0O1G0UV0LRQ\"><div class=\"reptile_colorThumb__dot \" style=\"background:#683228\"></div></li>",
+                "CSS-Selektor": "ul.reptile_colorThumbs > li.reptile_colorThumb",
+                "Änderungsvorschlag": "<li class=\"reptile_colorThumb reptile_colorThumb--selected\" data-color-name=\"Mix 6 (Bu/Ka/Go)\" data-variation-id=\"S0O1G0UV0LRQ\"><div class=\"reptile_colorThumb__dot \" style=\"background:#683228\" aria-label=\"Farbe: Mix 6 (Bu/Ka/Go)\"></div></li>",
+                "Änderungen einzeln": "aria-label=\"Farbe: Mix 6 (Bu/Ka/Go)\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Visuelle Darstellung einer verfügbaren Produktfarbe auf einer Produktkachel."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "Mehrere",
+                "Beschreibung der Verletzung": "Die Sterne für die Produktbewertung sind als SVG-Grafiken ohne zugänglichen Namen implementiert. Obwohl die Anzahl der Bewertungen daneben steht, wird die visuelle Bewertung (z.B. '4 von 5 Sternen') nicht an Screenreader übermittelt.",
+                "Html Ausschnitt auf der Webseite": "<span class=\"reptile_tile__rating__stars\"><svg class=\"pl_icon50\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_rating-filled50.svg#pl_icon_rating-filled50\"></use></svg><svg class=\"pl_icon50\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_rating-filled50.svg#pl_icon_rating-filled50\"></use></svg><svg class=\"pl_icon50\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_rating-filled50.svg#pl_icon_rating-filled50\"></use></svg><svg class=\"pl_icon50\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_rating-filled50.svg#pl_icon_rating-filled50\"></use></svg><svg class=\"pl_icon50\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_rating-empty50.svg#pl_icon_rating-empty50\"></use></svg></span>\n<span class=\"reptile_tile__rating__number\">(383)</span>",
+                "CSS-Selektor": "span.reptile_tile__rating__stars",
+                "Änderungsvorschlag": "<span class=\"reptile_tile__rating__stars\" aria-label=\"4 von 5 Sternen\"><svg class=\"pl_icon50\" role=\"img\" aria-hidden=\"true\"><use xlink:href=\"/assets-static/icons/pl_icon_rating-filled50.svg#pl_icon_rating-filled50\"></use></svg><svg class=\"pl_icon50\" role=\"img\" aria-hidden=\"true\"><use xlink:href=\"/assets-static/icons/pl_icon_rating-filled50.svg#pl_icon_rating-filled50\"></use></svg><svg class=\"pl_icon50\" role=\"img\" aria-hidden=\"true\"><use xlink:href=\"/assets-static/icons/pl_icon_rating-filled50.svg#pl_icon_rating-filled50\"></use></svg><svg class=\"pl_icon50\" role=\"img\" aria-hidden=\"true\"><use xlink:href=\"/assets-static/icons/pl_icon_rating-filled50.svg#pl_icon_rating-filled50\"></use></svg><svg class=\"pl_icon50\" role=\"img\" aria-hidden=\"true\"><use xlink:href=\"/assets-static/icons/pl_icon_rating-empty50.svg#pl_icon_rating-empty50\"></use></svg></span>",
+                "Änderungen einzeln": "aria-label=\"4 von 5 Sternen\" zum Container-Span hinzufügen und aria-hidden=\"true\" zu den einzelnen SVG-Sternen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Visuelle Darstellung der durchschnittlichen Kundenbewertung eines Produkts auf der Produktkachel."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "Mehrere",
+                "Beschreibung der Verletzung": "Gruppierungen von Formularfeldern (Fieldsets) haben eine versteckte Legende, wodurch die Beziehung zwischen der Gruppe und ihrem Zweck für Screenreader-Nutzer nicht programmatisch ermittelbar ist.",
+                "Html Ausschnitt auf der Webseite": "<fieldset id=\"facet_fashionsizeusv2\" data-ts-feature-name=\"Facet\" data-ts-feature-parent-id=\"find_filter_groesse\" data-ts-feature-status=\"visible\" data-ts-feature-labels=\"{&quot;san_FacetName&quot;:[&quot;us-groessen&quot;],&quot;san_FacetCoverage&quot;:[&quot;0.7898059842910147&quot;],&quot;san_PopularFacetValueCount&quot;:[&quot;7&quot;],&quot;san_FacetValueCount&quot;:[&quot;19&quot;]}\" class=\"find_facet find_facet--chip\" data-facet-visibility=\"relevant\" data-facet-name=\"us-groessen\" data-next-best-action-candidate=\"true\">\n<legend hidden=\"\"><span class=\"pl_headline50\">US-Größen</span></legend>",
+                "CSS-Selektor": "fieldset[id^='facet_'][hidden]",
+                "Änderungsvorschlag": "<fieldset id=\"facet_fashionsizeusv2\" ...><legend><span class=\"pl_headline50\">US-Größen</span></legend>...",
+                "Änderungen einzeln": "Entfernen des 'hidden' Attributs von <legend>.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Gruppiert verschiedene Größenoptionen innerhalb der Filterleiste, um die Auswahl zu strukturieren."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.3 Sensorische Eigenschaften (A)",
+                "Anzahl der Verletzungen": "Mehrere",
+                "Beschreibung der Verletzung": "Informationen über die Anzahl der Produkte pro Größe werden nur visuell in einem Tooltip angezeigt, nicht aber direkt im zugänglichen Namen des Elements. Dies kann für Nutzer von assistiven Technologien unzugänglich sein.",
+                "Html Ausschnitt auf der Webseite": "<span class=\"find_facetValue__label js_hasPaliTooltip\" data-tooltip=\"XXXS <span>(6)</span>\" data-tooltip-pos=\"mouse\" data-tooltip-touch=\"false\">XXXS</span>",
+                "CSS-Selektor": "span.find_facetValue__label[data-tooltip]",
+                "Änderungsvorschlag": "<span class=\"find_facetValue__label js_hasPaliTooltip\" data-tooltip=\"XXXS <span>(6)</span>\" data-tooltip-pos=\"mouse\" data-tooltip-touch=\"false\" aria-label=\"XXXS (6)\">XXXS</span>",
+                "Änderungen einzeln": "aria-label=\"XXXS (6)\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Zeigt eine verfügbare Größe in der Filterleiste an und gibt in einem Tooltip die Anzahl der Produkte für diese Größe an."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.5 Bestimmung des Eingabezwecks (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das Eingabefeld für die E-Mail-Adresse im Newsletter-Anmeldeformular hat kein 'autocomplete' Attribut, um den Zweck des Feldes programmatisch zu identifizieren.",
+                "Html Ausschnitt auf der Webseite": "<oc-text-field-v1 id=\"newsletter-subscribe-footer-email-input\" class=\"newsletter-subscribe-footer-input oc-mt-50 oc-mb-100\" hide-counter=\"\" placeholder=\"E-Mail-Adresse\" type=\"email\" value=\"\" maxlength=\"80\">E-Mail-Adresse</oc-text-field-v1>",
+                "CSS-Selektor": "#newsletter-subscribe-footer-email-input",
+                "Änderungsvorschlag": "<oc-text-field-v1 id=\"newsletter-subscribe-footer-email-input\" class=\"newsletter-subscribe-footer-input oc-mt-50 oc-mb-100\" hide-counter=\"\" placeholder=\"E-Mail-Adresse\" type=\"email\" value=\"\" maxlength=\"80\" autocomplete=\"email\">E-Mail-Adresse</oc-text-field-v1>",
+                "Änderungen einzeln": "autocomplete=\"email\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Eingabefeld für die E-Mail-Adresse zur Anmeldung für den Newsletter im Footer."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.1 Blöcke umgehen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Es fehlt ein Mechanismus (z.B. ein 'Zum Hauptinhalt springen'-Link), um wiederholte Inhaltsblöcke (wie Header oder Navigation) zu überspringen. Dies erschwert die Navigation für Tastatur- und Screenreader-Nutzer.",
+                "Html Ausschnitt auf der Webseite": "<body class=\"san-system\">...",
+                "CSS-Selektor": "body",
+                "Änderungsvorschlag": "Fügen Sie am Anfang des <body>-Elements einen 'Skip-Link' ein, der auf den Hauptinhaltsbereich verweist. Beispiel: <a href=\"#main-content\" class=\"skip-link\">Zum Hauptinhalt springen</a> und fügen Sie dem Hauptinhaltsbereich die ID 'main-content' hinzu.",
+                "Änderungen einzeln": "Hinzufügen eines Skip-Links und einer ID zum Hauptinhalt.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Der gesamte Seiteninhalt, der wiederkehrende Header- und Navigationsblöcke enthält."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.4 Linkzweck (Im Kontext) (A)",
+                "Anzahl der Verletzungen": "Mehrere",
+                "Beschreibung der Verletzung": "Links wie '+6' zur Anzeige weiterer Farboptionen sind nicht ausreichend beschreibend im Kontext. Nutzer von Screenreadern könnten den Zweck des Links missverstehen.",
+                "Html Ausschnitt auf der Webseite": "<li class=\"reptile_colorThumbLink js_reptile_colorThumbLink\"><oc-link-v2 base64-href=\"L3Avb25seS10LXNoaXJ0LW9ubGxpdmUtbG92ZS1uZXctMy10bGctM2VyLXBhY2stZmlndXItYmV0b250LWVsYXN0aXNjaGUtYmF1bXdvbGxxdWFsaXRhZXQtUzBPMUcwVVYvI3ZhcmlhdGlvbklkPVMwTzFHMFVWMExSUQ==\" size=\"100\"> <a class=\"\" href=\"/p/only-t-shirt-onllive-love-new-3-tlg-3er-pack-figur-betont-elastische-baumwollqualitaet-S0O1G0UV/\" data-link-type=\"text\" title=\"ONLY T-Shirt ONLLIVE LOVE NEW (3-tlg., 3er Pack) Figur betont, elastische Baumwollqualität\" tabindex=\"0\">+6</a> </oc-link-v2></li>",
+                "CSS-Selektor": "li.reptile_colorThumbLink > oc-link-v2 > a",
+                "Änderungsvorschlag": "<a class=\"\" href=\"/p/only-t-shirt-onllive-love-new-3-tlg-3er-pack-figur-betont-elastische-baumwollqualitaet-S0O1G0UV/\" data-link-type=\"text\" title=\"ONLY T-Shirt ONLLIVE LOVE NEW (3-tlg., 3er Pack) Figur betont, elastische Baumwollqualität\" tabindex=\"0\" aria-label=\"Weitere 6 Farben anzeigen\">+6</a>",
+                "Änderungen einzeln": "aria-label=\"Weitere 6 Farben anzeigen\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Link, der weitere verfügbare Farbvarianten eines Produkts auf der Suchergebnisseite anzeigt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "Mehrere",
+                "Beschreibung der Verletzung": "Benutzerdefinierte Web-Komponenten ('oc-icon-button-v2', 'oc-switch-v2', 'oc-accordion-v1') verwenden nicht-standardisierte Attribute ('oc-aria-label', 'title') anstelle von nativen ARIA-Attributen, um ihre Beschriftung oder ihren Zweck zugänglich zu machen. Dies kann dazu führen, dass assistive Technologien die Elemente nicht korrekt interpretieren.",
+                "Html Ausschnitt auf der Webseite": "<oc-icon-button-v2 class=\"squirrel_delete-button js_squirrel_searchbar__delete\" oc-aria-label=\"Suchbegriff löschen\" data-qa-id=\"search-field-reset\" data-qa=\"ftfind-search-reset\" data-testid=\"search-field-reset\" icon-color=\"var(--oc-base-color-gray-400, #6d6d6d)\" size=\"50\"></oc-icon-button-v2>",
+                "CSS-Selektor": "oc-icon-button-v2[oc-aria-label]",
+                "Änderungsvorschlag": "Die Implementierung der 'oc-icon-button-v2' Komponente muss sicherstellen, dass 'oc-aria-label' intern auf das native Button-Element als 'aria-label' abgebildet wird. Beispiel: <button aria-label=\"Suchbegriff löschen\">...</button>",
+                "Änderungen einzeln": "Internes Mapping von 'oc-aria-label' zu 'aria-label' auf dem nativen Button-Element.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Schaltfläche zum Löschen des aktuellen Suchbegriffs in der Suchleiste."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "Mehrere",
+                "Beschreibung der Verletzung": "Benutzerdefinierte Akkordeon-Komponenten ('oc-accordion-v1') verwenden das 'title'-Attribut für die Überschrift, was für interaktive Elemente nicht ausreichend ist, um den Zweck und den Zustand (erweitert/reduziert) zugänglich zu machen.",
+                "Html Ausschnitt auf der Webseite": "<oc-accordion-v1 title=\"Zahlungsarten\">...",
+                "CSS-Selektor": "oc-accordion-v1[title]",
+                "Änderungsvorschlag": "Die Implementierung der 'oc-accordion-v1' Komponente muss sicherstellen, dass das interaktive Element im Header die Rolle 'button' und die Attribute 'aria-expanded' und 'aria-controls' sowie einen zugänglichen Namen (z.B. durch den sichtbaren Text oder 'aria-label') erhält. Beispiel: <button role=\"button\" aria-expanded=\"false\" aria-controls=\"panel-id\">Zahlungsarten</button>",
+                "Änderungen einzeln": "Internes Mapping des 'title' zu einem zugänglichen Namen und Hinzufügen von 'role=\"button\"', 'aria-expanded' und 'aria-controls' zum interaktiven Element.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Akkordeon-Element im Footer, das eine Liste von Zahlungsarten ein- und ausklappt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "Mehrere",
+                "Beschreibung der Verletzung": "Interaktive Tags ('oc-tag-v1') mit der Eigenschaft 'show-info-icon' sind nicht als zugängliche Steuerelemente (z.B. Buttons) implementiert, was ihre Interaktivität für Screenreader-Nutzer unklar macht.",
+                "Html Ausschnitt auf der Webseite": "<oc-tag-v1 variant=\"sale\" size=\"50\" show-info-icon=\"\">-20% Extra</oc-tag-v1>",
+                "CSS-Selektor": "oc-tag-v1[show-info-icon]",
+                "Änderungsvorschlag": "Die 'oc-tag-v1' Komponente sollte, wenn sie interaktiv ist, als <button> oder <a> mit entsprechenden ARIA-Attributen (z.B. aria-label) gerendert werden, um ihre Rolle und ihren Zweck klar zu kommunizieren. Beispiel: <button aria-label=\"-20% Extra, weitere Informationen\">-20% Extra</button>",
+                "Änderungen einzeln": "Implementierung als interaktives Element (Button/Link) mit passendem aria-label.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Tag auf einer Produktkachel, der einen zusätzlichen Rabatt anzeigt und möglicherweise weitere Informationen dazu bietet."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "Mehrere",
+                "Beschreibung der Verletzung": "Nicht-native HTML-Elemente (<span>) werden mit role=\"link\" verwendet, aber es ist nicht ersichtlich, ob alle erforderlichen Tastaturinteraktionen und Zustandsänderungen für assistive Technologien korrekt implementiert sind. Native <a href> Elemente sollten bevorzugt werden.",
+                "Html Ausschnitt auf der Webseite": "<span class=\"ts-link ub64e pl_link100--secondary\" data-ub64e=\"L215YWNjb3VudC9kYXNoYm9hcmQ/ZW50cnlQb2ludD1mb290ZXI=\" role=\"link\" tabindex=\"0\" data-qa=\"reptile_footer_mein-konto_link\"><span style=\"all: unset;\">\n                Mein Konto\n              </span></span>",
+                "CSS-Selektor": "span[role=\"link\"]",
+                "Änderungsvorschlag": "Ersetzen Sie das <span>-Element durch ein natives <a>-Element mit dem entsprechenden href-Attribut. Beispiel: <a href=\"/myaccount/dashboard?entryPoint=footer\" class=\"ts-link pl_link100--secondary\" data-qa=\"reptile_footer_mein-konto_link\">Mein Konto</a>",
+                "Änderungen einzeln": "Ersetzen von <span> durch <a> und Übertragung der relevanten Attribute.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Link im Footer, der zum Bereich 'Mein Konto' führt."
+            }
+        ]
+    }
+]

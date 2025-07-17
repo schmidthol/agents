@@ -1,0 +1,20 @@
+[
+    {
+        "step": 1,
+        "description": "Suchergebnisseite",
+        "url": "https://www.otto.de/suche/t-shirt/",
+        "violations": []
+    },
+    {
+        "step": 2,
+        "description": "Produktdetailseite",
+        "url": "https://www.otto.de/p/jack-jones-t-shirt-basic-o-neck-3-tlg-3er-pack-etwas-laenger-geschnitten-nicht-zu-kurz-S0O1G0UW/#variationId=S0O1G0UW141E",
+        "violations": []
+    },
+    {
+        "step": 3,
+        "description": "Warenkorbseite",
+        "url": "https://www.otto.de/order/basket",
+        "violations": []
+    }
+]

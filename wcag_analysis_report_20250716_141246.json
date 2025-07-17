@@ -1,0 +1,139 @@
+[
+    {
+        "step": 1,
+        "description": "Suchergebnisseite",
+        "url": "https://www.otto.de/suche/t-shirt/",
+        "violations": [
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "19",
+                "Beschreibung der Verletzung": "Informative Bilder, die als Teil von Navigations-Chips oder mobilen Menü-Elementen dienen, haben keinen alternativen Text oder sind nicht als dekorativ markiert, obwohl der Text daneben die Information liefert. Screenreader würden diese Bilder ohne Kontext vorlesen.",
+                "Html Ausschnitt auf der Webseite": "<img src=\"https://i.otto.de/i/otto/001_2021_42_sale_deal_des_tages_kleine_shoppromotion_design_189585?w=200&amp;h=200&amp;upscale=true\">",
+                "CSS-Selektor": "span.nav_chip > picture.nav_chip__image > img, div.nav_mobile-list-tile > img.nav_mobile-list-tile__image",
+                "Änderungsvorschlag": "<img src=\"...\" aria-hidden=\"true\">",
+                "Änderungen einzeln": "aria-hidden=\"true\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Vorschaubilder für Kategorien oder Angebote in Navigationsleisten und mobilen Menüs."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "104",
+                "Beschreibung der Verletzung": "SVG-Icons und dekorative Text-Icons haben keinen alternativen Text oder sind nicht als dekorativ markiert. Dies führt dazu, dass Screenreader sie möglicherweise ohne sinnvollen Kontext vorlesen oder wichtige Informationen übersehen werden.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_logo\" role=\"img\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                "CSS-Selektor": "div.find_ottoLogo > a > svg, span.p_icons.squirrel_searchIcon__icon, span.p_icons.find_headerIcon__icon, span.us_loginAreaIcon.p_icons, span.p_icons.wl_mini__icon, div.or_minis > svg.pl_icon100.or_minis__icon, span.reptile_tilelist__transparencyIcon > svg, div.reptile_tile__deliveryInfo > svg.reptile_tile__ottoUp, oc-cinema-v1.find_tile__sustainabilityBadges > div > svg",
+                "Änderungsvorschlag": "<svg class=\"pl_logo\" role=\"img\" aria-hidden=\"true\"><use href=\"...\" xlink:href=\"...\"></use></svg> (für dekorative SVGs) oder <svg ... aria-label=\"OTTO Logo\"></svg> (für informative SVGs ohne umgebenden Text)",
+                "Änderungen einzeln": "aria-hidden=\"true\" oder aria-label=\"...\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Icons und Logos, die visuelle Hinweise geben, aber oft bereits durch umgebenden Text oder Link-Titel ausreichend beschrieben sind."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das Suchfeld hat keinen expliziten, programmatisch verknüpften Label. Der Platzhaltertext ist kein ausreichender Ersatz für ein Label, da er verschwindet, sobald der Benutzer tippt, und nicht von allen Screenreadern als Label erkannt wird. 'aria-describedby' liefert nur eine Beschreibung, keinen Namen.",
+                "Html Ausschnitt auf der Webseite": "<input class=\"squirrel_searchfield js_squirrel_searchbar__input oc-copy-125\" autocomplete=\"off\" type=\"text\" role=\"searchbox\" tabindex=\"0\" aria-describedby=\"squirrel_searchfieldDescription\" maxlength=\"150\" data-qa=\"ftfind-search-field\" data-qa-id=\"search-field\" data-testid=\"squirrel-searchfield\" data-target=\"https://www.otto.de/suche/t-shirt/#t=%7B%22wk.san_ActiveSearch%22%3A%22true%22%2C%22san_InitialSearch%22%3A%22true%22%2C%22san_Interaction%22%3A%22initial_search%22%2C%22wk.san_SearchType%22%3A%22search%22%7D\" placeholder=\"Wonach suchst du?\">",
+                "CSS-Selektor": "input.squirrel_searchfield",
+                "Änderungsvorschlag": "<input ... aria-label=\"Wonach suchst du?\"> oder <label for=\"search-field-id\">Wonach suchst du?</label><input id=\"search-field-id\" ...>",
+                "Änderungen einzeln": "aria-label=\"Wonach suchst du?\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Hauptsuchfeld im Header der Webseite, über das Nutzer Produkte suchen können."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "5",
+                "Beschreibung der Verletzung": "Die Überschriftenhierarchie ist nicht korrekt. 'h1'-Tags werden für Unterabschnitte verwendet, was die semantische Struktur der Seite stört und die Navigation für Screenreader-Nutzer erschwert. 'h4'-Tags werden für visuelle Gruppierungen verwendet, die keine echten Überschriften sind.",
+                "Html Ausschnitt auf der Webseite": "<h1 class=\"oc-headline-50 oc-mb-50\">E-Mail-Adresse bestätigen &amp; fertig!</h1>",
+                "CSS-Selektor": "#newsletter-subscribe-footer-sheet > h1, #newsletter-footer-headline, div.heureka_popularFacetValues--wrapper > h4",
+                "Änderungsvorschlag": "Ändern Sie 'h1' und 'h4' in 'h2' oder 'h3' entsprechend der tatsächlichen Hierarchie oder in 'div'/'span' mit ARIA-Rollen, wenn sie keine Überschriften sind.",
+                "Änderungen einzeln": "Ändern von <h1> zu <h2>/<h3> oder <h4> zu <div>/<span>",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Überschriften innerhalb des Newsletter-Anmelde-Popups und in den Filterbereichen, die die Inhalte strukturieren sollen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.5 Bestimmung des Eingabezwecks (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das E-Mail-Eingabefeld für den Newsletter-Anmeldung fehlt das 'autocomplete'-Attribut. Dies erschwert das automatische Ausfüllen für Nutzer und kann zu Fehlern führen.",
+                "Html Ausschnitt auf der Webseite": "<input id=\"newsletter-subscribe-footer-email-input\" class=\"newsletter-subscribe-footer-input oc-mt-50 oc-mb-100\" hide-counter=\"\" placeholder=\"E-Mail-Adresse\" type=\"email\" value=\"\" maxlength=\"80\">",
+                "CSS-Selektor": "#newsletter-subscribe-footer-email-input",
+                "Änderungsvorschlag": "<input ... autocomplete=\"email\">",
+                "Änderungen einzeln": "autocomplete=\"email\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Eingabefeld für die E-Mail-Adresse zur Newsletter-Anmeldung im Footer-Bereich."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.1 Blöcke umgehen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Es fehlt ein 'Skip-Link' (Sprunglink) am Anfang des Dokuments, der es Tastatur- und Screenreader-Nutzern ermöglicht, wiederholte Navigations- und Header-Inhalte zu überspringen und direkt zum Hauptinhalt zu gelangen.",
+                "Html Ausschnitt auf der Webseite": "<body class=\"san-system\">...<div id=\"avContent\" class=\"js_av_searchResult\" ...>...</div></body>",
+                "CSS-Selektor": "body",
+                "Änderungsvorschlag": "Fügen Sie am Anfang des <body>-Tags einen versteckten Link ein, der bei Fokus sichtbar wird: <a href=\"#main-content\" class=\"skip-link\">Zum Hauptinhalt springen</a>. Fügen Sie dann dem Hauptinhaltsbereich die ID 'main-content' hinzu: <main id=\"main-content\">.",
+                "Änderungen einzeln": "<a href=\"#main-content\" class=\"skip-link\">Zum Hauptinhalt springen</a> (am Anfang von body) und id=\"main-content\" (zu main-Element)",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Der Hauptinhaltsbereich der Suchergebnisseite."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.4 Linkzweck (Im Kontext) (A)",
+                "Anzahl der Verletzungen": "2",
+                "Beschreibung der Verletzung": "Links zur Anzeige weiterer Farbvarianten sind mit generischem Text wie '+6' oder '+1' beschriftet. Ohne visuellen Kontext ist der Zweck dieser Links für Screenreader-Nutzer unklar. Obwohl ein 'title'-Attribut vorhanden ist, sollte der zugängliche Name idealerweise den sichtbaren Text enthalten und spezifischer sein.",
+                "Html Ausschnitt auf der Webseite": "<li class=\"reptile_colorThumbLink js_reptile_colorThumbLink\"><oc-link-v2 base64-href=\"L3Avb25seS10LXNoaXJ0LW9ubGxpdmUtbG92ZS1uZXctMy10bGctM2VyLXBhY2stZmlndXItYmV0b250LWVsYXN0aXNjaGUtYmF1bXdvbGxxdWFsaXRhZXQtUzBPMUcwVVYvI3ZhcmlhdGlvbklkPVMwTzFHMFVWMExSUQ==\" size=\"100\"> <a class=\"\" href=\"/p/only-t-shirt-onllive-love-new-3-tlg-3er-pack-figur-betont-elastische-baumwollqualitaet-S0O1G0UV/\" data-link-type=\"text\" title=\"ONLY T-Shirt ONLLIVE LOVE NEW (3-tlg., 3er Pack) Figur betont, elastische Baumwollqualität\" tabindex=\"0\">+6</a> </oc-link-v2></li>",
+                "CSS-Selektor": "li.reptile_colorThumbLink > oc-link-v2 > a",
+                "Änderungsvorschlag": "<a ... aria-label=\"Weitere 6 Farben für ONLY T-Shirt ONLLIVE LOVE NEW\">+6</a>",
+                "Änderungen einzeln": "aria-label=\"Weitere [Anzahl] Farben für [Produktname]\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Links, die zu weiteren Farbvarianten eines Produkts führen, angezeigt unterhalb der Produktbilder in den Suchergebnissen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "14",
+                "Beschreibung der Verletzung": "Interaktive Akkordeon-Header (dt-Elemente) in den Filterbereichen sind nicht semantisch als Buttons ausgezeichnet und geben ihren Zustand (erweitert/reduziert) nicht programmatisch preis. Dies erschwert die Interaktion für Screenreader-Nutzer.",
+                "Html Ausschnitt auf der Webseite": "<dt class=\"pl_accordion__header\">Marke <div class=\"heureka_filterHeaderButtons\" hidden=\"\"><button data-ts-feature-labels=\"{&quot;san_FilterMethod&quot;:[&quot;x_single_local&quot;]}\" class=\"pl_link75--secondary heureka_removeAllTrashCan ts_heureka_selectAll\" data-select-mode=\"deselect\" form=\"find_filter_marke\" type=\"button\" hidden=\"\"> <svg class=\"pl_icon100\" role=\"img\"> <use xlink:href=\"/assets-static/icons/pl_icon_delete.svg#pl_icon_delete\"></use> </svg> </button></div><svg class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-down.svg#pl_icon_arrow-down\"></use></svg> </dt>",
+                "CSS-Selektor": "dt.pl_accordion__header",
+                "Änderungsvorschlag": "<dt class=\"pl_accordion__header\" role=\"button\" aria-expanded=\"false\" aria-controls=\"id-des-zugehörigen-dd-elements\">Marke ...</dt>",
+                "Änderungen einzeln": "role=\"button\" aria-expanded=\"false\" aria-controls=\"[id_des_dd]\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Überschriften der Filterkategorien in der Seitenleiste, die als Akkordeon-Header fungieren, um Filteroptionen ein- und auszublenden."
+            },
+            {
+                "Verletztes WCAG_kriterium": "3.2.4 Konsistente Erkennung (A)",
+                "Anzahl der Verletzungen": "2",
+                "Beschreibung der Verletzung": "Die Paginierungs-Buttons verwenden ein 'i'-Tag für das Pfeil-Icon, das nicht vor Screenreadern verborgen ist. Der zugängliche Name wird über ein 'title'-Attribut bereitgestellt, was weniger robust ist als ein 'aria-label' direkt auf dem Button, insbesondere wenn der 'i'-Tag-Inhalt nicht verborgen ist.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"js_pagingLink ts-link p_btn50--4th\" data-page=\"{&quot;l&quot;:&quot;gp&quot;,&quot;o&quot;:&quot;109&quot;,&quot;sortiertnach&quot;:&quot;&quot;}\" data-ts-link=\"{&quot;san_Interaction&quot;:&quot;paging&quot;,&quot;san_NaviPaging&quot;:&quot;2&quot;,&quot;ts_RemoveLabels&quot;:&quot;wk.nav_UnfilteredSelectionRule&quot;}\"> <i title=\"weiter\">&gt;</i> </button>",
+                "CSS-Selektor": "li#reptile-paging-top-next > button, li#reptile-paging-bottom-next > button",
+                "Änderungsvorschlag": "<button ... aria-label=\"Nächste Seite\"><i aria-hidden=\"true\">&gt;</i></button>",
+                "Änderungen einzeln": "aria-label=\"Nächste Seite\" (auf button) und aria-hidden=\"true\" (auf i-Tag)",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Buttons zur Navigation zwischen den Seiten der Suchergebnisse (Vorwärts-Pfeil)."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "2",
+                "Beschreibung der Verletzung": "Benutzerdefinierte Button-Elemente ('nav-mobile-menu-button', 'nav-refer-back') haben keine explizite ARIA-Rolle ('role=\"button\"') und keinen 'aria-expanded'-Status, um ihren interaktiven Zustand zu signalisieren. Dies erschwert Screenreader-Nutzern das Verständnis ihrer Funktionalität.",
+                "Html Ausschnitt auf der Webseite": "<nav-mobile-menu-button class=\"nav_menu-toggle-button\" data-controls=\"nav-menu-root-sheet\" data-menu-root=\"nav_menu\" data-menu-wrapper=\"nav_mobile-menu-wrapper\" data-nav-initialized=\"data-nav-initialized\" data-nav-track=\"true\" data-nav-tracking-menu-close=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;close&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}}]\" data-nav-tracking-menu-exit=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;exit&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}}]\" data-nav-tracking-menu-open=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;open&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}}]\" id=\"nav_menu-toggle-button\" style=\"display: none;\"><p class=\"nav_menu-toggle-button__icon\"></p><p class=\"nav_menu-toggle-button__title-closed\">Sortiment</p><p class=\"nav_menu-toggle-button__title-open\">Schließen</p></nav-mobile-menu-button>",
+                "CSS-Selektor": "nav-mobile-menu-button.nav_menu-toggle-button, nav-refer-back.nav_grimm-refer-back",
+                "Änderungsvorschlag": "<nav-mobile-menu-button ... role=\"button\" aria-expanded=\"false\" aria-controls=\"nav-menu-root-sheet\"></nav-mobile-menu-button>",
+                "Änderungen einzeln": "role=\"button\" aria-expanded=\"false\" aria-controls=\"[id_des_elements]\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Mobile Menü-Umschaltfläche und Zurück-Button in der Breadcrumb-Navigation."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "2",
+                "Beschreibung der Verletzung": "Benutzerdefinierte Icon-Button-Komponenten ('oc-icon-button-v2') haben keine korrekte programmatische Rolle und keinen zugänglichen Namen. Obwohl 'oc-aria-label' vorhanden ist, muss sichergestellt werden, dass dies korrekt an die Accessibility API weitergegeben wird, idealerweise durch ein natives Button-Element oder 'role=\"button\"' und 'aria-label'.",
+                "Html Ausschnitt auf der Webseite": "<oc-icon-button-v2 class=\"squirrel_delete-button js_squirrel_searchbar__delete\" oc-aria-label=\"Suchbegriff löschen\" data-qa-id=\"search-field-reset\" data-qa=\"ftfind-search-reset\" data-testid=\"search-field-reset\" icon-color=\"var(--oc-base-color-gray-400, #6d6d6d)\" size=\"50\"></oc-icon-button-v2>",
+                "CSS-Selektor": "oc-icon-button-v2.squirrel_delete-button, oc-icon-button-v2.squirrel_submit-button",
+                "Änderungsvorschlag": "Stellen Sie sicher, dass die Komponente ein natives <button>-Element rendert oder fügen Sie 'role=\"button\"' und 'aria-label=\"Suchbegriff löschen\"' zum Root-Element der Komponente hinzu.",
+                "Änderungen einzeln": "role=\"button\" aria-label=\"Suchbegriff löschen\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Buttons zum Löschen des Suchbegriffs und zum Abschicken der Suche im Suchfeld."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Die 'oc-switch-v2'-Komponente hat ein redundantes 'oc-aria-label'-Attribut, das den sichtbaren Text dupliziert oder leicht abweicht. Dies kann zu Verwirrung bei Screenreader-Nutzern führen, die doppelte oder inkonsistente Informationen erhalten.",
+                "Html Ausschnitt auf der Webseite": "<oc-switch-v2 id=\"facetValue_retailer_otto_otto\" data-ts-feature-name=\"Facet-Value\" data-ts-feature-parent-id=\"facet_retailer_otto\" data-ts-feature-labels=\"{&quot;san_FacetValue&quot;:[&quot;Verkauf und Versand durch OTTO&quot;]}\" oc-aria-label=\"Wähle den Filterwert Verkauf und Versand durch OTTO aus\" class=\"heureka_filterBanner__switch js_tValue\" type=\"checkbox\" name=\"verkaeufer\" value=\"otto\" size=\"50\" fit-content=\"true\" label-placement=\"right\">Verkauf und Versand durch OTTO</oc-switch-v2>",
+                "CSS-Selektor": "oc-banner-v1 > form > fieldset > ul > li > oc-switch-v2",
+                "Änderungsvorschlag": "Entfernen Sie das 'oc-aria-label'-Attribut und stellen Sie sicher, dass der sichtbare Text als zugänglicher Name verwendet wird.",
+                "Änderungen einzeln": "Entfernen von oc-aria-label=\"Wähle den Filterwert Verkauf und Versand durch OTTO aus\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Schalter-Element im Filterbereich, um Produkte nach dem Verkäufer 'OTTO' zu filtern."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "2",
+                "Beschreibung der Verletzung": "Benutzerdefinierte Textfeld-Komponenten ('oc-text-field-v1') in den Filterbereichen haben keinen programmatisch verknüpften Label für ihr internes Input-Feld. Dies kann dazu führen, dass Screenreader-Nutzer den Zweck des Feldes nicht verstehen.",
+                "Html Ausschnitt auf der Webseite": "<oc-text-field-v1>Nach Marke suchen</oc-text-field-v1>",
+                "CSS-Selektor": "div.hc_searchbox_wrapper > oc-text-field-v1",
+                "Änderungsvorschlag": "Stellen Sie sicher, dass die 'oc-text-field-v1'-Komponente intern ein korrektes <label for=\"input-id\"> oder aria-label=\"...\" für das Input-Feld generiert.",
+                "Änderungen einzeln": "Internes Labeling der Komponente sicherstellen",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Suchfelder innerhalb der Filter (z.B. 'Nach Marke suchen', 'Nach Verkäufer suchen')."
+            }
+        ]
+    }
+]

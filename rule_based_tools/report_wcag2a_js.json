@@ -1,0 +1,1484 @@
+{
+    "url": "https://www.w3.org/WAI/demos/bad/before/home.html",
+    "violations": [
+        {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "tags": [
+                "cat.semantics",
+                "best-practice"
+            ],
+            "description": "Ensure the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-one-main?application=axeAPI",
+            "nodes": [
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "page-has-main",
+                            "data": null,
+                            "relatedNodes": [],
+                            "impact": "moderate",
+                            "message": "Document does not have a main landmark"
+                        }
+                    ],
+                    "none": [],
+                    "impact": "moderate",
+                    "html": "<html>",
+                    "target": [
+                        "html"
+                    ],
+                    "failureSummary": "Fix all of the following:\n  Document does not have a main landmark"
+                }
+            ]
+        }
+    ],
+    "passes": [
+        {
+            "id": "heading-order",
+            "impact": null,
+            "tags": [
+                "cat.semantics",
+                "best-practice"
+            ],
+            "description": "Ensure the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/heading-order?application=axeAPI",
+            "nodes": [
+                {
+                    "any": [
+                        {
+                            "id": "heading-order",
+                            "data": {
+                                "headingOrder": [
+                                    {
+                                        "ancestry": [
+                                            "html > body > div:nth-child(1) > h1:nth-child(3)"
+                                        ],
+                                        "level": 1
+                                    }
+                                ]
+                            },
+                            "relatedNodes": [],
+                            "impact": "moderate",
+                            "message": "Heading order valid"
+                        }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": null,
+                    "html": "<h1><span class=\"subhead\">Inaccessible Home Page</span><span class=\"hidden\"> -</span> Before and After Demonstration</h1>",
+                    "target": [
+                        "h1"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "identical-links-same-purpose",
+            "impact": "minor",
+            "tags": [
+                "cat.semantics",
+                "wcag2aaa",
+                "wcag249"
+            ],
+            "description": "Ensure that links with the same accessible name serve a similar purpose",
+            "help": "Links with the same name must have a similar purpose",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/identical-links-same-purpose?application=axeAPI",
+            "nodes": [
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "skip to inaccessible demo page",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/demos/bad/before/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "home.html"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"#page\">Skip to inaccessible demo page</a>",
+                    "target": [
+                        "a[href$=\"#page\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "w3c logo",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": ""
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"https://www.w3.org/\" title=\"W3C Home\"><img alt=\"W3C logo\" src=\"../img/w3c.png\" height=\"48\" width=\"72\"></a>",
+                    "target": [
+                        "a[title=\"W3C Home\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "web accessibility initiative wai logo",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": ""
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"https://www.w3.org/WAI/\" title=\"WAI Home\"><img alt=\"Web Accessibility Initiative (WAI) logo\" src=\"../img/wai.png\" height=\"48\"></a>",
+                    "target": [
+                        "a[href$=\"WAI/\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "overview",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/demos/bad/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "Overview.html"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"../Overview.html\">Overview</a>",
+                    "target": [
+                        "a[href$=\"Overview.html\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "inaccessible home page report",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/demos/bad/before/reports/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "home.html"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"./reports/home.html\" class=\"report\"><span class=\"hidden\">Inaccessible Home Page </span> Report</a>",
+                    "target": [
+                        ".inaccessible > .report[href$=\"home.html\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "accessible home page",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/demos/bad/after/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "home.html"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"../after/home.html\" class=\"page\"><span class=\"hidden\">Accessible </span>Home Page</a>",
+                    "target": [
+                        ".page[href$=\"home.html\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "accessible home page report",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/demos/bad/after/reports/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "home.html"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"../after/reports/home.html\" class=\"report\"><span class=\"hidden\">Accessible Home Page </span> Report</a>",
+                    "target": [
+                        ".accessible > .report[href$=\"home.html\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "show annotations",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/demos/bad/before/annotated/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "home.html"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"./annotated/home.html\" class=\"annotoggle\">Show <br>Annotations</a>",
+                    "target": [
+                        ".annotoggle"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "news",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/demos/bad/before/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "news.html"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"news.html\">News</a>",
+                    "target": [
+                        "li:nth-child(3) > a[href$=\"news.html\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "tickets",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/demos/bad/before/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "tickets.html"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"tickets.html\">Tickets</a>",
+                    "target": [
+                        "li:nth-child(4) > a[href$=\"tickets.html\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "survey",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/demos/bad/before/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "survey.html"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"survey.html\">Survey</a>",
+                    "target": [
+                        "li:nth-child(5) > a[href$=\"survey.html\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "template",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/demos/bad/before/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "template.html"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"template.html\">Template</a>",
+                    "target": [
+                        "a[href$=\"template.html\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "red dot with a white letter c that symbolizes a moon crescent as well as the sun this logo is followed by a black banner that says citylights which is the name of this online portal finally the slogan of the portal your access to the city follows in a turquoise green handwriting style and with a slight slant across the top banner",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/demos/bad/before/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "home.html"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"home.html\">",
+                    "target": [
+                        "td[width=\"443px\"][background=\"./img/top_logo_next.gif\"][valign=\"MIDDLE\"] > div > a[href$=\"home.html\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "heat wave linked to temperatures",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/demos/bad/before/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "news.html"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"news.html\" onfocus=\"blur();\">Heat wave linked to temperatures</a>",
+                    "target": [
+                        ".newsheadline:nth-child(1) > a[href$=\"news.html\"][onfocus=\"blur();\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "man gets nine months in violin case",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/demos/bad/before/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "news.html"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"news.html\" onfocus=\"blur();\">Man Gets Nine Months in Violin Case</a>",
+                    "target": [
+                        ".newsheadline:nth-child(2) > a[href$=\"news.html\"][onfocus=\"blur();\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "lack of brains hinders research",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/demos/bad/before/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "news.html"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"news.html\" onfocus=\"blur();\">Lack of brains hinders research</a>",
+                    "target": [
+                        ".newsheadline:nth-child(3) > a[href$=\"news.html\"][onfocus=\"blur();\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "click here",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/demos/bad/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "offsite.html"
+                                }
+                            },
+                            "relatedNodes": [
+                                {
+                                    "html": "<a onfocus=\"blur();\" href=\"../offsite.html\" target=\"_blank\">Click here</a>",
+                                    "target": [
+                                        "a[href$=\"offsite.html\"][target=\"_blank\"][onfocus=\"blur();\"]:nth-child(5)"
+                                    ]
+                                }
+                            ],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a onfocus=\"blur();\" href=\"../offsite.html\" target=\"_blank\">Click here</a>",
+                    "target": [
+                        "a[href$=\"offsite.html\"][target=\"_blank\"][onfocus=\"blur();\"]:nth-child(2)"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "copyright",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/Consortium/Legal/ipr-notice/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": ""
+                                }
+                            },
+                            "relatedNodes": [
+                                {
+                                    "html": "<a rel=\"Copyright\" href=\"https://www.w3.org/Consortium/Legal/ipr-notice#Copyright\">Copyright</a>",
+                                    "target": [
+                                        "p > a[rel=\"Copyright\"]:nth-child(1)"
+                                    ]
+                                }
+                            ],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a rel=\"Copyright\" href=\"https://www.w3.org/Consortium/Legal/ipr-notice#Copyright\">Copyright</a>",
+                    "target": [
+                        "font[size=\"1\"] > a[rel=\"Copyright\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "w3c",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": ""
+                                }
+                            },
+                            "relatedNodes": [
+                                {
+                                    "html": "<a href=\"https://www.w3.org/\"><acronym title=\"World Wide Web Consortium\">W3C</acronym></a>",
+                                    "target": [
+                                        ".copyright > p > a[href$=\"w3.org/\"]"
+                                    ]
+                                }
+                            ],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"https://www.w3.org/\"><acronym title=\"World Wide Web Consortium\">W3C</acronym></a>",
+                    "target": [
+                        "font[size=\"1\"] > a[href$=\"w3.org/\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "mit",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.csail.mit.edu",
+                                    "port": "",
+                                    "pathname": "/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": ""
+                                }
+                            },
+                            "relatedNodes": [
+                                {
+                                    "html": "<a href=\"http://www.csail.mit.edu/\"><acronym title=\"Massachusetts Institute of Technology\">MIT</acronym></a>",
+                                    "target": [
+                                        "p > a[href$=\"csail.mit.edu/\"]"
+                                    ]
+                                }
+                            ],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"http://www.csail.mit.edu/\"><acronym title=\"Massachusetts Institute of Technology\">MIT</acronym></a>",
+                    "target": [
+                        "font[size=\"1\"] > a[href$=\"csail.mit.edu/\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "ercim",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.ercim.org",
+                                    "port": "",
+                                    "pathname": "/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": ""
+                                }
+                            },
+                            "relatedNodes": [
+                                {
+                                    "html": "<a href=\"http://www.ercim.org/\"><acronym title=\"European Research Consortium for Informatics and Mathematics\">ERCIM</acronym></a>",
+                                    "target": [
+                                        "p > a[href$=\"ercim.org/\"]"
+                                    ]
+                                }
+                            ],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"http://www.ercim.org/\"><acronym title=\"European Research Consortium for Informatics and Mathematics\">ERCIM</acronym></a>",
+                    "target": [
+                        "font[size=\"1\"] > a[href$=\"ercim.org/\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "keio",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.keio.ac.jp",
+                                    "port": "",
+                                    "pathname": "/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": ""
+                                }
+                            },
+                            "relatedNodes": [
+                                {
+                                    "html": "<a href=\"http://www.keio.ac.jp/\">Keio</a>",
+                                    "target": [
+                                        "p > a[href$=\"keio.ac.jp/\"]"
+                                    ]
+                                }
+                            ],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"http://www.keio.ac.jp/\">Keio</a>",
+                    "target": [
+                        "font[size=\"1\"] > a[href$=\"keio.ac.jp/\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "changelog",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/demos/bad/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "changelog.html"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"../changelog.html\">changelog</a>",
+                    "target": [
+                        "a[href$=\"changelog.html\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "shadi abouzahra",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/People/shadi/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": ""
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"https://www.w3.org/People/shadi/\">Shadi Abou-Zahra</a>",
+                    "target": [
+                        "p:nth-child(2) > a:nth-child(4)"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "education and outreach working group eowg",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/EO/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": ""
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"https://www.w3.org/WAI/EO/\">Education and Outreach Working Group (EOWG)</a>",
+                    "target": [
+                        "a[href$=\"EO/\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "waities",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/TIES/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": ""
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"https://www.w3.org/WAI/TIES/\"><acronym title=\"Web Accessibility Initiative: Training, Implementation, Education, Support\">WAI-TIES</acronym></a>",
+                    "target": [
+                        "a[href$=\"TIES/\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "waiage",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/WAI-AGE/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": ""
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"https://www.w3.org/WAI/WAI-AGE/\"><acronym title=\"Web Accessibility Initiative: Ageing Education and Harmonisation\">WAI-AGE</acronym></a>",
+                    "target": [
+                        "p:nth-child(2) > a:nth-child(8)"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "acknowledgements",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/demos/bad/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "acks.html"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"../acks.html\">Acknowledgements</a>",
+                    "target": [
+                        "a[href$=\"acks.html\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "wai site map",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "sitemap.html"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"https://www.w3.org/WAI/sitemap.html\" shape=\"rect\">WAI Site Map</a>",
+                    "target": [
+                        "p:nth-child(3) > a[shape=\"rect\"]:nth-child(1)"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "help with wai website",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "sitehelp.html"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"https://www.w3.org/WAI/sitehelp.html\" shape=\"rect\">Help with WAI Website</a>",
+                    "target": [
+                        "a[shape=\"rect\"]:nth-child(2)"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "search",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "search.php"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"https://www.w3.org/WAI/search.php\" shape=\"rect\">Search</a>",
+                    "target": [
+                        "a[shape=\"rect\"]:nth-child(3)"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "contacting wai",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/contacts/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": ""
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"https://www.w3.org/WAI/contacts\" shape=\"rect\">Contacting WAI</a>",
+                    "target": [
+                        "a[shape=\"rect\"]:nth-child(4)"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "waieoeditorsw3org",
+                                "urlProps": {
+                                    "protocol": "mailto:",
+                                    "hostname": "",
+                                    "port": "",
+                                    "pathname": "/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "wai-eo-editors@w3.org"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"mailto:wai-eo-editors@w3.org\" shape=\"rect\">wai-eo-editors@w3.org</a>",
+                    "target": [
+                        "a[href=\"mailto:wai-eo-editors@w3.org\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "waiw3org",
+                                "urlProps": {
+                                    "protocol": "mailto:",
+                                    "hostname": "",
+                                    "port": "",
+                                    "pathname": "/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "wai@w3.org"
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"mailto:wai@w3.org\" shape=\"rect\">wai@w3.org</a>",
+                    "target": [
+                        "a[href$=\"mailto:wai@w3.org\"]"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "liability",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/Consortium/Legal/ipr-notice/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": ""
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer\">liability</a>",
+                    "target": [
+                        ".copyright > p > a:nth-child(7)"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "trademark",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/Consortium/Legal/ipr-notice/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": ""
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks\">trademark</a>",
+                    "target": [
+                        ".copyright > p > a:nth-child(8)"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "document use",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/Consortium/Legal/copyright-documents/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": ""
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a rel=\"Copyright\" href=\"https://www.w3.org/Consortium/Legal/copyright-documents\">document use</a>",
+                    "target": [
+                        "a[rel=\"Copyright\"]:nth-child(9)"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "software licensing",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/Consortium/Legal/copyright-software/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": ""
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a rel=\"Copyright\" href=\"https://www.w3.org/Consortium/Legal/copyright-software\">software licensing</a>",
+                    "target": [
+                        "a[rel=\"Copyright\"]:nth-child(10)"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "public",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/Consortium/Legal/privacy-statement/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": ""
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"https://www.w3.org/Consortium/Legal/privacy-statement#Public\">public</a>",
+                    "target": [
+                        "a:nth-child(11)"
+                    ]
+                },
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "member",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/Consortium/Legal/privacy-statement/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": ""
+                                }
+                            },
+                            "relatedNodes": [],
+                            "impact": "minor",
+                            "message": "There are no other links with the same name, that go to a different URL"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<a href=\"https://www.w3.org/Consortium/Legal/privacy-statement#Members\">Member</a>",
+                    "target": [
+                        "a:nth-child(12)"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "page-has-heading-one",
+            "impact": null,
+            "tags": [
+                "cat.semantics",
+                "best-practice"
+            ],
+            "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+            "help": "Page should contain a level-one heading",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=axeAPI",
+            "nodes": [
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "page-has-heading-one",
+                            "data": null,
+                            "relatedNodes": [
+                                {
+                                    "html": "<h1><span class=\"subhead\">Inaccessible Home Page</span><span class=\"hidden\"> -</span> Before and After Demonstration</h1>",
+                                    "target": [
+                                        "h1"
+                                    ]
+                                }
+                            ],
+                            "impact": "moderate",
+                            "message": "Page has at least one level-one heading"
+                        }
+                    ],
+                    "none": [],
+                    "impact": null,
+                    "html": "<html>",
+                    "target": [
+                        "html"
+                    ]
+                }
+            ]
+        }
+    ],
+    "incomplete": [
+        {
+            "id": "identical-links-same-purpose",
+            "impact": "minor",
+            "tags": [
+                "cat.semantics",
+                "wcag2aaa",
+                "wcag249"
+            ],
+            "description": "Ensure that links with the same accessible name serve a similar purpose",
+            "help": "Links with the same name must have a similar purpose",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/identical-links-same-purpose?application=axeAPI",
+            "nodes": [
+                {
+                    "any": [],
+                    "all": [
+                        {
+                            "id": "identical-links-same-purpose",
+                            "data": {
+                                "name": "read more",
+                                "urlProps": {
+                                    "protocol": "http:",
+                                    "hostname": "www.w3.org",
+                                    "port": "",
+                                    "pathname": "/WAI/demos/bad/before/",
+                                    "search": {},
+                                    "hash": "",
+                                    "filename": "tickets.html"
+                                }
+                            },
+                            "relatedNodes": [
+                                {
+                                    "html": "<a href=\"survey.html\" onfocus=\"blur();\" style=\"text-decoration:none;\">Read More...</a>",
+                                    "target": [
+                                        "a[href$=\"survey.html\"][onfocus=\"blur();\"]"
+                                    ]
+                                }
+                            ],
+                            "impact": "minor",
+                            "message": "Check that links have the same purpose, or are intentionally ambiguous."
+                        }
+                    ],
+                    "none": [],
+                    "impact": "minor",
+                    "html": "<a href=\"tickets.html\" onfocus=\"blur();\" style=\"text-decoration:none;\">Read More...</a>",
+                    "target": [
+                        "a[href$=\"tickets.html\"][onfocus=\"blur();\"]"
+                    ],
+                    "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+                }
+            ]
+        }
+    ],
+    "inapplicable": [
+        {
+            "id": "landmark-banner-is-top-level",
+            "impact": null,
+            "tags": [
+                "cat.semantics",
+                "best-practice"
+            ],
+            "description": "Ensure the banner landmark is at top level",
+            "help": "Banner landmark should not be contained in another landmark",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-banner-is-top-level?application=axeAPI",
+            "nodes": []
+        },
+        {
+            "id": "landmark-complementary-is-top-level",
+            "impact": null,
+            "tags": [
+                "cat.semantics",
+                "best-practice"
+            ],
+            "description": "Ensure the complementary landmark or aside is at top level",
+            "help": "Aside should not be contained in another landmark",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-complementary-is-top-level?application=axeAPI",
+            "nodes": []
+        },
+        {
+            "id": "landmark-contentinfo-is-top-level",
+            "impact": null,
+            "tags": [
+                "cat.semantics",
+                "best-practice"
+            ],
+            "description": "Ensure the contentinfo landmark is at top level",
+            "help": "Contentinfo landmark should not be contained in another landmark",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-contentinfo-is-top-level?application=axeAPI",
+            "nodes": []
+        },
+        {
+            "id": "landmark-main-is-top-level",
+            "impact": null,
+            "tags": [
+                "cat.semantics",
+                "best-practice"
+            ],
+            "description": "Ensure the main landmark is at top level",
+            "help": "Main landmark should not be contained in another landmark",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+            "nodes": []
+        },
+        {
+            "id": "landmark-no-duplicate-banner",
+            "impact": null,
+            "tags": [
+                "cat.semantics",
+                "best-practice"
+            ],
+            "description": "Ensure the document has at most one banner landmark",
+            "help": "Document should not have more than one banner landmark",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-banner?application=axeAPI",
+            "nodes": []
+        },
+        {
+            "id": "landmark-no-duplicate-contentinfo",
+            "impact": null,
+            "tags": [
+                "cat.semantics",
+                "best-practice"
+            ],
+            "description": "Ensure the document has at most one contentinfo landmark",
+            "help": "Document should not have more than one contentinfo landmark",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-contentinfo?application=axeAPI",
+            "nodes": []
+        },
+        {
+            "id": "landmark-no-duplicate-main",
+            "impact": null,
+            "tags": [
+                "cat.semantics",
+                "best-practice"
+            ],
+            "description": "Ensure the document has at most one main landmark",
+            "help": "Document should not have more than one main landmark",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+            "nodes": []
+        },
+        {
+            "id": "landmark-unique",
+            "impact": null,
+            "tags": [
+                "cat.semantics",
+                "best-practice"
+            ],
+            "description": "Ensure landmarks are unique",
+            "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-unique?application=axeAPI",
+            "nodes": []
+        }
+    ]
+}

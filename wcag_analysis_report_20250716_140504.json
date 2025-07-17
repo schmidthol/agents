@@ -1,0 +1,159 @@
+[
+    {
+        "step": 1,
+        "description": "Suchergebnisseite",
+        "url": "https://www.otto.de/suche/t-shirt/",
+        "violations": [
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "18",
+                "Beschreibung der Verletzung": "Informative Bilder in Navigations-Chips fehlen ein 'alt'-Attribut, das ihren Inhalt beschreibt.",
+                "Html Ausschnitt auf der Webseite": "<picture class=\"nav_chip__image\"><source media=\"(max-width: 48em)\" srcset=\"https://i.otto.de/i/otto/001_2021_42_sale_deal_des_tages_kleine_shoppromotion_design_189585?w=48&amp;h=48&amp;upscale=true&amp;fmt=webp 1x, https://i.otto.de/i/otto/001_2021_42_sale_deal_des_tages_kleine_shoppromotion_design_189585?w=96&amp;h=96&amp;upscale=true&amp;fmt=webp 2x, https://i.otto.de/i/otto/001_2021_42_sale_des_tages_kleine_shoppromotion_design_189585?w=144&amp;h=144&amp;upscale=true&amp;fmt=webp 3x\" type=\"image/webp\"><source media=\"(min-width: 48em)\" srcset=\"https://i.otto.de/i/otto/001_2021_42_sale_deal_des_tages_kleine_shoppromotion_design_189585?w=56&amp;h=56&amp;upscale=true&amp;fmt=webp 1x, https://i.otto.de/i/otto/001_2021_42_sale_deal_des_tages_kleine_shoppromotion_design_189585?w=112&amp;h=112&amp;upscale=true&amp;fmt=webp 2x, https://i.otto.de/i/otto/001_2021_42_sale_deal_des_tages_kleine_shoppromotion_design_189585?w=168&amp;h=168&amp;upscale=true&amp;fmt=webp 3x\" type=\"image/webp\"><source media=\"(max-width: 48em)\" srcset=\"https://i.otto.de/i/otto/001_2021_42_sale_deal_des_tages_kleine_shoppromotion_design_189585?w=48&amp;h=48&amp;upscale=true 1x, https://i.otto.de/i/otto/001_2021_42_sale_deal_des_tages_kleine_shoppromotion_design_189585?w=96&amp;h=96&amp;upscale=true 2x, https://i.otto.de/i/otto/001_2021_42_sale_deal_des_tages_kleine_shoppromotion_design_189585?w=144&amp;h=144&amp;upscale=true 3x\"><source media=\"(min-width: 48em)\" srcset=\"https://i.otto.de/i/otto/001_2021_42_sale_deal_des_tages_kleine_shoppromotion_design_189585?w=56&amp;h=56&amp;upscale=true 1x, https://i.otto.de/i/otto/001_2021_42_sale_deal_des_tages_kleine_shoppromotion_design_189585?w=112&amp;h=112&amp;upscale=true 2x, https://i.otto.de/i/otto/001_2021_42_sale_deal_des_tages_kleine_shoppromotion_design_189585?w=168&amp;h=168&amp;upscale=true 3x\"><img src=\"https://i.otto.de/i/otto/001_2021_42_sale_deal_des_tages_kleine_shoppromotion_design_189585?w=200&amp;h=200&amp;upscale=true\"></picture>",
+                "CSS-Selektor": ".nav_chip__image > img",
+                "Änderungsvorschlag": "<img src=\"...\" alt=\"Deal des Tages Bild\">",
+                "Änderungen einzeln": "alt=\"Deal des Tages Bild\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Visuelles Icon für einen Navigations-Chip, der zu einer bestimmten Kategorie oder einem Angebot führt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "4",
+                "Beschreibung der Verletzung": "Dekorative Font-Icons sind nicht mit 'aria-hidden=\"true\"' versehen, was dazu führen kann, dass Screenreader redundante oder verwirrende Informationen vorlesen.",
+                "Html Ausschnitt auf der Webseite": "<span class=\"p_icons squirrel_searchIcon__icon svelte-1ml7eaa\">»</span>",
+                "CSS-Selektor": "div.squirrel_searchIcon > span.p_icons",
+                "Änderungsvorschlag": "<span class=\"p_icons squirrel_searchIcon__icon svelte-1ml7eaa\" aria-hidden=\"true\">»</span>",
+                "Änderungen einzeln": "aria-hidden=\"true\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Visuelles Symbol für die Suchfunktion, Teil des Suchbuttons."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "2",
+                "Beschreibung der Verletzung": "SVG-Icons, die informative Inhalte darstellen, fehlen ein 'aria-label' oder ein '<title>'-Element, um ihren Zweck für Screenreader zu beschreiben.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_logo\" role=\"img\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                "CSS-Selektor": ".find_ottoLogo > a > svg.pl_logo",
+                "Änderungsvorschlag": "<svg class=\"pl_logo\" role=\"img\" aria-label=\"OTTO Logo\"><use href=\"...\" xlink:href=\"...\"></use></svg>",
+                "Änderungen einzeln": "aria-label=\"OTTO Logo\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Firmenlogo im Header, das zur Startseite verlinkt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "17",
+                "Beschreibung der Verletzung": "Akkordeon-Header (dt-Elemente) fehlen 'aria-expanded' und 'aria-controls' Attribute, um ihren Zustand und die Beziehung zum gesteuerten Inhalt für Screenreader zu vermitteln.",
+                "Html Ausschnitt auf der Webseite": "<dt class=\"pl_accordion__header\">Marke <div class=\"heureka_filterHeaderButtons\" hidden=\"\"><button data-ts-feature-labels=\"{&quot;san_FilterMethod&quot;:[&quot;x_single_local&quot;]}\" class=\"pl_link75--secondary heureka_removeAllTrashCan ts_heureka_selectAll\" data-select-mode=\"deselect\" form=\"find_filter_marke\" type=\"button\" hidden=\"\"> <svg class=\"pl_icon100\" role=\"img\"> <use xlink:href=\"/assets-static/icons/pl_icon_delete.svg#pl_icon_delete\"></use> </svg> </button></div><svg class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-down.svg#pl_icon_arrow-down\"></use></svg> </dt>",
+                "CSS-Selektor": "div.pl_table-view__item.pl_accordion[data-filter-id=\"marke\"] > dt.pl_accordion__header",
+                "Änderungsvorschlag": "<dt class=\"pl_accordion__header\" aria-expanded=\"false\" aria-controls=\"find_filter_marke_content\">Marke ...</dt>",
+                "Änderungen einzeln": "aria-expanded=\"false\" aria-controls=\"find_filter_marke_content\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Überschrift eines Filterbereichs, der sich auf- und zuklappen lässt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "27",
+                "Beschreibung der Verletzung": "Fieldset-Elemente, die Gruppen von Formularsteuerelementen enthalten, haben ein verstecktes 'legend'-Element und kein 'aria-label' auf dem Fieldset selbst, was die semantische Gruppierung für Screenreader unklar macht.",
+                "Html Ausschnitt auf der Webseite": "<fieldset id=\"facet_brand\" name=\"marke\" class=\"hc_facet find_facet find_facet--checkbox svelte-18v9lhl\" data-facet-visibility=\"relevant\" data-ts-feature-name=\"Facet\" data-ts-feature-status=\"visible\" data-ts-feature-parent-id=\"find_filter_marke\" data-ts-feature-labels=\"{&quot;san_FacetValue&quot;:[&quot;marke&quot;],&quot;san_FacetCoverage&quot;:[&quot;0.9998770063341738&quot;],&quot;san_PopularFacetValueCount&quot;:[&quot;5&quot;],&quot;san_FacetValueCount&quot;:[&quot;1000&quot;]}\"><!----><!----><!----><!----><!----> <div class=\"hc_searchbox_wrapper svelte-18v9lhl\" data-ts-labels=\"{&quot;san_FacetSearchTerm&quot;:&quot;&quot;,&quot;san_FacetSearchType&quot;:&quot;marke&quot;}\" data-searchable-facet-input=\"#searchBox_facet_brand\"><oc-text-field-v1>Nach Marke suchen</oc-text-field-v1><!----></div><!----> <!----><div class=\"hc_facet__scrollBox hc_facet__scrollBox--scrollable svelte-18v9lhl\"><!----><span class=\"hc_facet__section_divider svelte-18v9lhl\">BELIEBT</span><!----> <!----><div class=\"hc_facetValueGroup--unselectedPopular svelte-15owtzb\"><!----> <ul><li><label style=\"--label-width: minmax(0, max-content)\" class=\"hc_checkbox hc_checkbox--right hc_facetValue svelte-3xf3eo\"><!----><input id=\"facetValue_brand_tommy-hilfiger\" class=\"js_hc_tValue hc_facetValueInput svelte-566coq\" name=\"marke\" type=\"checkbox\" value=\"tommy-hilfiger\" data-ts-feature-name=\"Facet-Value\" data-ts-feature-status=\"visible\" data-ts-feature-parent-id=\"facet_brand\" data-ts-feature-position=\"1\" data-ts-feature-labels=\"{&quot;san_FacetValue&quot;:[&quot;Tommy Hilfiger&quot;],&quot;san_TopFacetValue&quot;:[&quot;popular&quot;]}\" data-ts-feature-filter-method=\"popular\"><!----><!----><span class=\"hc_label hc_label--125 svelte-11l07k\" data-count=\"363\"><span class=\"hc_label__title svelte-11l07k\"><b></b>Tommy Hilfiger</span></span><!----><span class=\"hc_checkbox__handle svelte-3xf3eo\"><oc-icon-v1 class=\"hc_checkbox__checkmark svelte-3xf3eo\" size=\"50\"></oc-icon-v1></span></label><!----></li>...</ul></div>",
+                "CSS-Selektor": "fieldset#facet_brand",
+                "Änderungsvorschlag": "<fieldset id=\"facet_brand\" name=\"marke\" aria-label=\"Marke\" ...>",
+                "Änderungen einzeln": "aria-label=\"Marke\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Gruppe von Checkboxen für die Filteroption 'Marke'."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "2",
+                "Beschreibung der Verletzung": "Benutzerdefinierte Textfeld-Komponenten haben keine explizite Verknüpfung zwischen dem visuellen Label und dem Eingabefeld, was die Zugänglichkeit für assistive Technologien beeinträchtigen kann.",
+                "Html Ausschnitt auf der Webseite": "<oc-text-field-v1>Nach Marke suchen</oc-text-field-v1>",
+                "CSS-Selektor": "div.hc_searchbox_wrapper > oc-text-field-v1",
+                "Änderungsvorschlag": "<input id=\"searchBox_facet_brand\" ... aria-label=\"Nach Marke suchen\">",
+                "Änderungen einzeln": "aria-label=\"Nach Marke suchen\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Suchfeld innerhalb des Markenfilters."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.3 Sensorische Eigenschaften (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Farb-Thumbnails zur Produktauswahl verlassen sich ausschließlich auf die Farbe zur Informationsvermittlung, ohne eine textliche Alternative für farbenblinde oder Screenreader-Nutzer.",
+                "Html Ausschnitt auf der Webseite": "<li class=\"reptile_colorThumb reptile_colorThumb--selected\" data-color-name=\"Mix 6 (Bu/Ka/Go)\" data-variation-id=\"S0O1G0UV0LRQ\"><div class=\"reptile_colorThumb__dot \" style=\"background:#683228\"></div></li>",
+                "CSS-Selektor": ".reptile_colorThumb__dot",
+                "Änderungsvorschlag": "<li class=\"reptile_colorThumb reptile_colorThumb--selected\" data-color-name=\"Mix 6 (Bu/Ka/Go)\" data-variation-id=\"S0O1G0UV0LRQ\" aria-label=\"Farbe: Mix 6 (Bu/Ka/Go)\"><div class=\"reptile_colorThumb__dot \" style=\"background:#683228\"></div></li>",
+                "Änderungen einzeln": "aria-label=\"Farbe: Mix 6 (Bu/Ka/Go)\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Visuelle Darstellung einer Farboption für ein Produkt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.5 Bestimmung des Eingabezwecks (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das E-Mail-Eingabefeld für den Newsletter-Abonnement fehlt das 'autocomplete'-Attribut, was die automatische Vervollständigung für Benutzer erschwert.",
+                "Html Ausschnitt auf der Webseite": "<input id=\"newsletter-subscribe-footer-email-input\" class=\"newsletter-subscribe-footer-input oc-mt-50 oc-mb-100\" hide-counter=\"\" placeholder=\"E-Mail-Adresse\" type=\"email\" value=\"\" maxlength=\"80\">",
+                "CSS-Selektor": "input#newsletter-subscribe-footer-email-input",
+                "Änderungsvorschlag": "<input id=\"newsletter-subscribe-footer-email-input\" ... autocomplete=\"email\">",
+                "Änderungen einzeln": "autocomplete=\"email\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Eingabefeld für die E-Mail-Adresse zur Newsletter-Anmeldung."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.1 Blöcke umgehen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Es fehlt ein 'Skip-Link' oder ein ähnlicher Mechanismus, um wiederholende Header- und Navigationsinhalte zu überspringen, was die Navigation für Tastatur- und Screenreader-Benutzer erschwert.",
+                "Html Ausschnitt auf der Webseite": "Kein Skip-Link im HTML-Code gefunden.",
+                "CSS-Selektor": "N/A",
+                "Änderungsvorschlag": "<a href=\"#reptile-content\" class=\"skip-link\">Zum Hauptinhalt springen</a> (CSS für visuelles Verstecken, bis fokussiert)",
+                "Änderungen einzeln": "<a href=\"#reptile-content\" class=\"skip-link\">Zum Hauptinhalt springen</a>",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Erleichtert die Navigation für Tastatur- und Screenreader-Benutzer, indem repetitive Inhalte übersprungen werden können."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.4 Linkzweck (Im Kontext) (A)",
+                "Anzahl der Verletzungen": "19",
+                "Beschreibung der Verletzung": "Generische Linktexte wie 'Mehr anzeigen' in Filterbereichen sind ohne zusätzlichen Kontext nicht aussagekräftig genug, um ihren Zweck zu verstehen.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"pl_link100--primary\">Mehr anzeigen</button>",
+                "CSS-Selektor": "dd.heureka_filterTitle__more > button.pl_link100--primary",
+                "Änderungsvorschlag": "<button class=\"pl_link100--primary\" aria-label=\"Mehr Marken anzeigen\">Mehr anzeigen</button>",
+                "Änderungen einzeln": "aria-label=\"Mehr Marken anzeigen\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Button zum Erweitern der Liste von Filteroptionen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.4 Linkzweck (Im Kontext) (A)",
+                "Anzahl der Verletzungen": "2",
+                "Beschreibung der Verletzung": "Paginierungs-Buttons verwenden ein generisches '>'-Symbol mit einem 'title'-Attribut, das nicht immer zuverlässig von allen assistiven Technologien erkannt wird. Ein 'aria-label' wäre präziser.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"js_pagingLink ts-link p_btn50--4th\" data-page=\"{&quot;l&quot;:&quot;gp&quot;,&quot;o&quot;:&quot;109&quot;,&quot;sortiertnach&quot;:&quot;&quot;}\" data-ts-link=\"{&quot;san_Interaction&quot;:&quot;paging&quot;,&quot;san_NaviPaging&quot;:&quot;2&quot;,&quot;ts_RemoveLabels&quot;:&quot;wk.nav_UnfilteredSelectionRule&quot;}\"> <i title=\"weiter\">&gt;</i> </button>",
+                "CSS-Selektor": "li#reptile-paging-top-next > button",
+                "Änderungsvorschlag": "<button class=\"js_pagingLink ts-link p_btn50--4th\" ... aria-label=\"Nächste Seite\"> <i aria-hidden=\"true\">&gt;</i> </button>",
+                "Änderungen einzeln": "aria-label=\"Nächste Seite\" und i-Tag mit aria-hidden=\"true\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Button zur Navigation zur nächsten Seite der Suchergebnisse."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Die Hauptüberschrift (h1) der Suchergebnisseite ist fragmentiert, da das schließende Anführungszeichen in einem separaten div-Element liegt, was die Lesbarkeit für Screenreader beeinträchtigen kann.",
+                "Html Ausschnitt auf der Webseite": "<h1 class=\"nav_grimm-breadcrumb-headline__title nav_grimm-breadcrumb-headline__title--nomargin nav_grimm-breadcrumb-headline__title--clickable\" data-nav-testing=\"breadcrumb-headline\" data-nav-track=\"true\" data-nav-tracking-click-breadcrumb-headline=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;san_SearchBoxAction&quot;:&quot;clickTitle&quot;}}]\"> „t-shirt</h1><div class=\"nav_grimm-breadcrumb-headline__quote\">“</div>",
+                "CSS-Selektor": "h1.nav_grimm-breadcrumb-headline__title",
+                "Änderungsvorschlag": "<h1 class=\"nav_grimm-breadcrumb-headline__title nav_grimm-breadcrumb-headline__title--nomargin nav_grimm-breadcrumb-headline__title--clickable\" ...>„t-shirt“</h1>",
+                "Änderungen einzeln": "Inhalt des h1-Tags zu '„t-shirt“' ändern und das nachfolgende div entfernen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Hauptüberschrift der Suchergebnisseite, die den gesuchten Begriff anzeigt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "17",
+                "Beschreibung der Verletzung": "DT-Elemente, die als Akkordeon-Header fungieren, haben keine explizite 'role=\"button\"', um ihre interaktive Natur für assistive Technologien zu kennzeichnen.",
+                "Html Ausschnitt auf der Webseite": "<dt class=\"pl_accordion__header\">Marke ... </dt>",
+                "CSS-Selektor": "dt.pl_accordion__header",
+                "Änderungsvorschlag": "<dt class=\"pl_accordion__header\" role=\"button\">Marke ... </dt>",
+                "Änderungen einzeln": "role=\"button\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Überschrift eines Filterbereichs, der sich auf- und zuklappen lässt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Der benutzerdefinierte mobile Menü-Button hat keine 'role=\"button\"' und 'aria-expanded' Attribute auf seinem Host-Element, was die Erkennung und Interaktion für Screenreader erschwert.",
+                "Html Ausschnitt auf der Webseite": "<nav-mobile-menu-button class=\"nav_menu-toggle-button\" data-controls=\"nav-menu-root-sheet\" data-menu-root=\"nav_menu\" data-menu-wrapper=\"nav_mobile-menu-wrapper\" data-nav-initialized=\"data-nav-initialized\" data-nav-track=\"true\" data-nav-tracking-menu-close=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;close&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}}]\" data-nav-tracking-menu-exit=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;exit&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}}]\" data-nav-tracking-menu-open=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;open&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}}]\" id=\"nav_menu-toggle-button\" style=\"display: none;\"><p class=\"nav_menu-toggle-button__icon\"></p><p class=\"nav_menu-toggle-button__title-closed\">Sortiment</p><p class=\"nav_menu-toggle-button__title-open\">Schließen</p></nav-mobile-menu-button>",
+                "CSS-Selektor": "nav-mobile-menu-button#nav_menu-toggle-button",
+                "Änderungsvorschlag": "<nav-mobile-menu-button class=\"nav_menu-toggle-button\" role=\"button\" aria-expanded=\"false\" ...>",
+                "Änderungen einzeln": "role=\"button\" aria-expanded=\"false\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Button zum Öffnen und Schließen des mobilen Navigationsmenüs."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das Hauptsuchfeld verwendet einen Platzhalter als primäres Label, der beim Tippen verschwindet. Es fehlt ein dauerhaftes, programmatisch verknüpftes Label, das die Zugänglichkeit verbessert.",
+                "Html Ausschnitt auf der Webseite": "<input class=\"squirrel_searchfield js_squirrel_searchbar__input oc-copy-125\" autocomplete=\"off\" type=\"text\" role=\"searchbox\" tabindex=\"0\" aria-describedby=\"squirrel_searchfieldDescription\" maxlength=\"150\" data-qa=\"ftfind-search-field\" data-qa-id=\"search-field\" data-testid=\"squirrel-searchfield\" data-target=\"https://www.otto.de/suche/t-shirt/#t=%7B%22wk.san_ActiveSearch%22%3A%22true%22%2C%22san_InitialSearch%22%3A%22true%22%2C%22san_Interaction%22%3A%22initial_search%22%2C%22wk.san_SearchType%22%3A%22search%22%7D\" placeholder=\"Wonach suchst du?\">",
+                "CSS-Selektor": "input.squirrel_searchfield",
+                "Änderungsvorschlag": "<input class=\"squirrel_searchfield ...\" aria-label=\"Wonach suchst du?\" placeholder=\"Wonach suchst du?\">",
+                "Änderungen einzeln": "aria-label=\"Wonach suchst du?\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Hauptsuchfeld im Header der Webseite."
+            }
+        ]
+    }
+]

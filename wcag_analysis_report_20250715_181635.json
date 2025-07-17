@@ -1,0 +1,36 @@
+[
+    {
+        "step": 1,
+        "description": "Suchergebnisseite",
+        "url": "https://www.otto.de/suche/t-shirt/",
+        "violations": [
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Fehlender Alt-Text für ein Logo-Bild.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_logo\" role=\"img\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                "Änderungsvorschlag": "<svg class=\"pl_logo\" role=\"img\" aria-label=\"OTTO Logo\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                "Änderungen einzeln": "aria-label=\"OTTO Logo\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Otto-Logo im Header-Bereich der Webseite, das zur Homepage verlinkt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das Suchfeld hat keine eindeutige Beschriftung, die für Screenreader-Nutzer klar erkennbar ist. Die vorhandene Beschriftung ist visuell versteckt.",
+                "Html Ausschnitt auf der Webseite": "<input class=\"squirrel_searchfield js_squirrel_searchbar__input oc-copy-125\" autocomplete=\"off\" type=\"text\" role=\"searchbox\" tabindex=\"0\" aria-describedby=\"squirrel_searchfieldDescription\" maxlength=\"150\" data-qa=\"ftfind-search-field\" data-qa-id=\"search-field\" data-testid=\"squirrel-searchfield\" data-target=\"https://www.otto.de/suche/t-shirt/#t=%7B%22wk.san_ActiveSearch%22%3A%22true%22%2C%22san_InitialSearch%22%3A%22true%22%2C%22san_Interaction%22%3A%22initial_search%22%2C%22wk.san_SearchType%22%3A%22search%22%7D\" placeholder=\"Wonach suchst du?\">",
+                "Änderungsvorschlag": "<label for=\"squirrel_searchfield\" class=\"screen-reader-only\">Suchbegriff</label><input id=\"squirrel_searchfield\" class=\"squirrel_searchfield js_squirrel_searchbar__input oc-copy-125\" autocomplete=\"off\" type=\"text\" role=\"searchbox\" tabindex=\"0\" aria-describedby=\"squirrel_searchfieldDescription\" maxlength=\"150\" data-qa=\"ftfind-search-field\" data-qa-id=\"search-field\" data-testid=\"squirrel-searchfield\" data-target=\"https://www.otto.de/suche/t-shirt/#t=%7B%22wk.san_ActiveSearch%22%3A%22true%22%2C%22san_InitialSearch%22%3A%22true%22%2C%22san_Interaction%22%3A%22initial_search%22%2C%22wk.san_SearchType%22%3A%22search%22%7D\" placeholder=\"Wonach suchst du?\">",
+                "Änderungen einzeln": "<label for=\"squirrel_searchfield\" class=\"screen-reader-only\">Suchbegriff</label>",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Suchfeld ermöglicht es Benutzern, nach Produkten auf der Webseite zu suchen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Die Funktionalität zum Auswählen der Filter ist nicht ausreichend zugänglich, da die zugrunde liegenden UI-Komponenten keine semantischen Informationen liefern.",
+                "Html Ausschnitt auf der Webseite": "<button id=\"find_filterSheetButton\" class=\"pl_button50--primary js_openFilterSheet find_filterSheetButton--mini\" data-ts-labels=\"{&quot;san_Foldout&quot;:&quot;filter_top_all&quot;,&quot;san_FilterWhatIf&quot;:&quot;e3387_true&quot;,&quot;san_PopularFacetValues&quot;:&quot;kategorien|marke|preis-in-eur|us-groessen|verkaeufer&quot;}\">",
+                "Änderungsvorschlag": "<button id=\"find_filterSheetButton\" class=\"pl_button50--primary js_openFilterSheet find_filterSheetButton--mini\" data-ts-labels=\"{&quot;san_Foldout&quot;:&quot;filter_top_all&quot;,&quot;san_FilterWhatIf&quot;:&quot;e3387_true&quot;,&quot;san_PopularFacetValues&quot;:&quot;kategorien|marke|preis-in-eur|us-groessen|verkaeufer&quot;}\" aria-label=\"Filter und Sortieroptionen öffnen\">",
+                "Änderungen einzeln": "aria-label=\"Filter und Sortieroptionen öffnen\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Der Button öffnet ein Sheet mit Filter- und Sortieroptionen."
+            }
+        ]
+    }
+]

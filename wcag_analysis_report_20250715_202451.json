@@ -1,0 +1,114 @@
+[
+    {
+        "step": 1,
+        "description": "Suchergebnisseite",
+        "url": "https://www.otto.de/suche/t-shirt/",
+        "violations": []
+    },
+    {
+        "step": 2,
+        "description": "Produktdetailseite",
+        "url": "https://www.otto.de/p/jack-jones-t-shirt-basic-o-neck-3-tlg-3er-pack-etwas-laenger-geschnitten-nicht-zu-kurz-S0O1G0UW/#variationId=S0O1G0UW141E",
+        "violations": [
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "5+",
+                "Beschreibung der Verletzung": "Informative Bilder in den Suchvorschlägen und Produktkarussells haben leere oder fehlende Alt-Texte, was für Screenreader-Nutzer den Inhalt unzugänglich macht.",
+                "Html Ausschnitt auf der Webseite": "<img src=\"https://i.otto.de/i/otto/001_2021_42_sale_deal_des_tages_kleine_shoppromotion_design_189585?w=200&amp;h=200&amp;upscale=true\">",
+                "Änderungsvorschlag": "<img src=\"https://i.otto.de/i/otto/001_2021_42_sale_deal_des_tages_kleine_shoppromotion_design_189585?w=200&amp;h=200&amp;upscale=true\" alt=\"Bild zum Deal des Tages\">",
+                "Änderungen einzeln": "alt=\"Bild zum Deal des Tages\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Visuelle Darstellung eines Angebots ('Deal des Tages') im Suchvorschlags-Slider."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "Mehrere",
+                "Beschreibung der Verletzung": "Dekorative oder redundante SVG-Icons haben kein `aria-hidden=\"true\"` Attribut, wodurch sie unnötigerweise von Screenreadern vorgelesen werden könnten, obwohl ihr Zweck bereits durch umgebenden Text oder Attribute des Elternelements klar ist.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_logo\" role=\"img\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                "Änderungsvorschlag": "<svg class=\"pl_logo\" role=\"img\" aria-hidden=\"true\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                "Änderungen einzeln": "aria-hidden=\"true\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das OTTO-Logo im Header, das bereits durch den `title` des umgebenden Links 'zur Homepage' beschrieben wird."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Die Überschriftenhierarchie ist inkonsistent. Nach einem `<h1>` folgen `<h2>` und `<h3>` in einer nicht-logischen Reihenfolge, was die semantische Struktur der Seite beeinträchtigt.",
+                "Html Ausschnitt auf der Webseite": "<h1 class=\"pdp_short-info pl_headline100 pl_headline200--lg\" data-qa=\"variationName\" data-ft5-visibility-tracking=\"{&quot;componentName&quot;:&quot;short-info&quot;}\">\n    <oc-link-v2 variant=\"secondary\" size=\"75\" class=\"js_pdp_short-info__brand-link pdp_short-info__brand-link oc-mt-100 ts-link\" base64-href=\"L21vZGUvP21hcmtlPWphY2stam9uZXM=\" data-ft5-click-tracking=\"{&quot;product_BrandLogo&quot;:&quot;click_top&quot;}\" data-brand-name=\"Jack &amp; Jones\">JACK &amp; JONES</oc-link-v2>\n    <oc-placeholder-v1 class=\"pdp_short-info__main-name js_pdp_short-info__main-name oc-headline-100 oc-headline-200--l\" variant=\"text\" data-ft5-view-tracking=\"{&quot;product_ShortInfoHeadlineLength&quot;: 20 }\">T-Shirt Basic O-Neck</oc-placeholder-v1>\n    <div class=\"pdp_short-info__wrapper\">\n        <div class=\"pdp_short-info__left\">\n            <div class=\"pdp_short-info__subheading js_pdp_short-info__subheading pl_copy100\" data-ft5-view-tracking=\"{&quot;product_ShortInfoSubheadlineLength&quot;: 58 }\">(3-tlg., 3er Pack) etwas länger geschnitten, nicht zu kurz</div>\n        </div>\n        <div class=\"pdp_short-info__right js_pdp_short-info__right pl_hidden\">\n            <button class=\"pdp_short-info__expand-button js_pdp_short-info__expand-button pl_link--secondary pl_copy100\">... mehr</button>\n        </div>\n    </div>\n</h1>\n...\n<h2 class=\"pdp_details-short-info__title oc-headline-100 oc-headline-200--l\">\n                Artikelbeschreibung\n            </h2>\n...\n<h3 class=\"oc-headline-100 oc-headline-200-l oc-mb-150\">Wichtige Informationen</h3>\n...\n<h2 class=\"oc-headline-100 oc-headline-200-l\" data-qa=\"cr_sidebar__pdp-headline\">Kundenbewertungen</h2>",
+                "Änderungsvorschlag": "Stellen Sie sicher, dass die Überschriftenhierarchie logisch ist (z.B. `<h1>` gefolgt von `<h2>`, dann `<h3>` usw.). 'Wichtige Informationen' sollte ein `<h2>` sein, wenn es auf der gleichen Ebene wie 'Artikelbeschreibung' und 'Kundenbewertungen' steht.",
+                "Änderungen einzeln": "Ändern Sie `<h3 class=\"oc-headline-100 oc-headline-200-l oc-mb-150\">Wichtige Informationen</h3>` zu `<h2 class=\"oc-headline-100 oc-headline-200-l oc-mb-150\">Wichtige Informationen</h2>`.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Strukturiert die Hauptinhaltsbereiche der Produktdetailseite."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "10+",
+                "Beschreibung der Verletzung": "Listen (`<li>`) werden ohne ein übergeordnetes Listen-Element (`<ul>` oder `<ol>`) verwendet, was die semantische Struktur und die Zugänglichkeit für Screenreader beeinträchtigt.",
+                "Html Ausschnitt auf der Webseite": "<div role=\"list\">\n    <div class=\"pl_mb50 pl_mt100\" role=\"listitem\">\n        <span class=\"ts-link ub64e pl_link100--secondary\" data-ub64e=\"L3Nob3BwYWdlcy9wYXltZW50IzVkYTliZWNmNmYxYzIxMzUxY2RlNTZiMQ==\" role=\"link\" tabindex=\"0\" aria-label=\"SEPA-Lastschrift\" data-qa=\"reptile_footer_sepa_link\" data-ts-link=\"{&quot;ot_Origin&quot; : &quot;footer_Sepa&quot;}\">\n            <svg class=\"pl_logo\" role=\"img\" aria-hidden=\"true\" viewBox=\"0 0 106 40\" height=\"16\">\n                <use xlink:href=\"/assets-static/icons/pl_logo_sepa.svg#pl_logo_sepa\"></use>\n            </svg>\n        </span>\n    </div>\n    <div class=\"pl_mb50\" role=\"listitem\">\n        <span class=\"ts-link ub64e pl_link100--secondary\" data-ub64e=\"L3NlcnZpY2UvcGF5bWVudC8jNTgyZGJlZGMzMjIzZTg1OTMyYTNiMjUy\" role=\"link\" tabindex=\"0\" aria-label=\"PayPal\" data-qa=\"reptile_footer_paypal_link\" data-ts-link=\"{&quot;ot_Origin&quot; : &quot;footer_PayPal&quot;}\">\n            <svg class=\"pl_logo\" role=\"img\" aria-hidden=\"true\" viewBox=\"0 0 120 40\" height=\"16\">\n                <use xlink:href=\"/assets-static/icons/pl_logo_paypal.svg#pl_logo_paypal\"></use>\n            </svg>\n        </span>\n    </div>\n</div>",
+                "Änderungsvorschlag": "Verwenden Sie ein `<ul>` oder `<ol>` Element als Container für die `<li>` Elemente, um eine korrekte semantische Listenstruktur zu gewährleisten.",
+                "Änderungen einzeln": "Ersetzen Sie `<div role=\"list\">` durch `<ul role=\"list\">` und die entsprechenden schließenden Tags.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Stellt eine Liste von Zahlungsarten im Footer dar."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "10+",
+                "Beschreibung der Verletzung": "Interaktive Elemente, die als Links fungieren sollen, werden als `<span>` Elemente mit `role=\"link\"` und `tabindex=\"0\"` implementiert, anstatt native `<a>` Elemente zu verwenden. Dies kann zu inkonsistentem Verhalten für Assistive Technologien führen.",
+                "Html Ausschnitt auf der Webseite": "<span class=\"ts-link ub64e pl_link100--secondary\" data-ub64e=\"L215YWNjb3VudC9kYXNoYm9hcmQ/ZW50cnlQb2ludD1mb290ZXI=\" role=\"link\" tabindex=\"0\" data-qa=\"reptile_footer_mein-konto_link\" data-ts-link=\"{&quot;ot_Origin&quot; : &quot;footer_MeinKonto&quot;}\"><span style=\"all: unset;\">\n                Mein Konto\n              </span></span>",
+                "Änderungsvorschlag": "Verwenden Sie native `<a>` Elemente für Links, um die korrekte semantische Rolle und das erwartete Verhalten sicherzustellen.",
+                "Änderungen einzeln": "Ersetzen Sie `<span ... role=\"link\" tabindex=\"0\">` durch `<a href=\"/myaccount/dashboard?entryPoint=footer\">` und entfernen Sie `role` und `tabindex`.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Navigationselement im Footer, das zu 'Mein Konto' führt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.2 Bedeutungstragende Reihenfolge (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Zwei identische `<h2>` Überschriften ('Verwandte Produkte zu diesem Artikel') sind direkt hintereinander im HTML-Code vorhanden, was für Screenreader-Nutzer redundant und verwirrend ist.",
+                "Html Ausschnitt auf der Webseite": "<h2 style=\"margin-left: 16px;\" class=\"auction_cinema__headline pl_headline100\">Verwandte Produkte zu diesem Artikel</h2>\n<h2 style=\"margin-left: 16px;\" class=\"auction_cinema__headline pl_headline200\">Verwandte Produkte zu diesem Artikel</h2>",
+                "Änderungsvorschlag": "Entfernen Sie die redundante Überschrift oder verwenden Sie CSS, um eine der Überschriften visuell zu verstecken, während die andere für Screenreader zugänglich bleibt (z.B. mit `aria-hidden=\"true\"` auf der visuell versteckten Überschrift, wenn sie nur für visuelle Darstellung dient).",
+                "Änderungen einzeln": "Entfernen Sie `<h2 style=\"margin-left: 16px;\" class=\"auction_cinema__headline pl_headline100\">Verwandte Produkte zu diesem Artikel</h2>`",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Überschrift für den Bereich 'Verwandte Produkte', die visuell unterschiedlich dargestellt wird, aber semantisch redundant ist."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.5 Bestimmung des Eingabezwecks (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das E-Mail-Eingabefeld für den Newsletter-Anmeldung fehlt das `autocomplete` Attribut, was die automatische Vervollständigung für Nutzer erschwert.",
+                "Html Ausschnitt auf der Webseite": "<oc-text-field-v1 id=\"newsletter-subscribe-footer-email-input\" class=\"newsletter-subscribe-footer-input oc-mt-50 oc-mb-100\" hide-counter=\"\" placeholder=\"E-Mail-Adresse\" type=\"email\" value=\"\" maxlength=\"80\">E-Mail-Adresse\n            </oc-text-field-v1>",
+                "Änderungsvorschlag": "Fügen Sie das `autocomplete=\"email\"` Attribut zum Eingabefeld hinzu.",
+                "Änderungen einzeln": "autocomplete=\"email\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Eingabefeld für die E-Mail-Adresse zur Newsletter-Anmeldung im Footer."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.1 Blöcke umgehen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Es fehlt ein 'Skip-Link' oder eine ähnliche Mechanik, die es Tastatur- und Screenreader-Nutzern ermöglicht, wiederholte Navigationsblöcke am Seitenanfang zu überspringen und direkt zum Hauptinhalt zu gelangen.",
+                "Html Ausschnitt auf der Webseite": "Der HTML-Code enthält keinen sichtbaren oder programmatisch zugänglichen Skip-Link am Anfang des `<body>` Elements.",
+                "Änderungsvorschlag": "Fügen Sie einen 'Skip-Link' am Anfang des `<body>` Elements ein, der auf den Hauptinhaltsbereich der Seite verweist (z.B. `<a href=\"#main-content\" class=\"skip-link\">Zum Hauptinhalt springen</a>`).",
+                "Änderungen einzeln": "<a href=\"#main-content\" class=\"skip-link\">Zum Hauptinhalt springen</a>",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein 'Skip-Link' würde es Nutzern ermöglichen, die umfangreiche Kopfzeile und Navigation zu überspringen und direkt zum Produktinhalt zu gelangen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.5.3 Beschriftung (Label) im Namen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Der Button zum Öffnen der Suchleiste hat eine sichtbare Beschriftung ('Suche'), die jedoch nicht Teil des programmatisch ermittelten zugänglichen Namens des Buttons ist.",
+                "Html Ausschnitt auf der Webseite": "<div class=\"squirrel_searchIcon js_squirrel_searchIcon svelte-1ml7eaa\" data-testid=\"squirrel-search-icon\" role=\"button\"><span class=\"p_icons squirrel_searchIcon__icon svelte-1ml7eaa\">»</span> <span class=\"squirrel_searchIcon__label svelte-1ml7eaa\">Suche</span></div>",
+                "Änderungsvorschlag": "Fügen Sie `aria-label=\"Suche\"` zum Button-Element hinzu.",
+                "Änderungen einzeln": "aria-label=\"Suche\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Button, der beim Klicken die Suchleiste öffnet."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.5.3 Beschriftung (Label) im Namen (A)",
+                "Anzahl der Verletzungen": "2",
+                "Beschreibung der Verletzung": "Die Navigationsbuttons des Karussells (Pfeile) haben keine zugängliche Beschriftung, was ihre Funktion für Screenreader-Nutzer unklar macht.",
+                "Html Ausschnitt auf der Webseite": "<button type=\"button\" class=\"pl_carousel__arrow pl_rounded50 pl_rounded50--elevated pl_carousel__arrow--hidden\"><svg class=\"pl_icon\" role=\"img\"><use href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\" xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "Änderungsvorschlag": "Fügen Sie ein `aria-label` Attribut mit einer beschreibenden Bezeichnung hinzu (z.B. `aria-label=\"Vorheriges Element\"` für den linken Pfeil und `aria-label=\"Nächstes Element\"` für den rechten Pfeil). Stellen Sie außerdem sicher, dass das SVG-Element `aria-hidden=\"true\"` hat.",
+                "Änderungen einzeln": "aria-label=\"Vorheriges Element\" (für den linken Pfeil) und aria-label=\"Nächstes Element\" (für den rechten Pfeil), sowie aria-hidden=\"true\" auf dem SVG.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Buttons zur Navigation durch die Produktbilder im Hauptkarussell."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "Mehrere",
+                "Beschreibung der Verletzung": "Mehrere UI-Komponenten, insbesondere Icons und nicht-native Link-Elemente, haben keinen programmatisch bestimmbaren Namen oder eine korrekte Rolle, was die Interaktion für Assistive Technologien erschwert. Dies ist eine übergreifende Verletzung, die sich aus den oben genannten spezifischen Problemen ergibt.",
+                "Html Ausschnitt auf der Webseite": "Siehe Beispiele unter 1.1.1, 1.3.1 und 2.5.3.",
+                "Änderungsvorschlag": "Stellen Sie sicher, dass alle interaktiven UI-Komponenten einen zugänglichen Namen und eine korrekte Rolle haben. Verwenden Sie native HTML-Elemente, wo immer möglich, und ergänzen Sie diese bei Bedarf mit ARIA-Attributen (`aria-label`, `aria-hidden`, `role`).",
+                "Änderungen einzeln": "Siehe spezifische Korrekturen unter 1.1.1, 1.3.1 und 2.5.3.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Betrifft verschiedene interaktive Elemente wie Icons, Buttons und Links, die für die Navigation und Interaktion auf der gesamten Webseite entscheidend sind."
+            }
+        ]
+    }
+]

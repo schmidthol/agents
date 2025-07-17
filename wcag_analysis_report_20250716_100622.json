@@ -1,0 +1,482 @@
+[
+    {
+        "step": 1,
+        "description": "Suchergebnisseite",
+        "url": "https://www.otto.de/suche/t-shirt/",
+        "violations": [
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "4",
+                "Beschreibung der Verletzung": "Interaktive Elemente, die ausschließlich ein dekoratives SVG-Icon enthalten, besitzen keinen zugänglichen Namen (Accessible Name). Dies betrifft Navigationspfeile, Filter-Buttons und Löschen-Buttons.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow\" type=\"button\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "Änderungsvorschlag": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow\" type=\"button\" aria-label=\"Vorherige Seite\"><svg aria-hidden=\"true\" class=\"pl_icon\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "Änderungen einzeln": "aria-label=\"Vorherige Seite\" zum <button>-Tag hinzufügen und role=\"img\" vom <svg>-Tag entfernen, da aria-hidden=\"true\" verwendet wird.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Pfeil-Buttons in einem Slider-Element, die zur Navigation dienen. Ähnliche Probleme treten bei den Filter- und Löschen-Buttons auf."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "4",
+                "Beschreibung der Verletzung": "Informative SVG-Grafiken, die wichtige Informationen vermitteln, haben keinen zugänglichen Namen (Accessible Name).",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"reptile_tile__ottoUp pl_logo--red\" role=\"img\"><use href=\"/assets-static/icons/pl_logo_otto-up.svg#pl_logo_otto-up\" xlink:href=\"/assets-static/icons/pl_logo_otto-up.svg#pl_logo_otto-up\"></use></svg>",
+                "Änderungsvorschlag": "<svg class=\"reptile_tile__ottoUp pl_logo--red\" aria-label=\"OTTO UP Vorteil\" role=\"img\"><use href=\"/assets-static/icons/pl_logo_otto-up.svg#pl_logo_otto-up\" xlink:href=\"/assets-static/icons/pl_logo_otto-up.svg#pl_logo_otto-up\"></use></svg>",
+                "Änderungen einzeln": "aria-label=\"OTTO UP Vorteil\" zum <svg>-Tag hinzufügen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Logo, das einen speziellen Vorteil (OTTO UP) für das Produkt anzeigt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "4",
+                "Beschreibung der Verletzung": "Dekorative SVG-Grafiken, die keine Informationen vermitteln, sind nicht mit `aria-hidden=\"true\"` versehen, was sie für Screenreader sichtbar macht und zu unnötiger Redundanz führt.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-down.svg#pl_icon_arrow-down\"></use></svg>",
+                "Änderungsvorschlag": "<svg class=\"pl_icon\" aria-hidden=\"true\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-down.svg#pl_icon_arrow-down\"></use></svg>",
+                "Änderungen einzeln": "role=\"img\" entfernen und aria-hidden=\"true\" zum <svg>-Tag hinzufügen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Pfeil-Icons, die den Zustand von Akkordeon-Elementen (Filter) visuell anzeigen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "4",
+                "Beschreibung der Verletzung": "Produkt-Farbmuster werden visuell durch farbige Punkte dargestellt, aber die zugehörigen `<li>`-Elemente, die als interaktive Farbauswahl dienen, haben keinen zugänglichen Namen, der die Farbe beschreibt.",
+                "Html Ausschnitt auf der Webseite": "<li class=\"reptile_colorThumb reptile_colorThumb--selected\" data-color-name=\"Mix 6 (Bu/Ka/Go)\" data-variation-id=\"S0O1G0UV0LRQ\"><div class=\"reptile_colorThumb__dot \" style=\"background:#683228\"></div></li>",
+                "Änderungsvorschlag": "<li class=\"reptile_colorThumb reptile_colorThumb--selected\" data-color-name=\"Mix 6 (Bu/Ka/Go)\" data-variation-id=\"S0O1G0UV0LRQ\" role=\"option\" aria-label=\"Farbe: Mix 6 (Bu/Ka/Go)\"><div class=\"reptile_colorThumb__dot \" style=\"background:#683228\" aria-hidden=\"true\"></div></li>",
+                "Änderungen einzeln": "role=\"option\" und aria-label=\"Farbe: [Wert von data-color-name]\" zum `<li>`-Tag hinzufügen. aria-hidden=\"true\" zum `<div>`-Tag hinzufügen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Visuelle Darstellung der verfügbaren Produktfarben, die anklickbar sind, um die Produktansicht zu ändern."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "3",
+                "Beschreibung der Verletzung": "Interaktive Elemente, die visuell als Buttons oder Akkordeon-Header fungieren, verwenden keine semantisch korrekten HTML-Elemente (`<button>`) oder die entsprechenden ARIA-Rollen und -Attribute (`role=\"button\"`, `aria-expanded`).",
+                "Html Ausschnitt auf der Webseite": "<nav-mobile-menu-button class=\"nav_menu-toggle-button\" data-controls=\"nav-menu-root-sheet\" data-menu-root=\"nav_menu\" data-menu-wrapper=\"nav_mobile-menu-wrapper\" data-nav-initialized=\"data-nav-initialized\" data-nav-track=\"true\" data-nav-tracking-menu-close=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;close&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}]\"><p class=\"nav_menu-toggle-button__icon\"></p><p class=\"nav_menu-toggle-button__title-closed\">Sortiment</p><p class=\"nav_menu-toggle-button__title-open\">Schließen</p></nav-mobile-menu-button>",
+                "Änderungsvorschlag": "<button class=\"nav_menu-toggle-button\" data-controls=\"nav-menu-root-sheet\" aria-expanded=\"false\" aria-label=\"Sortiment Menü öffnen\" type=\"button\"><span class=\"nav_menu-toggle-button__icon\" aria-hidden=\"true\"></span><span class=\"nav_menu-toggle-button__title-closed\">Sortiment</span><span class=\"nav_menu-toggle-button__title-open\" aria-hidden=\"true\">Schließen</span></button>",
+                "Änderungen einzeln": "Das Custom-Element `nav-mobile-menu-button` durch ein `<button>`-Tag ersetzen. `aria-expanded=\"false\"` und `aria-label=\"Sortiment Menü öffnen\"` zum `<button>`-Tag hinzufügen. Die `<p>`-Tags durch `<span>`-Tags ersetzen und das Icon mit `aria-hidden=\"true\"` versehen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Der Button zum Öffnen und Schließen des mobilen Navigationsmenüs. Ähnliche Probleme treten beim 'Mein Konto'-Button und den Filter-Akkordeons auf."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "3",
+                "Beschreibung der Verletzung": "Listenstrukturen im Footer werden mit generischen `div`-Elementen und ARIA-Rollen (`role=\"list\"`, `role=\"listitem\"`) implementiert, anstatt native HTML-Listen (`<ul>`, `<li>`) zu verwenden. Dies kann die semantische Interpretation für Assistive Technologien erschweren.",
+                "Html Ausschnitt auf der Webseite": "<div role=\"list\"><div class=\"pl_mb50 pl_mt100\" role=\"listitem\">...</div></div>",
+                "Änderungsvorschlag": "<ul><li>...</li></ul>",
+                "Änderungen einzeln": "Alle `div`s mit `role=\"list\"` durch `<ul>` und `div`s mit `role=\"listitem\"` durch `<li>` ersetzen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Strukturiert die Links und Informationen im Footer der Webseite."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.5 Bestimmung des Eingabezwecks (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das E-Mail-Eingabefeld für den Newsletter-Anmeldebereich verwendet nicht das `autocomplete`-Attribut, was die automatische Vervollständigung für Benutzer erschwert.",
+                "Html Ausschnitt auf der Webseite": "<oc-text-field-v1 id=\"newsletter-subscribe-footer-email-input\" class=\"newsletter-subscribe-footer-input oc-mt-50 oc-mb-100\" hide-counter=\"\" placeholder=\"E-Mail-Adresse\" type=\"email\" value=\"\" maxlength=\"80\">E-Mail-Adresse</oc-text-field-v1>",
+                "Änderungsvorschlag": "<oc-text-field-v1 id=\"newsletter-subscribe-footer-email-input\" class=\"newsletter-subscribe-footer-input oc-mt-50 oc-mb-100\" hide-counter=\"\" placeholder=\"E-Mail-Adresse\" type=\"email\" value=\"\" maxlength=\"80\" autocomplete=\"email\">E-Mail-Adresse</oc-text-field-v1>",
+                "Änderungen einzeln": "autocomplete=\"email\" zum `<oc-text-field-v1>`-Tag hinzufügen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Eingabefeld für die E-Mail-Adresse zur Newsletter-Anmeldung im Footer."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.1 Blöcke umgehen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Es gibt keinen 'Skip-Link' oder eine ähnliche Funktion, die es Benutzern ermöglicht, wiederholte Inhaltsblöcke (z.B. Header-Navigation) zu überspringen und direkt zum Hauptinhalt zu gelangen.",
+                "Html Ausschnitt auf der Webseite": "Kein spezifischer HTML-Ausschnitt, da das Element fehlt.",
+                "Änderungsvorschlag": "Füge einen 'Skip-Link' am Anfang des `<body>`-Tags hinzu, der auf den Hauptinhalt verweist: `<a href=\"#main-content\" class=\"skip-link\">Zum Hauptinhalt springen</a>` und füge `id=\"main-content\"` zum `<main>`-Tag hinzu.",
+                "Änderungen einzeln": "Füge `<a href=\"#main-content\" class=\"skip-link\">Zum Hauptinhalt springen</a>` am Anfang des `<body>` hinzu. Füge `id=\"main-content\"` zum `<main>`-Tag hinzu.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Mechanismus, der es Tastatur- und Screenreader-Benutzern ermöglicht, schnell zum Hauptinhalt der Seite zu navigieren."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.4 Linkzweck (Im Kontext) (A)",
+                "Anzahl der Verletzungen": "2",
+                "Beschreibung der Verletzung": "Der Zweck von Paginierungs-Buttons ist nicht klar aus dem Button-Text oder dem Kontext ersichtlich, da der Text nur ein Pfeil-Symbol ist und der `title`-Attribut auf einem inneren `<i>`-Tag liegt, nicht auf dem `button`-Element selbst.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"js_pagingLink ts-link p_btn50--4th\" data-page=\"{&quot;l&quot;:&quot;gp&quot;,&quot;o&quot;:&quot;109&quot;,&quot;sortiertnach&quot;:&quot;&quot;}\" data-ts-link=\"{&quot;san_Interaction&quot;:&quot;paging&quot;,&quot;san_NaviPaging&quot;:&quot;2&quot;,&quot;ts_RemoveLabels&quot;:&quot;wk.nav_UnfilteredSelectionRule&quot;}\"> <i title=\"weiter\">&gt;</i> </button>",
+                "Änderungsvorschlag": "<button class=\"js_pagingLink ts-link p_btn50--4th\" data-page=\"{&quot;l&quot;:&quot;gp&quot;,&quot;o&quot;:&quot;109&quot;,&quot;sortiertnach&quot;:&quot;&quot;}\" data-ts-link=\"{&quot;san_Interaction&quot;:&quot;paging&quot;,&quot;san_NaviPaging&quot;:&quot;2&quot;,&quot;ts_RemoveLabels&quot;:&quot;wk.nav_UnfilteredSelectionRule&quot;}\" aria-label=\"Nächste Seite\"><i aria-hidden=\"true\">&gt;</i></button>",
+                "Änderungen einzeln": "aria-label=\"Nächste Seite\" zum `<button>`-Tag hinzufügen. `title` vom `<i>`-Tag entfernen und `aria-hidden=\"true\"` zum `<i>`-Tag hinzufügen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Buttons, die zur Navigation zwischen den Seiten der Suchergebnisse dienen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.4 Linkzweck (Im Kontext) (A)",
+                "Anzahl der Verletzungen": "2",
+                "Beschreibung der Verletzung": "Der Linktext '+6' für die Farbauswahl ist nicht ausreichend beschreibend, um den Zweck des Links ohne zusätzlichen Kontext zu verstehen. Obwohl ein `title`-Attribut vorhanden ist, sollte der sichtbare Linktext selbst aussagekräftiger sein.",
+                "Html Ausschnitt auf der Webseite": "<li class=\"reptile_colorThumbLink js_reptile_colorThumbLink\"><oc-link-v2 base64-href=\"L3Avb25seS10LXNoaXJ0LW9ubGxpdmUtbG92ZS1uZXctMy10bGctM2VyLXBhY2stZmlndXItYmV0b250LWVsYXN0aXNjaGUtYmF1bXdvbGxxdWFsaXRhZXQtUzBPMUcwVVYvI3ZhcmlhdGlvbklkPVMwTzFHMFVWMExSUQ==\" size=\"100\"> <a class=\"\" href=\"/p/only-t-shirt-onllive-love-new-3-tlg-3er-pack-figur-betont-elastische-baumwollqualitaet-S0O1G0UV/\" data-link-type=\"text\" title=\"ONLY T-Shirt ONLLIVE LOVE NEW (3-tlg., 3er Pack) Figur betont, elastische Baumwollqualität\" tabindex=\"0\">+6</a> </oc-link-v2></li>",
+                "Änderungsvorschlag": "<li class=\"reptile_colorThumbLink js_reptile_colorThumbLink\"><oc-link-v2 base64-href=\"L3Avb25seS10LXNoaXJ0LW9ubGxpdmUtbG92ZS1uZXctMy10bGctM2VyLXBhY2stZmlndXItYmV0b250LWVsYXN0aXNjaGUtYmF1bXdvbGxxdWFsaXRhZXQtUzBPMUcwVVYvI3ZhcmlhdGlvbklkPVMwTzFHMFVWMExSUQ==\" size=\"100\"> <a class=\"\" href=\"/p/only-t-shirt-onllive-love-new-3-tlg-3er-pack-figur-betont-elastische-baumwollqualitaet-S0O1G0UV/\" data-link-type=\"text\" title=\"ONLY T-Shirt ONLLIVE LOVE NEW (3-tlg., 3er Pack) Figur betont, elastische Baumwollqualität\" tabindex=\"0\">+6 weitere Farben</a> </oc-link-v2></li>",
+                "Änderungen einzeln": "Den Linktext von '+6' zu '+6 weitere Farben' ändern.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Link, der zu weiteren Farbvarianten eines Produkts führt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Der Text 'SORTIEREN NACH' fungiert visuell als Überschrift für eine Sektion, ist aber nicht als semantische Überschrift (`<h2>` oder `<h3>`) ausgezeichnet, sondern als `<span>` innerhalb eines `dt`-Elements. Dies beeinträchtigt die Struktur und Navigation für Screenreader-Benutzer.",
+                "Html Ausschnitt auf der Webseite": "<dt class=\"heureka_filterTitle__title\"><span class=\"pl_copy75 pl_copy75--grey\">SORTIEREN NACH</span></dt>",
+                "Änderungsvorschlag": "<h3>SORTIEREN NACH</h3>",
+                "Änderungen einzeln": "Das `<dt>`-Tag und das `<span>`-Tag durch ein `<h3>`-Tag ersetzen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Überschrift für die Sortieroptionen im Filterbereich."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.5.3 Beschriftung (Label) im Namen (A)",
+                "Anzahl der Verletzungen": "2",
+                "Beschreibung der Verletzung": "Interaktive Elemente, die eine sichtbare Textbeschriftung haben, stellen sicher, dass der zugängliche Name (Accessible Name) des Elements diesen sichtbaren Text enthält. Bei den Custom Elements ist dies nicht immer explizit gewährleistet.",
+                "Html Ausschnitt auf der Webseite": "<nav-mobile-menu-button class=\"nav_menu-toggle-button\" ...><p class=\"nav_menu-toggle-button__title-closed\">Sortiment</p>...</nav-mobile-menu-button>",
+                "Änderungsvorschlag": "<nav-mobile-menu-button class=\"nav_menu-toggle-button\" ... aria-label=\"Sortiment Menü öffnen\"><p class=\"nav_menu-toggle-button__title-closed\">Sortiment</p>...</nav-mobile-menu-button>",
+                "Änderungen einzeln": "aria-label=\"Sortiment Menü öffnen\" zum `nav-mobile-menu-button`-Tag hinzufügen. Ähnlich für den Such-Icon-Button.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Der Button zum Öffnen des mobilen Navigationsmenüs und der Such-Icon-Button."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "4",
+                "Beschreibung der Verletzung": "Benutzeroberflächenkomponenten, die durch Skripte generiert werden oder nicht-native HTML-Elemente sind, haben keine programmatisch bestimmbaren Namen, Rollen und/oder Werte, was ihre Interaktion für Assistive Technologien unmöglich macht.",
+                "Html Ausschnitt auf der Webseite": "<nav-mobile-menu-button class=\"nav_menu-toggle-button\" ...>",
+                "Änderungsvorschlag": "<nav-mobile-menu-button class=\"nav_menu-toggle-button\" role=\"button\" aria-expanded=\"false\" aria-label=\"Sortiment Menü öffnen\">",
+                "Änderungen einzeln": "role=\"button\", aria-expanded=\"false\" und aria-label=\"Sortiment Menü öffnen\" zum `nav-mobile-menu-button`-Tag hinzufügen. Ähnliche Korrekturen für andere Custom Elements und `div`-Elemente, die als interaktive Komponenten fungieren, sowie für Paginierungs-Buttons und Filter-Akkordeons.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Der Button zum Öffnen des mobilen Navigationsmenüs. Dies gilt auch für den 'Mein Konto'-Button, den Such-Icon-Button, die Filter-Akkordeon-Header und die Paginierungs-Buttons."
+            }
+        ]
+    },
+    {
+        "step": 2,
+        "description": "Produktdetailseite",
+        "url": "https://www.otto.de/p/jack-jones-t-shirt-basic-o-neck-3-tlg-3er-pack-etwas-laenger-geschnitten-nicht-zu-kurz-S0O1G0UW/#variationId=S0O1G0UW141E",
+        "violations": [
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Informative Produktbilder innerhalb von Karussells oder Listen haben einen leeren oder unzureichenden 'alt'-Text. Obwohl der umgebende Link einen 'title'-Attribut haben kann, ist der 'alt'-Text des Bildes entscheidend für Screenreader, um den visuellen Inhalt des Bildes zu vermitteln.",
+                "Html Ausschnitt auf der Webseite": "<img alt=\"\" src=\"https://i.otto.de/i/otto/f48e181e-4d46-5f78-9831-78a5f6e6efcb?$tile_portrait$\" class=\"portrait\">",
+                "Änderungsvorschlag": "<img alt=\"T-Shirt Basic V-Neck (3-tlg., 3er Pack) etwas länger geschnitten, nicht zu kurz\" src=\"https://i.otto.de/i/otto/f48e181e-4d46-5f78-9831-78a5f6e6efcb?$tile_portrait$\" class=\"portrait\">",
+                "Änderungen einzeln": "alt=\"T-Shirt Basic V-Neck (3-tlg., 3er Pack) etwas länger geschnitten, nicht zu kurz\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Dies ist ein Produktbild in einem Karussell von 'Verwandte Produkte'. Es dient dazu, das beworbene Produkt visuell darzustellen und ist Teil eines klickbaren Links zu diesem Produkt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Das OTTO-Logo, das als SVG eingebunden ist, hat kein direktes 'aria-label' oder 'title'-Attribut auf dem <svg>-Element, um seinen Zweck für Screenreader zu beschreiben. Obwohl der umgebende Link einen 'title' hat, sollte das Bild selbst eine zugängliche Bezeichnung haben.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_logo\" role=\"img\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                "Änderungsvorschlag": "<svg class=\"pl_logo\" role=\"img\" aria-label=\"OTTO Logo\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                "Änderungen einzeln": "aria-label=\"OTTO Logo\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Logo ist das Hauptidentifikationsmerkmal der Marke OTTO und dient als klickbarer Link zur Startseite der Webseite."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.4 Linkzweck (Im Kontext) (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Navigationsbuttons in Karussells, die nur ein Icon enthalten (SVG mit 'aria-hidden=\"true\"'), haben keinen zugänglichen Namen ('aria-label' oder sichtbaren Text). Dies macht sie für Screenreader-Nutzer unbedienbar.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"pl_carousel__arrow pl_rounded50 pl_rounded50--elevated pl_carousel__arrow--hidden\" type=\"button\"><svg class=\"pl_icon\" role=\"img\"><use href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\" xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "Änderungsvorschlag": "<button class=\"pl_carousel__arrow pl_rounded50 pl_rounded50--elevated pl_carousel__arrow--hidden\" type=\"button\" aria-label=\"Vorheriges Element\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\" xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "Änderungen einzeln": "aria-label=\"Vorheriges Element\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Diese Buttons ermöglichen die Navigation durch Karussellinhalte (z.B. Produktbilder, Empfehlungen) auf der Webseite."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Visuell als Überschriften fungierende Texte sind mit generischen <span>-Tags anstatt semantisch korrekten Überschriften-Tags (<h2>, <h3>) ausgezeichnet. Dies beeinträchtigt die Strukturwahrnehmung für Screenreader-Nutzer.",
+                "Html Ausschnitt auf der Webseite": "<span class=\"pl_headline100 reptile_color_black100\">\n              Wir sind gerne für dich da.\n            </span>",
+                "Änderungsvorschlag": "<h2>\n              Wir sind gerne für dich da.\n            </h2>",
+                "Änderungen einzeln": "Ersetze <span> durch <h2>.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Dies ist eine Überschrift für den Service-Bereich im Footer, die wichtige Kontaktinformationen und Hilfsangebote gruppiert."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Die Tabelle mit den Artikeldetails verwendet keine <th>-Elemente, um Spalten- oder Zeilenüberschriften zu definieren. Stattdessen werden alle Zellen als <td> markiert, was die programmatische Bestimmung der Beziehungen zwischen den Daten erschwert.",
+                "Html Ausschnitt auf der Webseite": "<div class=\"pdp_details__characteristics-html\"><table class=\"dv_characteristicsTable\"><tbody><tr><td class=\"left\"><span>Materialzusammensetzung</span></td><td>92% Baumwolle, 8% Elasthan</td></tr><tr><td class=\"left\"><span>Materialart</span></td><td>Jersey</td></tr></tbody></table></div>",
+                "Änderungsvorschlag": "<div class=\"pdp_details__characteristics-html\">\n        <table class=\"dv_characteristicsTable\">\n            <thead>\n                <tr>\n                    <th scope=\"col\">Eigenschaft</th>\n                    <th scope=\"col\">Wert</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr>\n                    <th scope=\"row\">Materialzusammensetzung</th>\n                    <td>92% Baumwolle, 8% Elasthan</td>\n                </tr>\n                <tr>\n                    <th scope=\"row\">Materialart</th>\n                    <td>Jersey</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>",
+                "Änderungen einzeln": "Füge <thead> und <th> für Spaltenüberschriften hinzu. Ändere die erste <td> in jeder Zeile zu <th> mit scope=\"row\".",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Diese Tabelle präsentiert detaillierte Eigenschaften des Produkts, wie Materialzusammensetzung, Pflegehinweise und Passform."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.1 Blöcke umgehen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Es fehlt ein 'Zum Hauptinhalt springen'-Link (Skip-Link) am Anfang des Dokuments. Dies zwingt Tastatur- und Screenreader-Nutzer, sich durch alle Navigationselemente und den Header zu tabben, bevor sie zum Hauptinhalt der Seite gelangen.",
+                "Html Ausschnitt auf der Webseite": "<body class=\"product-system so_footerswitch\">",
+                "Änderungsvorschlag": "<body class=\"product-system so_footerswitch\">\n    <a href=\"#main-content\" class=\"skip-link\">Zum Hauptinhalt springen</a>\n    <!-- ... existing header content ... -->\n    <div class=\"pl_grid-lane pl_grid-lane--ft5 pdp-content\" data-pdp-ui-aggregator-component=\"pdp-content\" data-qa=\"product-detail-page\" data-video-player-type=\"OTTO_live\" data-product-base-class=\"Shirts\" id=\"main-content\">",
+                "Änderungen einzeln": "Füge <a href=\"#main-content\" class=\"skip-link\">Zum Hauptinhalt springen</a> direkt nach dem <body>-Tag ein. Füge id=\"main-content\" zum Hauptinhaltsbereich (div.pdp-content) hinzu.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Skip-Link ermöglicht es Nutzern von assistiven Technologien, repetitive Header-Inhalte zu überspringen und direkt zum Hauptinhalt der Seite zu navigieren, was die Effizienz der Tastaturnavigation erheblich verbessert."
+            }
+        ]
+    },
+    {
+        "step": 3,
+        "description": "Warenkorbseite",
+        "url": "https://www.otto.de/order/basket",
+        "violations": [
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "6",
+                "Beschreibung der Verletzung": "Das OTTO-Logo als SVG-Icon innerhalb eines Links hat 'role=\"img\"', aber keine explizite zugängliche Bezeichnung (aria-label oder <title>). Obwohl der umgebende Link ein 'title'-Attribut hat, sollte das SVG selbst für Robustheit eine Bezeichnung haben, wenn es nicht rein dekorativ ist.",
+                "Html Ausschnitt auf der Webseite": "<svg class=\"pl_logo\" role=\"img\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                "Änderungsvorschlag": "<svg class=\"pl_logo\" role=\"img\" aria-label=\"OTTO Logo\"><use href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\" xlink:href=\"/static-proxy/assets-static/icons/pl_logo_otto.svg#pl_logo_otto\"></use></svg>",
+                "Änderungen einzeln": "aria-label=\"OTTO Logo\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das OTTO-Logo im Header-Bereich der Webseite, das als Link zur Startseite dient."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "6",
+                "Beschreibung der Verletzung": "Interaktive Buttons, die nur ein SVG-Icon enthalten, haben keine zugängliche Bezeichnung (aria-label). Obwohl das SVG selbst als 'aria-hidden=\"true\"' markiert ist, fehlt dem Button der Name, der seine Funktion für Screenreader-Nutzer beschreibt.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow\" type=\"button\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "Änderungsvorschlag": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow\" type=\"button\" aria-label=\"Vorherige Elemente\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "Änderungen einzeln": "aria-label=\"Vorherige Elemente\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Navigationsbutton in einem Karussell, der zum vorherigen Satz von Elementen blättert."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "6",
+                "Beschreibung der Verletzung": "Interaktive Buttons, die nur ein SVG-Icon enthalten, haben keine zugängliche Bezeichnung (aria-label). Obwohl das SVG selbst als 'aria-hidden=\"true\"' markiert ist, fehlt dem Button der Name, der seine Funktion für Screenreader-Nutzer beschreibt.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow pl_carousel__arrow--next\" type=\"button\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-right.svg#pl_icon_arrow-right\"></use></svg></button>",
+                "Änderungsvorschlag": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow pl_carousel__arrow--next\" type=\"button\" aria-label=\"Nächste Elemente\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-right.svg#pl_icon_arrow-right\"></use></svg></button>",
+                "Änderungen einzeln": "aria-label=\"Nächste Elemente\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Navigationsbutton in einem Karussell, der zum nächsten Satz von Elementen blättert."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "6",
+                "Beschreibung der Verletzung": "Ein dekoratives SVG-Icon innerhalb des Mini-Warenkorb-Elements ist nicht mit 'aria-hidden=\"true\"' versehen. Dies führt zu Redundanz für Screenreader, da der Zweck des Elements bereits durch den sichtbaren Text 'Warenkorb' und das 'title'-Attribut des umgebenden Elements klar ist.",
+                "Html Ausschnitt auf der Webseite": "<div class=\"or_minis or_minibasket order_js_minibasket_link ub64e ts-link\" data-ub64e=\"L29yZGVyL2Jhc2tldA==\" data-ts-link=\"{&quot;san_Header&quot;:&quot;basket&quot;,&quot;order_MiniBasket&quot;:1}\" title=\"Zum Warenkorb\">\n    <svg class=\"pl_icon100 or_minis__icon\" role=\"img\">\n        <use xlink:href=\"/assets-static/icons/pl_icon_basket.svg#pl_icon_basket\"></use>\n    </svg>\n    <span class=\"or_minis__badge pl_badge--red order_js_minibasket_amount\" data-loadurl=\"/order/basket/amount.json\" data-qa=\"miniBasketAmount\">1</span>\n    <span class=\"or_minis__text--large pl_copy75\">Warenkorb</span>\n    <span class=\"or_minis__text pl_copy50\">Warenkorb</span>\n</div>",
+                "Änderungsvorschlag": "<div class=\"or_minis or_minibasket order_js_minibasket_link ub64e ts-link\" data-ub64e=\"L29yZGVyL2Jhc2tldA==\" data-ts-link=\"{&quot;san_Header&quot;:&quot;basket&quot;,&quot;order_MiniBasket&quot;:1}\" title=\"Zum Warenkorb\">\n    <svg class=\"pl_icon100 or_minis__icon\" role=\"img\" aria-hidden=\"true\">\n        <use xlink:href=\"/assets-static/icons/pl_icon_basket.svg#pl_icon_basket\"></use>\n    </svg>\n    <span class=\"or_minis__badge pl_badge--red order_js_minibasket_amount\" data-loadurl=\"/order/basket/amount.json\" data-qa=\"miniBasketAmount\">1</span>\n    <span class=\"or_minis__text--large pl_copy75\">Warenkorb</span>\n    <span class=\"or_minis__text pl_copy50\">Warenkorb</span>\n</div>",
+                "Änderungen einzeln": "aria-hidden=\"true\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Icon für den Mini-Warenkorb im Header, das die Anzahl der Artikel anzeigt und zum Warenkorb verlinkt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "6",
+                "Beschreibung der Verletzung": "Ein dekoratives SVG-Icon innerhalb eines 'Löschen'-Buttons ist nicht mit 'aria-hidden=\"true\"' versehen. Dies führt zu Redundanz für Screenreader, da der Zweck des Buttons bereits durch das 'title'-Attribut klar ist.",
+                "Html Ausschnitt auf der Webseite": "<button type=\"button\" class=\"or_basketItem__deleteButton pl_rounded50 order_js_kreuz\" title=\"Position löschen\" data-qa=\"deleteButton\">\n    <svg class=\"pl_icon\" role=\"img\">\n        <use xlink:href=\"/assets-static/icons/pl_icon_close.svg#pl_icon_close\"></use>\n    </svg>\n</button>",
+                "Änderungsvorschlag": "<button type=\"button\" class=\"or_basketItem__deleteButton pl_rounded50 order_js_kreuz\" title=\"Position löschen\" data-qa=\"deleteButton\">\n    <svg class=\"pl_icon\" role=\"img\" aria-hidden=\"true\">\n        <use xlink:href=\"/assets-static/icons/pl_icon_close.svg#pl_icon_close\"></use>\n    </svg>\n</button>",
+                "Änderungen einzeln": "aria-hidden=\"true\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Der 'Löschen'-Button neben einem Artikel im Warenkorb, um diesen aus dem Warenkorb zu entfernen. Dieser Button erscheint zweimal pro Artikel."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.1.1 Nicht-Text-Inhalt (A)",
+                "Anzahl der Verletzungen": "6",
+                "Beschreibung der Verletzung": "Ein dekoratives SVG-Icon innerhalb eines 'Löschen'-Buttons ist nicht mit 'aria-hidden=\"true\"' versehen. Dies führt zu Redundanz für Screenreader, da der Zweck des Buttons bereits durch das 'title'-Attribut klar ist.",
+                "Html Ausschnitt auf der Webseite": "<button type=\"button\" class=\"or_basketItem__deleteButton pl_rounded50 order_js_kreuz\" title=\"Position löschen\" data-qa=\"deleteBasketItemButton\">\n    <svg class=\"pl_icon\" role=\"img\">\n        <use xlink:href=\"/assets-static/icons/pl_icon_close.svg#pl_icon_close\"></use>\n    </svg>\n</button>",
+                "Änderungsvorschlag": "<button type=\"button\" class=\"or_basketItem__deleteButton pl_rounded50 order_js_kreuz\" title=\"Position löschen\" data-qa=\"deleteBasketItemButton\">\n    <svg class=\"pl_icon\" role=\"img\" aria-hidden=\"true\">\n        <use xlink:href=\"/assets-static/icons/pl_icon_close.svg#pl_icon_close\"></use>\n    </svg>\n</button>",
+                "Änderungen einzeln": "aria-hidden=\"true\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Der 'Löschen'-Button neben einem Artikel im Warenkorb, um diesen aus dem Warenkorb zu entfernen. Dieser Button erscheint zweimal pro Artikel."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "17",
+                "Beschreibung der Verletzung": "Das mobile Menü-Umschaltelement ist ein Custom-Element ('nav-mobile-menu-button'), das keine ARIA-Attribute wie 'aria-expanded' und 'aria-controls' verwendet, um seinen Zustand (geöffnet/geschlossen) und die Beziehung zum gesteuerten Menü programmatisch zu vermitteln.",
+                "Html Ausschnitt auf der Webseite": "<nav-mobile-menu-button class=\"nav_menu-toggle-button\" data-controls=\"nav-menu-root-sheet\" data-menu-root=\"nav_menu\" data-menu-wrapper=\"nav_mobile-menu-wrapper\" data-nav-initialized=\"data-nav-initialized\" data-nav-track=\"true\" data-nav-tracking-menu-close=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;close&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}]\" data-nav-tracking-menu-exit=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;exit&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}]\" data-nav-tracking-menu-open=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;open&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}]\" id=\"nav_menu-toggle-button\" style=\"display: none;\"><p class=\"nav_menu-toggle-button__icon\"></p><p class=\"nav_menu-toggle-button__title-closed\">Sortiment</p><p class=\"nav_menu-toggle-button__title-open\">Schließen</p></nav-mobile-menu-button>",
+                "Änderungsvorschlag": "<nav-mobile-menu-button class=\"nav_menu-toggle-button\" data-controls=\"nav-menu-root-sheet\" aria-expanded=\"false\" aria-controls=\"nav-menu-root-sheet\" data-menu-root=\"nav_menu\" data-menu-wrapper=\"nav_mobile-menu-wrapper\" data-nav-initialized=\"data-nav-initialized\" data-nav-track=\"true\" data-nav-tracking-menu-close=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;close&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}]\" data-nav-tracking-menu-exit=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;exit&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}]\" data-nav-tracking-menu-open=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;open&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}]\" id=\"nav_menu-toggle-button\" style=\"display: none;\"><p class=\"nav_menu-toggle-button__icon\"></p><p class=\"nav_menu-toggle-button__title-closed\">Sortiment</p><p class=\"nav_menu-toggle-button__title-open\">Schließen</p></nav-mobile-menu-button>",
+                "Änderungen einzeln": "aria-expanded=\"false\" aria-controls=\"nav-menu-root-sheet\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Der Button zum Öffnen und Schließen des mobilen Hauptnavigationsmenüs im Header."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "17",
+                "Beschreibung der Verletzung": "Das 'Mein Konto'-Element, das ein Menü öffnet, ist ein 'div' ohne explizite ARIA-Rolle ('role=\"button\"') und ohne 'aria-haspopup' oder 'aria-expanded' Attribute, um seine Funktionalität und seinen Zustand programmatisch zu vermitteln.",
+                "Html Ausschnitt auf der Webseite": "<div class=\"us_loginArea us_js_loginAreaMenuHandle ub64e\" id=\"us_id_loginArea\" data-qa=\"user_login_area_header\" data-ub64e=\"amF2YXNjcmlwdDp2b2lkKDApOw==\">\n    <span class=\"us_loginAreaIcon p_icons\" data-qa=\"user_login_area_icon\">\nΘ\n</span>\n                        <span class=\"us_iconSubtitle us_js_loginAreaIconSubtitle\" data-qa=\"user_login_area_icon_subtitle\" data-loggedin=\"false\" data-login-state=\"UNKNOWN_VISITOR\">\n                                        <span class=\"us_js_loginAreaIconSubtitleMyAccount\" data-qa=\"user_loginAreaIconSubtitleMyAccount\">Mein Konto</span>\n                                    </span>\n                    </div>",
+                "Änderungsvorschlag": "<div class=\"us_loginArea us_js_loginAreaMenuHandle ub64e\" id=\"us_id_loginArea\" role=\"button\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-qa=\"user_login_area_header\" data-ub64e=\"amF2YXNjcmlwdDp2b2lkKDApOw==\">\n    <span class=\"us_loginAreaIcon p_icons\" data-qa=\"user_login_area_icon\">\nΘ\n</span>\n                        <span class=\"us_iconSubtitle us_js_loginAreaIconSubtitle\" data-qa=\"user_login_area_icon_subtitle\" data-loggedin=\"false\" data-login-state=\"UNKNOWN_VISITOR\">\n                                        <span class=\"us_js_loginAreaIconSubtitleMyAccount\" data-qa=\"user_loginAreaIconSubtitleMyAccount\">Mein Konto</span>\n                                    </span>\n                    </div>",
+                "Änderungen einzeln": "role=\"button\" aria-haspopup=\"menu\" aria-expanded=\"false\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das 'Mein Konto'-Element im Header, das beim Anklicken ein Dropdown-Menü mit Benutzeroptionen öffnet."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "17",
+                "Beschreibung der Verletzung": "Menüpunkte im Login-Bereich sind als 'span'-Elemente mit JavaScript-basierten Klicks implementiert, anstatt semantische 'a'-Tags zu verwenden. Dies beeinträchtigt die Erkennung als Link und die Standard-Browserfunktionalität für Assistive Technologien.",
+                "Html Ausschnitt auf der Webseite": "<span class=\"ub64e p_link100--2nd us_js_loginAreaLink\" data-ub64e=\"L215YWNjb3VudC9kYXNoYm9hcmQ/ZW50cnlQb2ludD1sb2dpbkFyZWE=\" data-qa=\"user_login_area_menu_myaccount\" data-us-navi-destination=\"MyAccountOverview\"><span style=\"all: unset;\">\nMein Konto                </span></span>",
+                "Änderungsvorschlag": "<a href=\"/myaccount/dashboard?entryPoint=loginArea\" class=\"p_link100--2nd us_js_loginAreaLink\" data-qa=\"user_login_area_menu_myaccount\" data-us-navi-destination=\"MyAccountOverview\">Mein Konto</a>",
+                "Änderungen einzeln": "Änderung von <span> zu <a>, data-ub64e zu href, Entfernung von <span style=\"all: unset;\">",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Link im 'Mein Konto'-Dropdown-Menü, der zur Übersichtsseite des Benutzerkontos führt. Dies betrifft alle 7 Links in diesem Menü (Mein Konto, Meine Bestellungen, Meine Rechnungen, Mein Profil, Mein UP, Anmelden, Neu bei OTTO? Jetzt registrieren)."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "17",
+                "Beschreibung der Verletzung": "Die Preisübersicht ist als 'table'-Element ohne semantische Tabellenüberschriften ('<th>') implementiert. Dies erschwert Screenreader-Nutzern das Verständnis der Beziehungen zwischen den Preisbezeichnungen (z.B. 'alter Preis', 'aktueller Preis') und den zugehörigen Werten.",
+                "Html Ausschnitt auf der Webseite": "<table class=\"or_basketItemPricingTable\" data-qa=\"basketItemPricingTable\">\n            <tbody><tr class=\"or_basketItemPricingTable__priceRow\" data-qa=\"oldPrice-priceRow\">\n                <td class=\"or_basketItemPricingTable__priceRowLeft\">\n                    <div class=\"or_basketItem__discounts\">\n                    </div>\n                </td>\n                <td class=\"or_basketItemPricingTable__priceRowRight\">\n                        <div class=\"or_basketItem__strikethroughPrice pl_copy75 or_basketItem__price\" data-qa=\"oldPrice\">53,97</div>\n                </td>\n            </tr>\n        <tr class=\"or_basketItemPricingTable__priceRow\">\n            <td class=\"or_basketItemPricingTable__priceRowLeft\"></td>\n            <td class=\"or_basketItemPricingTable__priceRowRight\">\n                <div class=\"or_basketItem__currentPrice oc-headline-50 or_basketItem__currentPrice_reduced\" data-qa=\"currentPrice\">39,95</div>\n            </td>\n        </tr>\n    </tbody></table>",
+                "Änderungsvorschlag": "<table class=\"or_basketItemPricingTable\" data-qa=\"basketItemPricingTable\">\n    <thead>\n        <tr>\n            <th scope=\"col\">Preisart</th>\n            <th scope=\"col\">Betrag</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr class=\"or_basketItemPricingTable__priceRow\" data-qa=\"oldPrice-priceRow\">\n            <td class=\"or_basketItemPricingTable__priceRowLeft\">Alter Preis</td>\n            <td class=\"or_basketItemPricingTable__priceRowRight\">\n                <div class=\"or_basketItem__strikethroughPrice pl_copy75 or_basketItem__price\" data-qa=\"oldPrice\">53,97</div>\n            </td>\n        </tr>\n        <tr class=\"or_basketItemPricingTable__priceRow\">\n            <td class=\"or_basketItemPricingTable__priceRowLeft\">Aktueller Preis</td>\n            <td class=\"or_basketItemPricingTable__priceRowRight\">\n                <div class=\"or_basketItem__currentPrice oc-headline-50 or_basketItem__currentPrice_reduced\" data-qa=\"currentPrice\">39,95</div>\n            </td>\n        </tr>\n    </tbody>\n</table>",
+                "Änderungen einzeln": "Hinzufügen von <thead> mit <th> Elementen und Textinhalten in den <td> Elementen.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Eine Tabelle, die die Preisdetails eines Artikels im Warenkorb anzeigt, einschließlich des alten und des aktuellen Preises."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "17",
+                "Beschreibung der Verletzung": "Interaktive 'div'-Elemente für 'Gutscheine' und 'Rabatte' sind mit 'tabindex=\"0\"' fokussierbar gemacht, aber es fehlen explizite ARIA-Rollen ('role=\"button\"') und 'aria-expanded' Attribute, um ihre interaktive Natur und ihren Zustand programmatisch zu vermitteln.",
+                "Html Ausschnitt auf der Webseite": "<div tabindex=\"0\" class=\"or_couponAndVoucher__block--disabled  \" data-sheet-id=\"or_couponsAndVouchersSheet\" data-sheet-title=\"Gutscheine\" data-sheet-content-grey-background=\"true\" data-sheet-url=\"/order/couponsAndVouchersSheet\" data-sheet-lock-mobile-height=\"false\">\n            <div class=\"pl_grid-content\">\n                <div class=\"pl_grid-container\">\n                    <div class=\"pl_grid-col-11 or_reductionBlock__contentLeft\">\n                        <div class=\"or_reductionBlock__icon\">\n                            <svg class=\"pl_icon100\" role=\"img\">\n                                <use href=\"/assets-static/icons/pl_icon_voucher.svg#pl_icon_voucher\" xlink:href=\"/assets-static/icons/pl_icon_voucher.svg#pl_icon_voucher\"></use>\n                            </svg>\n                        </div>\n                        <div class=\"or_reductionBlock__inner\">\n                            <div class=\"pl_headline50 or_reductionBlock__heading\">\n                                    Gutscheine\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"pl_grid-col-1 or_reductionBlock__button\">\n                        <svg class=\"pl_icon50\" role=\"img\">\n                            <use href=\"/assets-static/icons/pl_icon_arrow-right50.svg#pl_icon_arrow-right50\" xlink:href=\"/assets-static/icons/pl_icon_arrow-right50.svg#pl_icon_arrow-right50\"></use>\n                        </svg>\n                    </div>\n                </div>\n            </div>\n        </div>",
+                "Änderungsvorschlag": "<button type=\"button\" class=\"or_couponAndVoucher__block--disabled\" data-sheet-id=\"or_couponsAndVouchersSheet\" data-sheet-title=\"Gutscheine\" data-sheet-content-grey-background=\"true\" data-sheet-url=\"/order/couponsAndVouchersSheet\" data-sheet-lock-mobile-height=\"false\" aria-expanded=\"false\" aria-controls=\"or_couponsAndVouchersSheetContent\">\n            <div class=\"pl_grid-content\">\n                <div class=\"pl_grid-container\">\n                    <div class=\"pl_grid-col-11 or_reductionBlock__contentLeft\">\n                        <div class=\"or_reductionBlock__icon\">\n                            <svg class=\"pl_icon100\" role=\"img\" aria-hidden=\"true\">\n                                <use href=\"/assets-static/icons/pl_icon_voucher.svg#pl_icon_voucher\" xlink:href=\"/assets-static/icons/pl_icon_voucher.svg#pl_icon_voucher\"></use>\n                            </svg>\n                        </div>\n                        <div class=\"or_reductionBlock__inner\">\n                            <h3 class=\"pl_headline50 or_reductionBlock__heading\">\n                                    Gutscheine\n                            </h3>\n                        </div>\n                    </div>\n                    <div class=\"pl_grid-col-1 or_reductionBlock__button\">\n                        <svg class=\"pl_icon50\" role=\"img\" aria-hidden=\"true\">\n                            <use href=\"/assets-static/icons/pl_icon_arrow-right50.svg#pl_icon_arrow-right50\" xlink:href=\"/assets-static/icons/pl_icon_arrow-right50.svg#pl_icon_arrow-right50\"></use>\n                        </svg>\n                    </div>\n                </div>\n            </div>\n        </button>",
+                "Änderungen einzeln": "Änderung von <div> zu <button>, Hinzufügen von type=\"button\", aria-expanded=\"false\", aria-controls=\"or_couponsAndVouchersSheetContent\" (und entsprechendes ID für den Inhalt), aria-hidden=\"true\" zu SVGs, <div> zu <h3> für Überschrift.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein interaktiver Block im Warenkorb, der beim Anklicken ein Sheet mit Gutschein-Eingabemöglichkeiten öffnet. Dies betrifft auch den 'Rabatte'-Block."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "17",
+                "Beschreibung der Verletzung": "Interaktive 'div'-Elemente für 'Gutscheine' und 'Rabatte' sind mit 'tabindex=\"0\"' fokussierbar gemacht, aber es fehlen explizite ARIA-Rollen ('role=\"button\"') und 'aria-expanded' Attribute, um ihre interaktive Natur und ihren Zustand programmatisch zu vermitteln.",
+                "Html Ausschnitt auf der Webseite": "<div tabindex=\"0\" class=\"or_discount__block js_openInPaliSheet\" data-sheet-id=\"or_discountsSheet\" data-sheet-title=\"Rabatte\" data-sheet-content-grey-background=\"true\" data-sheet-lock-mobile-height=\"false\" data-sheet-url=\"/order/discountsSheet\">\n            <div class=\"pl_grid-content\">\n                <div class=\"pl_grid-container\">\n                    <div class=\"pl_grid-col-11 or_reductionBlock__contentLeft\">\n                        <div class=\"or_reductionBlock__icon\">\n                            <svg class=\"pl_icon100\" role=\"img\">\n                                <use href=\"/assets-static/icons/pl_icon_sale.svg#pl_icon_sale\" xlink:href=\"/assets-static/icons/pl_icon_sale.svg#pl_icon_sale\"></use>\n                            </svg>\n                        </div>\n                        <div class=\"or_reductionBlock__inner\">\n                            <div class=\"pl_headline50 or_reductionBlock__heading\">\n                                    Rabatte\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"pl_grid-col-1 or_reductionBlock__button\">\n                        <svg class=\"pl_icon50\" role=\"img\">\n                            <use href=\"/assets-static/icons/pl_icon_arrow-right50.svg#pl_icon_arrow-right50\" xlink:href=\"/assets-static/icons/pl_icon_arrow-right50.svg#pl_icon_arrow-right50\"></use>\n                        </svg>\n                    </div>\n                </div>\n            </div>\n        </div>",
+                "Änderungsvorschlag": "<button type=\"button\" class=\"or_discount__block js_openInPaliSheet\" data-sheet-id=\"or_discountsSheet\" data-sheet-title=\"Rabatte\" data-sheet-content-grey-background=\"true\" data-sheet-lock-mobile-height=\"false\" data-sheet-url=\"/order/discountsSheet\" aria-expanded=\"false\" aria-controls=\"or_discountsSheetContent\">\n            <div class=\"pl_grid-content\">\n                <div class=\"pl_grid-container\">\n                    <div class=\"pl_grid-col-11 or_reductionBlock__contentLeft\">\n                        <div class=\"or_reductionBlock__icon\">\n                            <svg class=\"pl_icon100\" role=\"img\" aria-hidden=\"true\">\n                                <use href=\"/assets-static/icons/pl_icon_sale.svg#pl_icon_sale\" xlink:href=\"/assets-static/icons/pl_icon_sale.svg#pl_icon_sale\"></use>\n                            </svg>\n                        </div>\n                        <div class=\"or_reductionBlock__inner\">\n                            <h3 class=\"pl_headline50 or_reductionBlock__heading\">\n                                    Rabatte\n                            </h3>\n                        </div>\n                    </div>\n                    <div class=\"pl_grid-col-1 or_reductionBlock__button\">\n                        <svg class=\"pl_icon50\" role=\"img\" aria-hidden=\"true\">\n                            <use href=\"/assets-static/icons/pl_icon_arrow-right50.svg#pl_icon_arrow-right50\" xlink:href=\"/assets-static/icons/pl_icon_arrow-right50.svg#pl_icon_arrow-right50\"></use>\n                        </svg>\n                    </div>\n                </div>\n            </div>\n        </button>",
+                "Änderungen einzeln": "Änderung von <div> zu <button>, Hinzufügen von type=\"button\", aria-expanded=\"false\", aria-controls=\"or_discountsSheetContent\" (und entsprechendes ID für den Inhalt), aria-hidden=\"true\" zu SVGs, <div> zu <h3> für Überschrift.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein interaktiver Block im Warenkorb, der beim Anklicken ein Sheet mit Rabattinformationen öffnet."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.1 Info und Beziehungen (A)",
+                "Anzahl der Verletzungen": "17",
+                "Beschreibung der Verletzung": "Das Custom-Element 'oc-accordion-v1' für Akkordeons im Footer vermittelt seine Rolle und seinen Zustand (erweitert/eingeklappt) nicht programmatisch über ARIA-Attribute wie 'role=\"button\"' und 'aria-expanded' am klickbaren Header. Die 'title'-Attribute sind nicht ausreichend für die Zugänglichkeit des interaktiven Teils.",
+                "Html Ausschnitt auf der Webseite": "<oc-accordion-v1 title=\"Zahlungsarten\">\n                <div role=\"list\">\n                    <div class=\"pl_mb50 pl_mt100\" role=\"listitem\">",
+                "Änderungsvorschlag": "Die Implementierung des Custom-Elements 'oc-accordion-v1' muss angepasst werden, um einen semantischen Button als Akkordeon-Header mit 'aria-expanded' und 'aria-controls' zu rendern. Beispiel für die gerenderte Struktur:\n<div role=\"heading\" aria-level=\"2\">\n    <button aria-expanded=\"false\" aria-controls=\"accordion-content-zahlungsarten\" role=\"button\">Zahlungsarten</button>\n</div>\n<div id=\"accordion-content-zahlungsarten\" hidden>\n    <div role=\"list\">\n        <div class=\"pl_mb50 pl_mt100\" role=\"listitem\">",
+                "Änderungen einzeln": "Anpassung der 'oc-accordion-v1' Komponente, um einen semantischen Button mit 'aria-expanded' und 'aria-controls' für den Akkordeon-Header zu rendern.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Akkordeon-Elemente im Footer, die verschiedene Informationskategorien (Zahlungsarten, Über uns, Blogs, Verkaufen bei OTTO, Werben bei OTTO, OTTO Partner) ein- und ausklappen. Dies betrifft 5 Instanzen."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.5 Bestimmung des Eingabezwecks (AA)",
+                "Anzahl der Verletzungen": "2",
+                "Beschreibung der Verletzung": "Das Suchfeld verwendet 'autocomplete=\"off\"', anstatt einen spezifischeren 'autocomplete'-Token wie 'search' zu nutzen. Dies erschwert Browsern und Assistiven Technologien, den Eingabezweck korrekt zu identifizieren und entsprechende Hilfestellungen anzubieten.",
+                "Html Ausschnitt auf der Webseite": "<input class=\"squirrel_searchfield js_squirrel_searchbar__input oc-copy-125\" autocomplete=\"off\" type=\"text\" role=\"searchbox\" tabindex=\"0\" aria-describedby=\"squirrel_searchfieldDescription\" maxlength=\"150\" data-qa=\"ftfind-search-field\" data-qa-id=\"search-field\" data-testid=\"squirrel-searchfield\" data-target=\"https://www.otto.de/#t=%7B%22wk.san_ActiveSearch%22%3A%22true%22%2C%22san_InitialSearch%22%3A%22true%22%2C%22san_Interaction%22%3A%22initial_search%22%2C%22wk.san_SearchType%22%3A%22search%22%7D\" placeholder=\"Wonach suchst du?\">",
+                "Änderungsvorschlag": "<input class=\"squirrel_searchfield js_squirrel_searchbar__input oc-copy-125\" autocomplete=\"search\" type=\"text\" role=\"searchbox\" tabindex=\"0\" aria-describedby=\"squirrel_searchfieldDescription\" maxlength=\"150\" data-qa=\"ftfind-search-field\" data-qa-id=\"search-field\" data-testid=\"squirrel-searchfield\" data-target=\"https://www.otto.de/#t=%7B%22wk.san_ActiveSearch%22%3A%22true%22%2C%22san_InitialSearch%22%3A%22true%22%2C%22san_Interaction%22%3A%22initial_search%22%2C%22wk.san_SearchType%22%3A%22search%22%7D\" placeholder=\"Wonach suchst du?\">",
+                "Änderungen einzeln": "autocomplete=\"search\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Hauptsuchfeld im Header der Webseite, über das Nutzer nach Produkten suchen können."
+            },
+            {
+                "Verletztes WCAG_kriterium": "1.3.5 Bestimmung des Eingabezwecks (AA)",
+                "Anzahl der Verletzungen": "2",
+                "Beschreibung der Verletzung": "Das E-Mail-Eingabefeld für den Newsletter-Abonnement fehlt das 'autocomplete=\"email\"' Attribut. Dies erschwert die automatische Vervollständigung für Nutzer und vermittelt den Eingabezweck nicht klar.",
+                "Html Ausschnitt auf der Webseite": "<oc-text-field-v1 id=\"newsletter-subscribe-footer-email-input\" class=\"newsletter-subscribe-footer-input oc-mt-50 oc-mb-100\" hide-counter=\"\" placeholder=\"E-Mail-Adresse\" type=\"email\" value=\"\" maxlength=\"80\">E-Mail-Adresse\n            </oc-text-field-v1>",
+                "Änderungsvorschlag": "<oc-text-field-v1 id=\"newsletter-subscribe-footer-email-input\" class=\"newsletter-subscribe-footer-input oc-mt-50 oc-mb-100\" hide-counter=\"\" placeholder=\"E-Mail-Adresse\" type=\"email\" value=\"\" maxlength=\"80\" autocomplete=\"email\">E-Mail-Adresse\n            </oc-text-field-v1>",
+                "Änderungen einzeln": "autocomplete=\"email\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das Eingabefeld im Footer, in das Nutzer ihre E-Mail-Adresse für den Newsletter eintragen können."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.1 Blöcke umgehen (A)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Es fehlt ein 'Skip-Link' am Anfang des Dokuments, der es Tastatur- und Screenreader-Nutzern ermöglichen würde, wiederholte Inhaltsblöcke (wie Header-Navigation) zu überspringen und direkt zum Hauptinhalt zu gelangen.",
+                "Html Ausschnitt auf der Webseite": "<body class=\"order or_basketPage so_footerswitch js_cookieBanner\" onunload=\"\" data-qa=\"basketPage\">",
+                "Änderungsvorschlag": "<body class=\"order or_basketPage so_footerswitch js_cookieBanner\" onunload=\"\" data-qa=\"basketPage\">\n    <a href=\"#maincontent\" class=\"skip-link\">Zum Hauptinhalt springen</a>\n    <div class=\"gridAndInfoContainer\">\n        <div class=\"gridContainer wrapper mo-frame reducedOuterPadding\">\n            <header class=\"order-headerLarge\">...</header>\n            <div class=\"pl_grid-lane or_content\" id=\"maincontent\">...",
+                "Änderungen einzeln": "Hinzufügen von <a href=\"#maincontent\" class=\"skip-link\">Zum Hauptinhalt springen</a> nach <body> und id=\"maincontent\" zum Hauptinhalts-Container.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Mechanismus, der es Nutzern ermöglicht, den wiederholten Header-Bereich zu überspringen und direkt zum Warenkorb-Inhalt zu navigieren."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "12",
+                "Beschreibung der Verletzung": "Die Überschrift 'Deine OTTO Vorteile' ist als 'div'-Element mit Styling implementiert, anstatt ein semantisches Überschriften-Tag (z.B. h2) zu verwenden. Dies beeinträchtigt die Struktur und Navigation für Screenreader-Nutzer.",
+                "Html Ausschnitt auf der Webseite": "<div class=\"pl_headline100 pl_mb50\" data-qa=\"or_reductionBlockHeading--new\">\n                            Deine OTTO Vorteile\n                        </div>",
+                "Änderungsvorschlag": "<h2 class=\"pl_headline100 pl_mb50\" data-qa=\"or_reductionBlockHeading--new\">\n                            Deine OTTO Vorteile\n                        </h2>",
+                "Änderungen einzeln": "Änderung von <div> zu <h2>",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Die Überschrift für den Abschnitt 'Deine OTTO Vorteile' im Warenkorb, der Informationen zu Gutscheinen und Rabatten enthält."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "12",
+                "Beschreibung der Verletzung": "Die Überschrift 'Gutscheine' ist als 'div'-Element mit Styling implementiert, anstatt ein semantisches Überschriften-Tag (z.B. h3) zu verwenden. Dies beeinträchtigt die Struktur und Navigation für Screenreader-Nutzer.",
+                "Html Ausschnitt auf der Webseite": "<div class=\"pl_headline50 or_reductionBlock__heading\">\n                                    Gutscheine\n                            </div>",
+                "Änderungsvorschlag": "<h3 class=\"pl_headline50 or_reductionBlock__heading\">\n                                    Gutscheine\n                            </h3>",
+                "Änderungen einzeln": "Änderung von <div> zu <h3>",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Die Überschrift für den Abschnitt 'Gutscheine' innerhalb der 'OTTO Vorteile'."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "12",
+                "Beschreibung der Verletzung": "Die Überschrift 'Rabatte' ist als 'div'-Element mit Styling implementiert, anstatt ein semantisches Überschriften-Tag (z.B. h3) zu verwenden. Dies beeinträchtigt die Struktur und Navigation für Screenreader-Nutzer.",
+                "Html Ausschnitt auf der Webseite": "<div class=\"pl_headline50 or_reductionBlock__heading\">\n                                    Rabatte\n                            </div>",
+                "Änderungsvorschlag": "<h3 class=\"pl_headline50 or_reductionBlock__heading\">\n                                    Rabatte\n                            </h3>",
+                "Änderungen einzeln": "Änderung von <div> zu <h3>",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Die Überschrift für den Abschnitt 'Rabatte' innerhalb der 'OTTO Vorteile'."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "12",
+                "Beschreibung der Verletzung": "Die Überschrift 'Zwischensumme' ist als 'div'-Element mit Styling implementiert, anstatt ein semantisches Überschriften-Tag (z.B. h3) zu verwenden. Dies beeinträchtigt die Struktur und Navigation für Screenreader-Nutzer.",
+                "Html Ausschnitt auf der Webseite": "<div class=\"or_priceSummary__line pl_headline50\">\n                <div>Zwischensumme</div>\n                <div data-qa=\"subTotal\">39,95</div>\n            </div>",
+                "Änderungsvorschlag": "<h3 class=\"or_priceSummary__line pl_headline50\">\n                Zwischensumme\n                <div data-qa=\"subTotal\">39,95</div>\n            </h3>",
+                "Änderungen einzeln": "Änderung des äußeren <div> zu <h3> und Entfernung des inneren <div> um 'Zwischensumme'.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Die Überschrift für die Zwischensumme der Artikel im Warenkorb."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "12",
+                "Beschreibung der Verletzung": "Die Überschrift 'Gesamtsumme' ist als 'div'-Element mit Styling implementiert, anstatt ein semantisches Überschriften-Tag (z.B. h2) zu verwenden. Dies beeinträchtigt die Struktur und Navigation für Screenreader-Nutzer.",
+                "Html Ausschnitt auf der Webseite": "<div class=\"or_grandTotal__price pl_headline200\">\n            <span>Gesamtsumme</span>\n            <span data-qa=\"grandTotalAmount\">39,95</span>\n        </div>",
+                "Änderungsvorschlag": "<h2 class=\"or_grandTotal__price pl_headline200\">\n            Gesamtsumme\n            <span data-qa=\"grandTotalAmount\">39,95</span>\n        </h2>",
+                "Änderungen einzeln": "Änderung des äußeren <div> zu <h2> und Entfernung des inneren <span> um 'Gesamtsumme'.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Die Überschrift für die Gesamtsumme des Warenkorbs."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "12",
+                "Beschreibung der Verletzung": "Die Seite enthält mehrere 'h1'-Überschriften, was die semantische Struktur der Seite beeinträchtigt. Die 'h1' im Footer für den Newsletter sollte eine niedrigere Überschriftenebene (z.B. h2 oder h3) sein, da 'Warenkorb' die Hauptüberschrift der Seite ist.",
+                "Html Ausschnitt auf der Webseite": "<h1 class=\"oc-headline-100 oc-mb-75\" id=\"newsletter-footer-headline\">\n                Newsletter anmelden &amp; Vorteile sichern\n            </h1>",
+                "Änderungsvorschlag": "<h2 class=\"oc-headline-100 oc-mb-75\" id=\"newsletter-footer-headline\">\n                Newsletter anmelden &amp; Vorteile sichern\n            </h2>",
+                "Änderungen einzeln": "Änderung von <h1> zu <h2>",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Die Überschrift für den Newsletter-Anmeldebereich im Footer der Webseite."
+            },
+            {
+                "Verletztes WCAG_kriterium": "2.4.6 Überschriften und Beschriftungen (Labels) (AA)",
+                "Anzahl der Verletzungen": "12",
+                "Beschreibung der Verletzung": "Die Titel der Footer-Sektionen ('Zahlungsarten', 'Über uns', 'Blogs', 'Verkaufen bei OTTO', 'Werben bei OTTO', 'OTTO Partner') sind als 'span'-Elemente mit Styling implementiert, anstatt semantische Überschriften-Tags (h2, h3 etc.) zu verwenden. Dies beeinträchtigt die Struktur und Navigation für Screenreader-Nutzer.",
+                "Html Ausschnitt auf der Webseite": "<span class=\"pl_headline100 reptile_color_black100\">\n          Zahlungsarten\n        </span>",
+                "Änderungsvorschlag": "<h2 class=\"pl_headline100 reptile_color_black100\">\n          Zahlungsarten\n        </h2>",
+                "Änderungen einzeln": "Änderung von <span> zu <h2>",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Die Überschrift für den Abschnitt 'Zahlungsarten' im Footer, der verschiedene Zahlungsmethoden auflistet. Dies betrifft 6 ähnliche Überschriften im Footer."
+            },
+            {
+                "Verletztes WCAG_kriterium": "3.3.3 Fehlerempfehlung (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Die Fehlermeldung für eine ungültige E-Mail-Adresse im Newsletter-Anmeldeformular informiert zwar über den Fehler, bietet aber keine konkreten Vorschläge zur Korrektur an, was die Benutzerfreundlichkeit mindert.",
+                "Html Ausschnitt auf der Webseite": "<oc-banner-v1 variant=\"error\" hide-close-button=\"\" class=\"oc-mb-150 newsletter-subscribe-footer-error-banner\" id=\"invalid-form-banner\" style=\"display: none\" hide-icon=\"\">\n                <span>Achtung: Du hast eine ungültige E-Mail-Adresse eingegeben.</span>\n            </oc-banner-v1>",
+                "Änderungsvorschlag": "<oc-banner-v1 variant=\"error\" hide-close-button=\"\" class=\"oc-mb-150 newsletter-subscribe-footer-error-banner\" id=\"invalid-form-banner\" style=\"display: none\" hide-icon=\"\">\n                <span>Achtung: Du hast eine ungültige E-Mail-Adresse eingegeben. Bitte überprüfe das Format (z.B. name@domain.de).</span>\n            </oc-banner-v1>",
+                "Änderungen einzeln": "Hinzufügen von 'Bitte überprüfe das Format (z.B. name@domain.de).'",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Fehlermeldung, die angezeigt wird, wenn der Nutzer eine ungültige E-Mail-Adresse im Newsletter-Anmeldeformular eingibt."
+            },
+            {
+                "Verletztes WCAG_kriterium": "3.3.3 Fehlerempfehlung (AA)",
+                "Anzahl der Verletzungen": "1",
+                "Beschreibung der Verletzung": "Die Fehlermeldung bei einem allgemeinen Problem mit der Newsletter-Anmeldung ('Das hat leider nicht funktioniert.') bietet keine konkreten Vorschläge zur Fehlerbehebung an, was die Benutzerfreundlichkeit mindert.",
+                "Html Ausschnitt auf der Webseite": "<div id=\"newsletter-subscribe-footer-error\" style=\"display: none\">\n        <oc-banner-v1 class=\"oc-mb-100\" variant=\"error\" hide-close-button=\"\" hide-icon=\"\">\n      <span>Das hat leider nicht funktioniert. Bitte versuche es später\n        erneut</span>\n        </oc-banner-v1>\n    </div>",
+                "Änderungsvorschlag": "<div id=\"newsletter-subscribe-footer-error\" style=\"display: none\">\n        <oc-banner-v1 class=\"oc-mb-100\" variant=\"error\" hide-close-button=\"\" hide-icon=\"\">\n      <span>Das hat leider nicht funktioniert. Bitte versuche es später erneut oder kontaktiere den Support.</span>\n        </oc-banner-v1>\n    </div>",
+                "Änderungen einzeln": "Hinzufügen von 'oder kontaktiere den Support.'",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Fehlermeldung, die bei einem allgemeinen Fehler während der Newsletter-Anmeldung angezeigt wird."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "11",
+                "Beschreibung der Verletzung": "Das mobile Menü-Umschaltelement ist ein Custom-Element ('nav-mobile-menu-button'), das keine ARIA-Attribute wie 'aria-expanded' und 'aria-controls' verwendet, um seinen Zustand (geöffnet/geschlossen) und die Beziehung zum gesteuerten Menü programmatisch zu vermitteln. Dies verhindert, dass Assistive Technologien den aktuellen Zustand des Menüs korrekt erkennen.",
+                "Html Ausschnitt auf der Webseite": "<nav-mobile-menu-button class=\"nav_menu-toggle-button\" data-controls=\"nav-menu-root-sheet\" data-menu-root=\"nav_menu\" data-menu-wrapper=\"nav_mobile-menu-wrapper\" data-nav-initialized=\"data-nav-initialized\" data-nav-track=\"true\" data-nav-tracking-menu-close=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;close&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}]\" data-nav-tracking-menu-exit=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;exit&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}]\" data-nav-tracking-menu-open=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;open&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}]\" id=\"nav_menu-toggle-button\" style=\"display: none;\"><p class=\"nav_menu-toggle-button__icon\"></p><p class=\"nav_menu-toggle-button__title-closed\">Sortiment</p><p class=\"nav_menu-toggle-button__title-open\">Schließen</p></nav-mobile-menu-button>",
+                "Änderungsvorschlag": "<nav-mobile-menu-button class=\"nav_menu-toggle-button\" data-controls=\"nav-menu-root-sheet\" aria-expanded=\"false\" aria-controls=\"nav-menu-root-sheet\" data-menu-root=\"nav_menu\" data-menu-wrapper=\"nav_mobile-menu-wrapper\" data-nav-initialized=\"data-nav-initialized\" data-nav-track=\"true\" data-nav-tracking-menu-close=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;close&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}]\" data-nav-tracking-menu-exit=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;exit&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}]\" data-nav-tracking-menu-open=\"[{&quot;method&quot;:&quot;submitEvent&quot;,&quot;dataContainer&quot;:{&quot;nav_MenuAction&quot;:&quot;open&quot;,&quot;nav_GlobalNavigationFeature&quot;:&quot;standard&quot;}}]\" id=\"nav_menu-toggle-button\" style=\"display: none;\"><p class=\"nav_menu-toggle-button__icon\"></p><p class=\"nav_menu-toggle-button__title-closed\">Sortiment</p><p class=\"nav_menu-toggle-button__title-open\">Schließen</p></nav-mobile-menu-button>",
+                "Änderungen einzeln": "aria-expanded=\"false\" aria-controls=\"nav-menu-root-sheet\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Der Button zum Öffnen und Schließen des mobilen Hauptnavigationsmenüs im Header."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "11",
+                "Beschreibung der Verletzung": "Interaktive Buttons, die nur ein SVG-Icon enthalten, haben keine zugängliche Bezeichnung (aria-label). Obwohl das SVG selbst als 'aria-hidden=\"true\"' markiert ist, fehlt dem Button der Name, der seine Funktion für Screenreader-Nutzer beschreibt.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow\" type=\"button\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "Änderungsvorschlag": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow\" type=\"button\" aria-label=\"Vorherige Elemente\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-left.svg#pl_icon_arrow-left\"></use></svg></button>",
+                "Änderungen einzeln": "aria-label=\"Vorherige Elemente\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Navigationsbutton in einem Karussell, der zum vorherigen Satz von Elementen blättert."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "11",
+                "Beschreibung der Verletzung": "Interaktive Buttons, die nur ein SVG-Icon enthalten, haben keine zugängliche Bezeichnung (aria-label). Obwohl das SVG selbst als 'aria-hidden=\"true\"' markiert ist, fehlt dem Button der Name, der seine Funktion für Screenreader-Nutzer beschreibt.",
+                "Html Ausschnitt auf der Webseite": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow pl_carousel__arrow--next\" type=\"button\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-right.svg#pl_icon_arrow-right\"></use></svg></button>",
+                "Änderungsvorschlag": "<button class=\"pl_rounded50 pl_rounded50--elevated pl_carousel__arrow pl_carousel__arrow--next\" type=\"button\" aria-label=\"Nächste Elemente\"><svg aria-hidden=\"true\" class=\"pl_icon\" role=\"img\"><use xlink:href=\"/assets-static/icons/pl_icon_arrow-right.svg#pl_icon_arrow-right\"></use></svg></button>",
+                "Änderungen einzeln": "aria-label=\"Nächste Elemente\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein Navigationsbutton in einem Karussell, der zum nächsten Satz von Elementen blättert."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "11",
+                "Beschreibung der Verletzung": "Das 'Mein Konto'-Element, das ein Menü öffnet, ist ein 'div' ohne explizite ARIA-Rolle ('role=\"button\"') und ohne 'aria-haspopup' oder 'aria-expanded' Attribute, um seine Funktionalität und seinen Zustand programmatisch zu vermitteln.",
+                "Html Ausschnitt auf der Webseite": "<div class=\"us_loginArea us_js_loginAreaMenuHandle ub64e\" id=\"us_id_loginArea\" data-qa=\"user_login_area_header\" data-ub64e=\"amF2YXNjcmlwdDp2b2lkKDApOw==\">\n    <span class=\"us_loginAreaIcon p_icons\" data-qa=\"user_login_area_icon\">\nΘ\n</span>\n                        <span class=\"us_iconSubtitle us_js_loginAreaIconSubtitle\" data-qa=\"user_login_area_icon_subtitle\" data-loggedin=\"false\" data-login-state=\"UNKNOWN_VISITOR\">\n                                        <span class=\"us_js_loginAreaIconSubtitleMyAccount\" data-qa=\"user_loginAreaIconSubtitleMyAccount\">Mein Konto</span>\n                                    </span>\n                    </div>",
+                "Änderungsvorschlag": "<div class=\"us_loginArea us_js_loginAreaMenuHandle ub64e\" id=\"us_id_loginArea\" role=\"button\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-qa=\"user_login_area_header\" data-ub64e=\"amF2YXNjcmlwdDp2b2lkKDApOw==\">\n    <span class=\"us_loginAreaIcon p_icons\" data-qa=\"user_login_area_icon\">\nΘ\n</span>\n                        <span class=\"us_iconSubtitle us_js_loginAreaIconSubtitle\" data-qa=\"user_login_area_icon_subtitle\" data-loggedin=\"false\" data-login-state=\"UNKNOWN_VISITOR\">\n                                        <span class=\"us_js_loginAreaIconSubtitleMyAccount\" data-qa=\"user_loginAreaIconSubtitleMyAccount\">Mein Konto</span>\n                                    </span>\n                    </div>",
+                "Änderungen einzeln": "role=\"button\" aria-haspopup=\"menu\" aria-expanded=\"false\"",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Das 'Mein Konto'-Element im Header, das beim Anklicken ein Dropdown-Menü mit Benutzeroptionen öffnet."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "11",
+                "Beschreibung der Verletzung": "Interaktive 'div'-Elemente für 'Gutscheine' und 'Rabatte' sind mit 'tabindex=\"0\"' fokussierbar gemacht, aber es fehlen explizite ARIA-Rollen ('role=\"button\"') und 'aria-expanded' Attribute, um ihre interaktive Natur und ihren Zustand programmatisch zu vermitteln.",
+                "Html Ausschnitt auf der Webseite": "<div tabindex=\"0\" class=\"or_couponAndVoucher__block--disabled  \" data-sheet-id=\"or_couponsAndVouchersSheet\" data-sheet-title=\"Gutscheine\" data-sheet-content-grey-background=\"true\" data-sheet-url=\"/order/couponsAndVouchersSheet\" data-sheet-lock-mobile-height=\"false\">\n            <div class=\"pl_grid-content\">\n                <div class=\"pl_grid-container\">\n                    <div class=\"pl_grid-col-11 or_reductionBlock__contentLeft\">\n                        <div class=\"or_reductionBlock__icon\">\n                            <svg class=\"pl_icon100\" role=\"img\">\n                                <use href=\"/assets-static/icons/pl_icon_voucher.svg#pl_icon_voucher\" xlink:href=\"/assets-static/icons/pl_icon_voucher.svg#pl_icon_voucher\"></use>\n                            </svg>\n                        </div>\n                        <div class=\"or_reductionBlock__inner\">\n                            <div class=\"pl_headline50 or_reductionBlock__heading\">\n                                    Gutscheine\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"pl_grid-col-1 or_reductionBlock__button\">\n                        <svg class=\"pl_icon50\" role=\"img\">\n                            <use href=\"/assets-static/icons/pl_icon_arrow-right50.svg#pl_icon_arrow-right50\" xlink:href=\"/assets-static/icons/pl_icon_arrow-right50.svg#pl_icon_arrow-right50\"></use>\n                        </svg>\n                    </div>\n                </div>\n            </div>\n        </div>",
+                "Änderungsvorschlag": "<button type=\"button\" class=\"or_couponAndVoucher__block--disabled\" data-sheet-id=\"or_couponsAndVouchersSheet\" data-sheet-title=\"Gutscheine\" data-sheet-content-grey-background=\"true\" data-sheet-url=\"/order/couponsAndVouchersSheet\" data-sheet-lock-mobile-height=\"false\" aria-expanded=\"false\" aria-controls=\"or_couponsAndVouchersSheetContent\">\n            <div class=\"pl_grid-content\">\n                <div class=\"pl_grid-container\">\n                    <div class=\"pl_grid-col-11 or_reductionBlock__contentLeft\">\n                        <div class=\"or_reductionBlock__icon\">\n                            <svg class=\"pl_icon100\" role=\"img\" aria-hidden=\"true\">\n                                <use href=\"/assets-static/icons/pl_icon_voucher.svg#pl_icon_voucher\" xlink:href=\"/assets-static/icons/pl_icon_voucher.svg#pl_icon_voucher\"></use>\n                            </svg>\n                        </div>\n                        <div class=\"or_reductionBlock__inner\">\n                            <h3 class=\"pl_headline50 or_reductionBlock__heading\">\n                                    Gutscheine\n                            </h3>\n                        </div>\n                    </div>\n                    <div class=\"pl_grid-col-1 or_reductionBlock__button\">\n                        <svg class=\"pl_icon50\" role=\"img\" aria-hidden=\"true\">\n                            <use href=\"/assets-static/icons/pl_icon_arrow-right50.svg#pl_icon_arrow-right50\" xlink:href=\"/assets-static/icons/pl_icon_arrow-right50.svg#pl_icon_arrow-right50\"></use>\n                        </svg>\n                    </div>\n                </div>\n            </div>\n        </button>",
+                "Änderungen einzeln": "Änderung von <div> zu <button>, Hinzufügen von type=\"button\", aria-expanded=\"false\", aria-controls=\"or_couponsAndVouchersSheetContent\" (und entsprechendes ID für den Inhalt), aria-hidden=\"true\" zu SVGs, <div> zu <h3> für Überschrift.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein interaktiver Block im Warenkorb, der beim Anklicken ein Sheet mit Gutschein-Eingabemöglichkeiten öffnet. Dies betrifft auch den 'Rabatte'-Block."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "11",
+                "Beschreibung der Verletzung": "Interaktive 'div'-Elemente für 'Gutscheine' und 'Rabatte' sind mit 'tabindex=\"0\"' fokussierbar gemacht, aber es fehlen explizite ARIA-Rollen ('role=\"button\"') und 'aria-expanded' Attribute, um ihre interaktive Natur und ihren Zustand programmatisch zu vermitteln.",
+                "Html Ausschnitt auf der Webseite": "<div tabindex=\"0\" class=\"or_discount__block js_openInPaliSheet\" data-sheet-id=\"or_discountsSheet\" data-sheet-title=\"Rabatte\" data-sheet-content-grey-background=\"true\" data-sheet-lock-mobile-height=\"false\" data-sheet-url=\"/order/discountsSheet\">\n            <div class=\"pl_grid-content\">\n                <div class=\"pl_grid-container\">\n                    <div class=\"pl_grid-col-11 or_reductionBlock__contentLeft\">\n                        <div class=\"or_reductionBlock__icon\">\n                            <svg class=\"pl_icon100\" role=\"img\">\n                                <use href=\"/assets-static/icons/pl_icon_sale.svg#pl_icon_sale\" xlink:href=\"/assets-static/icons/pl_icon_sale.svg#pl_icon_sale\"></use>\n                            </svg>\n                        </div>\n                        <div class=\"or_reductionBlock__inner\">\n                            <div class=\"pl_headline50 or_reductionBlock__heading\">\n                                    Rabatte\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"pl_grid-col-1 or_reductionBlock__button\">\n                        <svg class=\"pl_icon50\" role=\"img\">\n                            <use href=\"/assets-static/icons/pl_icon_arrow-right50.svg#pl_icon_arrow-right50\" xlink:href=\"/assets-static/icons/pl_icon_arrow-right50.svg#pl_icon_arrow-right50\"></use>\n                        </svg>\n                    </div>\n                </div>\n            </div>\n        </div>",
+                "Änderungsvorschlag": "<button type=\"button\" class=\"or_discount__block js_openInPaliSheet\" data-sheet-id=\"or_discountsSheet\" data-sheet-title=\"Rabatte\" data-sheet-content-grey-background=\"true\" data-sheet-lock-mobile-height=\"false\" data-sheet-url=\"/order/discountsSheet\" aria-expanded=\"false\" aria-controls=\"or_discountsSheetContent\">\n            <div class=\"pl_grid-content\">\n                <div class=\"pl_grid-container\">\n                    <div class=\"pl_grid-col-11 or_reductionBlock__contentLeft\">\n                        <div class=\"or_reductionBlock__icon\">\n                            <svg class=\"pl_icon100\" role=\"img\" aria-hidden=\"true\">\n                                <use href=\"/assets-static/icons/pl_icon_sale.svg#pl_icon_sale\" xlink:href=\"/assets-static/icons/pl_icon_sale.svg#pl_icon_sale\"></use>\n                            </svg>\n                        </div>\n                        <div class=\"or_reductionBlock__inner\">\n                            <h3 class=\"pl_headline50 or_reductionBlock__heading\">\n                                    Rabatte\n                            </h3>\n                        </div>\n                    </div>\n                    <div class=\"pl_grid-col-1 or_reductionBlock__button\">\n                        <svg class=\"pl_icon50\" role=\"img\" aria-hidden=\"true\">\n                            <use href=\"/assets-static/icons/pl_icon_arrow-right50.svg#pl_icon_arrow-right50\" xlink:href=\"/assets-static/icons/pl_icon_arrow-right50.svg#pl_icon_arrow-right50\"></use>\n                        </svg>\n                    </div>\n                </div>\n            </div>\n        </button>",
+                "Änderungen einzeln": "Änderung von <div> zu <button>, Hinzufügen von type=\"button\", aria-expanded=\"false\", aria-controls=\"or_discountsSheetContent\" (und entsprechendes ID für den Inhalt), aria-hidden=\"true\" zu SVGs, <div> zu <h3> für Überschrift.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Ein interaktiver Block im Warenkorb, der beim Anklicken ein Sheet mit Rabattinformationen öffnet."
+            },
+            {
+                "Verletztes WCAG_kriterium": "4.1.2 Name, Rolle, Wert (A)",
+                "Anzahl der Verletzungen": "11",
+                "Beschreibung der Verletzung": "Das Custom-Element 'oc-accordion-v1' für Akkordeons im Footer vermittelt seine Rolle und seinen Zustand (erweitert/eingeklappt) nicht programmatisch über ARIA-Attribute wie 'role=\"button\"' und 'aria-expanded' am klickbaren Header. Die 'title'-Attribute sind nicht ausreichend für die Zugänglichkeit des interaktiven Teils.",
+                "Html Ausschnitt auf der Webseite": "<oc-accordion-v1 title=\"Zahlungsarten\">\n                <div role=\"list\">\n                    <div class=\"pl_mb50 pl_mt100\" role=\"listitem\">",
+                "Änderungsvorschlag": "Die Implementierung des Custom-Elements 'oc-accordion-v1' muss angepasst werden, um einen semantischen Button als Akkordeon-Header mit 'aria-expanded' und 'aria-controls' zu rendern. Beispiel für die gerenderte Struktur:\n<div role=\"heading\" aria-level=\"2\">\n    <button aria-expanded=\"false\" aria-controls=\"accordion-content-zahlungsarten\" role=\"button\">Zahlungsarten</button>\n</div>\n<div id=\"accordion-content-zahlungsarten\" hidden>\n    <div role=\"list\">\n        <div class=\"pl_mb50 pl_mt100\" role=\"listitem\">",
+                "Änderungen einzeln": "Anpassung der 'oc-accordion-v1' Komponente, um einen semantischen Button mit 'aria-expanded' und 'aria-controls' für den Akkordeon-Header zu rendern.",
+                "Funktion/Rolle des Elements im Kontext der Webseite ": "Akkordeon-Elemente im Footer, die verschiedene Informationskategorien (Zahlungsarten, Über uns, Blogs, Verkaufen bei OTTO, Werben bei OTTO, OTTO Partner) ein- und ausklappen. Dies betrifft 5 Instanzen."
+            }
+        ]
+    }
+]
