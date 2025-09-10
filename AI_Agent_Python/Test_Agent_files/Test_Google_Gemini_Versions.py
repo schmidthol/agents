@@ -15,7 +15,7 @@ from pydantic import BaseModel # Für Agenten-Input-Modell, falls das ADK verwen
 # --- Konfiguration ---
 # API-Schlüssel für Google Gemini (aus Umgebungsvariablen laden)
 load_dotenv()
-GOOGLE_API_KEY = "AIzaSyC2U4wVDLxpDcbcn2Q3zHqss2_zVet54TU" #os.getenv("GOOGLE_API_KEY")
+GOOGLE_API_KEY = "none" #os.getenv("GOOGLE_API_KEY")
 if not GOOGLE_API_KEY:
     raise ValueError("GOOGLE_API_KEY Umgebungsvariable ist nicht gesetzt. Bitte setze sie.")
 genai.configure(api_key=GOOGLE_API_KEY)
