@@ -7,7 +7,7 @@ const fs = require('fs'); // Für Dateisystemoperationen (JSON speichern)
 
 // --- Konfiguration ---
 // Ausgabe-Dateiname für den gesamten Bericht
-const OUTPUT_REPORT_FILE = `wcag_workflow_report_${new Date().toISOString().replace(/:/g, '-')}.json`;
+const OUTPUT_REPORT_FILE = `results/wcag_workflow_report_${new Date().toISOString().replace(/:/g, '-')}.json`;
 
 // Basis-URLs und Startseite für die Simulation
 const BASE_URL = "https://www.otto.de";

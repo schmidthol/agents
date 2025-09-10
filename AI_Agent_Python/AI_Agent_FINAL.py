@@ -47,6 +47,7 @@ WCAG 2.2 Level A und AA Kriterien, insbesondere fokussiert auf semantische und k
 - 1.1.1 Nicht-Text-Inhalt (Non-text Content): Alt-Texte auf Aussagekraft und Kontextpassung.
 - 1.3.1 Info und Beziehungen (Info and Relationships): Korrekte Überschriftenhierarchie, Listen- und Tabellenstrukturen, Formularbeschriftungen (Labeling).
 - 1.3.2 Bedeutungstragende Reihenfolge (Meaningful Sequence): Logische Lesereihenfolge bei visueller Abweichung.
+- 1.3.5 Bestimmung des Eingabezwecks: Zweck des Formularfelds angeben.
 - 2.4.1 Blöcke umgehen (Bypass Blocks): Existenz von Skip-Links für wiederholte Inhalte.
 - 2.4.4 Linkzweck (Im Kontext): Aussagekraft von Linktexten im Kontext (z.B. "Hier klicken" vermeiden).
 - 2.4.6 Überschriften und Beschriftungen: Sind Überschriften und Beschriftungen deskriptiv?
@@ -55,6 +56,7 @@ WCAG 2.2 Level A und AA Kriterien, insbesondere fokussiert auf semantische und k
 - 3.3.2 Beschriftungen oder Anweisungen: Formularfelder haben klare Anweisungen.
 - 3.3.3 Fehlervorschläge: Sind Fehlermeldungen klar und hilfreich?
 - 3.3.4 Fehlervermeidung: Mechanismen zur Vermeidung schwerwiegender Fehler bei Transaktionen.
+- 4.1.2 Name, Rolle, Wert: Benutzerdefinierte Steuerelemente müssen ausreichend beschrieben und steuerbar sein.
 """
 
 interaction_history = []
