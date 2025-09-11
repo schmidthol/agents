@@ -79,18 +79,19 @@ async def analyze_with_gemini(page_html: str, current_url: str, step_description
     prompt_text = f"""
     Analysiere den folgenden HTML-Code einer Webseite auf Verletzungen der WCAG Kriterien, insbesondere in Bezug auf semantisches Verständnis und Kontext.
     Konzentriere dich auf alle folgenden WCAG Erfolgskriterien:
+ 
     - 1.1.1 Nicht-Text-Inhalt (A)
     - 1.3.1 Info und Beziehungen (A)
     - 1.3.2 Bedeutungstragende Reihenfolge (A)
-    - 1.3.3 Sensorische Eigenschaften (A)
+    - 1.3.5 Bestimmung des Eingabezwecks (AA)
     - 2.4.1 Blöcke umgehen (A)
     - 2.4.4 Linkzweck (Im Kontext) (A)
-    - 2.4.5 Verschiedene Methoden (AA)
-    - 2.4.6 Überschriften und Beschriftungen (Labels) (AA)
-    - 2.5.3 Beschriftung (Label) im Namen (A)
+    - 2.4.6 Überschriften und Beschriftungen (AA)
     - 3.2.3 Konsistente Navigation (A)
-    - 3.2.4 Konsistente Erkennung (A)
-    - 3.3.3 Fehlerempfehlung (AA)
+    - 3.2.4 Konsistente Identifikation (A)
+    - 3.3.2 Beschriftungen oder Anweisungen (AA)
+    - 3.3.3 Fehlervorschläge (AA)
+    - 3.3.4 Fehlervermeidung (A))
     - 4.1.2 Name, Rolle, Wert (A)
 
     Identifiziere spezifische WCAG Verletzungen und setzen in Klammern die Konformitätsstufe (A oder AA) dahinter .
