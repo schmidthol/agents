@@ -4,10 +4,10 @@ AI-Agent:
 ---------
 
 Prompt (Answeisung) des AI-Agenten (inklusive des gescrapten HTML Codes):
-prompt_text = f"""
+    
+    prompt_text = f"""
     Analysiere den folgenden HTML-Code einer Webseite auf Verletzungen der WCAG Kriterien, insbesondere in Bezug auf semantisches Verständnis und Kontext.
     Konzentriere dich auf alle folgenden WCAG Erfolgskriterien:
- 
     - 1.1.1 Nicht-Text-Inhalt (A)
     - 1.3.1 Info und Beziehungen (A)
     - 1.3.2 Bedeutungstragende Reihenfolge (A)
