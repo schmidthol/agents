@@ -65,9 +65,7 @@ prompt_text = f"""
  
     """
 
-
-    Beispiel einer vom AI-Agenten entdeckten Barriere:
-
+Beispiel einer vom AI-Agenten entdeckten Barriere:
     
 ![AI-Agent Verletzung](https://github.com/user-attachments/assets/41884bf8-3ac2-4cb1-aa49-b7dc78bedb80)
 
@@ -76,9 +74,11 @@ prompt_text = f"""
 ------ ------ ------ ------ ------ ------ ------ ------
 
 
+
 ------------
 axe devTools
 ------------
+
 
 Die von den axe devTools geprüften rule-IDS
 // Diese Liste von Rule IDs wird bei jeder Analyse verwendet.
@@ -102,13 +102,14 @@ const AXE_RULES_TO_CHECK = [
 
 
 
-    Beispiel einer von den axe devTools entdeckten Barriere:
+Beispiel einer von den axe devTools entdeckten Barriere:
 
-    ![axe devTools Verletzung ](https://github.com/user-attachments/assets/54c6fc7a-f645-44b0-bfb7-249c00f8b7a1)
+![axe devTools Verletzung ](https://github.com/user-attachments/assets/54c6fc7a-f645-44b0-bfb7-249c00f8b7a1)
 
 
 
 ------ ------ ------ ------ ------ ------ ------ ------
+
 
 
 ------------
