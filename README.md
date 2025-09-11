@@ -80,25 +80,26 @@ axe devTools
 ------------
 
 
-Die von den axe devTools geprüften rule-IDS
-// Diese Liste von Rule IDs wird bei jeder Analyse verwendet.
-const AXE_RULES_TO_CHECK = [
-    //'aria-alt',           // Prüft, ob ARIA-Elemente einen zugänglichen Namen haben (ähnlich image-alt)
-    'button-name',        // Buttons müssen einen zugänglichen Namen haben
-    'document-title',     // Dokument muss einen <title> haben
-    'input-button-name',  // Input-Buttons (type="submit", "reset", "button") müssen Namen haben
-    'input-image-alt',    // Input-Elemente mit type="image" müssen einen Alt-Text haben
-    'label',              // Formularfelder müssen Labels haben
-    'link-name',          // Links müssen einen Namen haben
-    'object-alt',         // <object>-Elemente müssen einen Alt-Text haben
-    'role-img-alt',           // Elemente mit role="img" müssen einen Alt-Text haben
-    'select-name',        // <select>-Elemente müssen einen zugänglichen Namen haben
-    'svg-img-alt',        // Inline-SVGs, die ein Bild sind, müssen einen Alt-Text haben
-    'autocomplete-valid', // autocomplete-Attribute müssen gültige Werte haben
-    'empty-heading',      // Überschriften dürfen nicht leer sein
-    'heading-order',      // Überschriften-Hierarchie muss korrekt sein
-    'empty-table-header', // Tabellenköpfe dürfen nicht leer sein
-    'image-redundant-alt' // Alt-Texte dürfen nicht redundant sein
+Die von den axe devTools geprüften rule-IDS:
+
+    // Diese Liste von Rule IDs wird bei jeder Analyse verwendet.
+    const AXE_RULES_TO_CHECK = [
+        //'aria-alt',           // Prüft, ob ARIA-Elemente einen zugänglichen Namen haben (ähnlich image-alt)
+        'button-name',        // Buttons müssen einen zugänglichen Namen haben
+        'document-title',     // Dokument muss einen <title> haben
+        'input-button-name',  // Input-Buttons (type="submit", "reset", "button") müssen Namen haben
+        'input-image-alt',    // Input-Elemente mit type="image" müssen einen Alt-Text haben
+        'label',              // Formularfelder müssen Labels haben
+        'link-name',          // Links müssen einen Namen haben
+        'object-alt',         // <object>-Elemente müssen einen Alt-Text haben
+        'role-img-alt',           // Elemente mit role="img" müssen einen Alt-Text haben
+        'select-name',        // <select>-Elemente müssen einen zugänglichen Namen haben
+        'svg-img-alt',        // Inline-SVGs, die ein Bild sind, müssen einen Alt-Text haben
+        'autocomplete-valid', // autocomplete-Attribute müssen gültige Werte haben
+        'empty-heading',      // Überschriften dürfen nicht leer sein
+        'heading-order',      // Überschriften-Hierarchie muss korrekt sein
+        'empty-table-header', // Tabellenköpfe dürfen nicht leer sein
+        'image-redundant-alt' // Alt-Texte dürfen nicht redundant sein
 
 
 
@@ -117,22 +118,22 @@ Zuordnung der axe devTools rule-IDs zu Erfolgskriterien
 ------------
 
 
-Area-alt = 2.4.4, 4.1.2
-button-name = 4.1.2
-Document-title = 2.4.2
-image-alt = 1.1.1
-input-button-name = 4.1.2
-input-image-alt = 1.1.1, 4.1.2
-label = 4.1.2, 3.3.2, 1.3.1
-link-name = 2.4.4, 4.1.2
-Object-alt = 1.1.1
-role-img = 1.1.1
-select-name = 4.1.2
-svg-img-alt = 1.1.1
-Autocomplete-valid = 1.3.5
-Emtpy-heading = 1.3.1
-Heading-order = 1.3.1, 2.4.6
-Empty-table-header = 1.1.1
-Image-redundant-alt = none
+    Area-alt = 2.4.4, 4.1.2
+    button-name = 4.1.2
+    Document-title = 2.4.2
+    image-alt = 1.1.1
+    input-button-name = 4.1.2
+    input-image-alt = 1.1.1, 4.1.2
+    label = 4.1.2, 3.3.2, 1.3.1
+    link-name = 2.4.4, 4.1.2
+    Object-alt = 1.1.1
+    role-img = 1.1.1
+    select-name = 4.1.2
+    svg-img-alt = 1.1.1
+    Autocomplete-valid = 1.3.5
+    Emtpy-heading = 1.3.1
+    Heading-order = 1.3.1, 2.4.6
+    Empty-table-header = 1.1.1
+    Image-redundant-alt = none
 
 
